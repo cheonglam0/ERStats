@@ -1,0 +1,13 @@
+# Netlify 배포 설정 (전용 레포 = 앱이 레포 루트에 위치).
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA 폴백 (단일 페이지)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

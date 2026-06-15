@@ -1,0 +1,124 @@
+{
+  "characterId": "Camilo",
+  "characterName": "카밀로",
+  "source": "나무위키 카밀로(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "올레",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(보호막/공속). 직접 피해 제외.",
+      "_dakId": 1039100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "브엘따",
+      "damageType": "physical",
+      "baseDamage": [
+        30,
+        60,
+        90,
+        120,
+        150
+      ],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "회전 2타 기준. 1타[20~100](+80%)·근접[10~90](+75%) 별도. 공속비례 쿨감.",
+      "_dakId": 1039200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "씨에레",
+      "damageType": "physical",
+      "baseDamage": [
+        5,
+        15,
+        25,
+        35,
+        45
+      ],
+      "apRatio": 0.2,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        18,
+        16.5,
+        15,
+        13.5,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "최대 4회 타격.",
+      "_dakId": 1039300,
+      "_maxLevel": 5,
+      "hitCount": 4
+    },
+    {
+      "slot": "E",
+      "name": "알 꼼빠스",
+      "damageType": "physical",
+      "baseDamage": [
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "이동기(원/투스텝). 쿨다운 불명 → 제외.",
+      "_dakId": 1039400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "두엔데",
+      "damageType": "physical",
+      "baseDamage": [
+        200,
+        300,
+        400
+      ],
+      "apRatio": 1,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        65,
+        50
+      ],
+      "excludeFromDps": false,
+      "note": "2중첩 기준. 1중첩 [100~200](+50%).",
+      "_dakId": 1039500,
+      "_maxLevel": 3
+    }
+  ]
+}

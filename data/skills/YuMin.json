@@ -1,0 +1,123 @@
+{
+  "characterId": "YuMin",
+  "characterName": "유민",
+  "source": "나무위키 유민(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "도력",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(도력). 제외.",
+      "_dakId": 1077100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "선풍",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        65,
+        80,
+        95,
+        110
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        7,
+        6.5,
+        6,
+        5.5,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "선풍. 바람 지대 [50~130](+40%) 별도.",
+      "_dakId": 1077200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "풍인",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        110,
+        140,
+        170,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        9,
+        8.5,
+        8,
+        7.5,
+        7
+      ],
+      "excludeFromDps": false,
+      "note": "풍인. 바람 지대 [100~240](+75%) 별도.",
+      "_dakId": 1077300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "경운",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        95,
+        130,
+        165,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        11,
+        10.5,
+        10,
+        9.5,
+        9
+      ],
+      "excludeFromDps": false,
+      "note": "경운.",
+      "_dakId": 1077400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "풍류운산(風流雲散)",
+      "damageType": "magic",
+      "baseDamage": [
+        100,
+        200,
+        300
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "풍류운산 2타 기준(+최대체력10%). 1타 [50~150](+45%).",
+      "_dakId": 1077500,
+      "_maxLevel": 3
+    }
+  ]
+}

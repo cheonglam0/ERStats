@@ -1,0 +1,123 @@
+{
+  "characterId": "Chloe",
+  "characterName": "클로에",
+  "source": "나무위키 클로에(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "살아 있는 마리오네트",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(인형 니나). 제외.",
+      "_dakId": 1040100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "공격 명령",
+      "damageType": "physical",
+      "baseDamage": [
+        70,
+        90,
+        110,
+        130,
+        150
+      ],
+      "apRatio": 0.75,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        9,
+        8.5,
+        8,
+        7.5,
+        7
+      ],
+      "excludeFromDps": false,
+      "note": "니나 공격력 계수(근사). 쿨다운 추정.",
+      "_dakId": 1040200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "인형극",
+      "damageType": "physical",
+      "baseDamage": [
+        40,
+        60,
+        80,
+        100,
+        120
+      ],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "excludeFromDps": false,
+      "note": "클로에 던지기 기준. 니나 찍기 [40~200](+니나70%) 별도.",
+      "_dakId": 1040300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "퀼트 리퍼",
+      "damageType": "physical",
+      "baseDamage": [
+        40,
+        55,
+        70,
+        85,
+        100
+      ],
+      "apRatio": 0.4,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        14,
+        13.5,
+        13,
+        12.5,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "클로에 기준. 니나 [50~170](+니나60%) 별도.",
+      "_dakId": 1040400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "생명 공유",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": true,
+      "note": "링크 버프(라인 고정피해). 제외.",
+      "_dakId": 1040500,
+      "_maxLevel": 3
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "characterId": "Adela",
+  "characterName": "아델라",
+  "source": "나무위키 아델라(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "퀸즈 갬빗 디클라인드",
+      "damageType": "magic",
+      "baseDamage": [0, 0],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [0, 0],
+      "excludeFromDps": true,
+      "note": "패시브(체스 말 지휘). 직접 피해 없음 → 제외.",
+      "_dakId": 1024100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "프로모션",
+      "damageType": "magic",
+      "baseDamage": [60, 100, 140, 180, 220],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [2.4, 2.2, 2, 1.8, 1.6],
+      "note": "폰 기준. 3스택 시 퀸 강화 [80/125/170/215/260](+스증80%, 스턴) 별도 미반영.",
+      "_dakId": 1024200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "나이트 포크",
+      "damageType": "magic",
+      "baseDamage": [20, 60, 100, 140, 180],
+      "apRatio": 0,
+      "skillAmpRatio": 0.8,
+      "cooldown": [17, 16, 15, 14, 13],
+      "note": "쿨다운은 충전 시간 기준(2스택 충전형, 내부쿨 3초). 지속 DPS 근사.",
+      "_dakId": 1024300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "캐슬링",
+      "damageType": "magic",
+      "baseDamage": [50, 90, 130, 170, 210],
+      "apRatio": 0,
+      "skillAmpRatio": 0.75,
+      "cooldown": [12, 11.5, 11, 10.5, 10],
+      "note": "룩 발사 + 재사용 위치 교환. 추가 룩/나이트 연계 피해 미반영.",
+      "_dakId": 1024400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "체크메이트",
+      "damageType": "magic",
+      "baseDamage": [150, 275, 400],
+      "apRatio": 0,
+      "skillAmpRatio": 0.95,
+      "cooldown": [80, 70, 60],
+      "_dakId": 1024500,
+      "_maxLevel": 3
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "characterId": "Chiara",
+  "characterName": "키아라",
+  "source": "나무위키 키아라(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "낙인",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(낙인/치유감소). 제외.",
+      "_dakId": 1014100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "부정의 손길",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      "excludeFromDps": false,
+      "note": "검기 5개 부채꼴. 추가 [10~50](+8%)·회복 별도.",
+      "_dakId": 1014200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "뒤틀린 기도",
+      "damageType": "magic",
+      "baseDamage": [
+        40,
+        70,
+        100,
+        130,
+        160
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        12,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "보호막+피해(+대상 최대체력).",
+      "_dakId": 1014300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "집착",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        70,
+        90,
+        110,
+        130
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "excludeFromDps": false,
+      "note": "사슬 속박. 추가 [40~160](+70%).",
+      "_dakId": 1014400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "폭주",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        70,
+        80
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.25,
+      "cooldown": [
+        60,
+        55,
+        50
+      ],
+      "excludeFromDps": true,
+      "note": "변신/버프(지속피해). 제외.",
+      "_dakId": 1014500,
+      "_maxLevel": 3
+    },
+    {
+      "slot": "R",
+      "name": "심판",
+      "damageType": "magic",
+      "baseDamage": [
+        70,
+        110,
+        150
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.25,
+      "cooldown": [
+        60,
+        55,
+        50
+      ],
+      "excludeFromDps": false,
+      "note": "폭주 중 발동 누킹(심판).",
+      "_dakId": 1014510,
+      "_maxLevel": 3
+    }
+  ]
+}

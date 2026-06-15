@@ -1,0 +1,123 @@
+{
+  "characterId": "Niah",
+  "characterName": "니아",
+  "source": "나무위키 니아(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "K.O.",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(K.O. 중첩). 제외.",
+      "_dakId": 1081100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "아케이드 드롭",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        100,
+        140,
+        180,
+        220
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        6,
+        5.5,
+        5,
+        4.5,
+        4
+      ],
+      "excludeFromDps": false,
+      "note": "아케이드 드롭. 발사체 [30~130](+40%) 별도.",
+      "_dakId": 1081200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "싱크 포인트",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        100,
+        140,
+        180,
+        220
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [
+        12,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "싱크 포인트.",
+      "_dakId": 1081300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "1UP",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        32,
+        29,
+        26,
+        23,
+        20
+      ],
+      "excludeFromDps": true,
+      "note": "1UP(자기 강화/부활). 제외.",
+      "_dakId": 1081400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "니아의 게임월드",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        75,
+        100
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.45,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "게임월드(영역). Q 쿨 감소.",
+      "_dakId": 1081500,
+      "_maxLevel": 3
+    }
+  ]
+}

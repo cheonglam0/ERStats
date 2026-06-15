@@ -1,0 +1,69 @@
+{
+  "characterId": "Barbara",
+  "characterName": "바바라",
+  "source": "나무위키 바바라(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "개조",
+      "damageType": "magic",
+      "baseDamage": [0, 0],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [0, 0],
+      "excludeFromDps": true,
+      "note": "패시브(제작 속도 + 추가 피해 proc). 단순화 위해 제외.",
+      "_dakId": 1019100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "BT-Mk2 센트리건",
+      "damageType": "magic",
+      "baseDamage": [60, 80, 100, 120, 140],
+      "apRatio": 0,
+      "skillAmpRatio": 0.35,
+      "cooldown": [16, 15, 14, 13, 12],
+      "note": "레일건 기준(쿨=충전시간). 센트리 기본 피해 [30~70](+18%) 별도 미반영.",
+      "_dakId": 1019200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "이온 레이저",
+      "damageType": "magic",
+      "baseDamage": [90, 125, 160, 195, 230],
+      "apRatio": 0,
+      "skillAmpRatio": 0.85,
+      "cooldown": [8, 7.5, 7, 6.5, 6],
+      "note": "센트리건 레일건 적중 시 쿨 10% 반환(미반영).",
+      "_dakId": 1019300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "자력 수류탄",
+      "damageType": "magic",
+      "baseDamage": [80, 110, 140, 170, 200],
+      "apRatio": 0,
+      "skillAmpRatio": 0.55,
+      "cooldown": [14, 13, 12, 11, 10],
+      "_dakId": 1019400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "오버클럭",
+      "damageType": "magic",
+      "baseDamage": [0, 0, 0],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [65, 55, 45],
+      "excludeFromDps": true,
+      "note": "강화 모드 토글(Q/W/E를 강화형으로). 자체 직접 피해 없음 → 제외.",
+      "_dakId": 1019500,
+      "_maxLevel": 3
+    }
+  ]
+}

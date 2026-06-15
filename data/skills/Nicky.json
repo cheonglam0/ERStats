@@ -1,0 +1,173 @@
+{
+  "characterId": "Nicky",
+  "characterName": "니키",
+  "source": "나무위키 니키(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "다혈질",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(다혈질). 제외.",
+      "_dakId": 1033100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "격투 액션",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        120,
+        160,
+        200,
+        240
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 1.4,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "격투 액션 최대 충전. 최소 [40~120](+70%).",
+      "_dakId": 1033200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "Q",
+      "name": "리버 블로우",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": true,
+      "note": "리버 블로우(대체 폼) → 제외.",
+      "_dakId": 1033210,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "가드 & 카운터",
+      "damageType": "magic",
+      "baseDamage": [
+        100,
+        125,
+        150,
+        175,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        8,
+        7.5,
+        7,
+        6.5,
+        6
+      ],
+      "excludeFromDps": false,
+      "note": "가드 & 카운터.",
+      "_dakId": 1033300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "강력한 펀치",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        95,
+        130,
+        165,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.95,
+      "cooldown": [
+        12,
+        10.5,
+        9,
+        7.5,
+        6
+      ],
+      "excludeFromDps": false,
+      "note": "강력한 펀치.",
+      "_dakId": 1033400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "분노의 펀치!",
+      "damageType": "magic",
+      "baseDamage": [
+        70,
+        110,
+        150,
+        190,
+        230
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 1,
+      "cooldown": [
+        12,
+        10.5,
+        9,
+        7.5,
+        6
+      ],
+      "excludeFromDps": true,
+      "note": "분노의 펀치(강화 폼) → 제외.",
+      "_dakId": 1033410,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "분노의 어퍼컷!",
+      "damageType": "magic",
+      "baseDamage": [
+        100,
+        200,
+        300
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 1,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "어퍼컷 강화 기준. 일반 [100~260](+35%).",
+      "_dakId": 1033500,
+      "_maxLevel": 3
+    }
+  ]
+}

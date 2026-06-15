@@ -1,0 +1,123 @@
+{
+  "characterId": "Laura",
+  "characterName": "라우라",
+  "source": "나무위키 라우라(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "괴도",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(괴도). 제외.",
+      "_dakId": 1047100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "날카로운 꽃",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.55,
+      "cooldown": [
+        4,
+        3.6,
+        3.2,
+        2.8,
+        2.4
+      ],
+      "excludeFromDps": false,
+      "note": "주력기(재사용 0.1초).",
+      "_dakId": 1047200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "예고장",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [
+        11,
+        10.5,
+        10,
+        9.5,
+        9
+      ],
+      "excludeFromDps": false,
+      "note": "예고장(타겟+회복).",
+      "_dakId": 1047300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "우아한 발걸음",
+      "damageType": "magic",
+      "baseDamage": [
+        110,
+        145,
+        180,
+        215,
+        250
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.75,
+      "cooldown": [
+        17,
+        16,
+        15,
+        14,
+        13
+      ],
+      "excludeFromDps": false,
+      "note": "에어본 돌진.",
+      "_dakId": 1047400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "황혼의 도둑",
+      "damageType": "magic",
+      "baseDamage": [
+        180,
+        260,
+        340
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.9,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "2타 기준. 1타 [50~150](+15%).",
+      "_dakId": 1047500,
+      "_maxLevel": 3
+    }
+  ]
+}

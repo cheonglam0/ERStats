@@ -1,0 +1,125 @@
+{
+  "characterId": "Celine",
+  "characterName": "셀린",
+  "source": "나무위키 셀린(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "폭발물 전문가",
+      "damageType": "magic",
+      "baseDamage": [
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(강화평타+쿨감→스증 1:1 치환). 제외.",
+      "_dakId": 1043100,
+      "_maxLevel": 1
+    },
+    {
+      "slot": "Q",
+      "name": "플라즈마 폭탄",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        105,
+        130,
+        155,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.42,
+      "cooldown": [
+        7,
+        6.5,
+        6,
+        5.5,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "폭탄 설치/충전.",
+      "_dakId": 1043200,
+      "_maxLevel": 4
+    },
+    {
+      "slot": "W",
+      "name": "기폭",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        80,
+        100,
+        120,
+        140
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.37,
+      "cooldown": [
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25
+      ],
+      "excludeFromDps": false,
+      "note": "폭탄 기폭(단계·다중 비례) 근사.",
+      "_dakId": 1043300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "블라스트 웨이브",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        80,
+        100,
+        120,
+        140
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [
+        12,
+        11,
+        10,
+        9,
+        8
+      ],
+      "excludeFromDps": false,
+      "note": "블라스트 웨이브.",
+      "_dakId": 1043400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "자력 융합",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "궁극기 계수 미확인 → 제외.",
+      "_dakId": 1043500,
+      "_maxLevel": 5
+    }
+  ]
+}

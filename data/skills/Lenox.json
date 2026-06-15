@@ -1,0 +1,123 @@
+{
+  "characterId": "Lenox",
+  "characterName": "레녹스",
+  "source": "나무위키 레녹스(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "위풍당당",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(위풍당당). 제외.",
+      "_dakId": 1020100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "회오리 비늘",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        115,
+        150,
+        185,
+        220
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "excludeFromDps": false,
+      "note": "회오리 비늘(+최대체력 4~12%).",
+      "_dakId": 1020200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "날카로운 독니",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        75,
+        100,
+        125,
+        150
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [
+        16,
+        15,
+        14,
+        13,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "2타 기준. 1타 [20~80](+30%).",
+      "_dakId": 1020300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "휩쓸기",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        100,
+        140,
+        180,
+        220
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "excludeFromDps": false,
+      "note": "휩쓸기(+최대체력5%).",
+      "_dakId": 1020400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "푸른뱀",
+      "damageType": "magic",
+      "baseDamage": [
+        70,
+        135,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "푸른뱀(2타·고정피해).",
+      "_dakId": 1020500,
+      "_maxLevel": 3
+    }
+  ]
+}

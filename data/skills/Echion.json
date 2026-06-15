@@ -1,0 +1,144 @@
+{
+  "characterId": "Echion",
+  "characterName": "에키온",
+  "source": "나무위키 에키온(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "카드모스의 부름",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(VF). 제외.",
+      "_dakId": 1044100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "독사의 칼날",
+      "damageType": "physical",
+      "baseDamage": [
+        40,
+        60,
+        80,
+        100,
+        120
+      ],
+      "apRatio": 0.65,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "excludeFromDps": false,
+      "note": "2타 기준. 1타 [20~80](+50%).",
+      "_dakId": 1044200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "뒤집힌 비늘",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        10,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
+      "excludeFromDps": true,
+      "note": "보호막(폭주 상태). 직접 피해 제외.",
+      "_dakId": 1044300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "메마른 송곳니",
+      "damageType": "physical",
+      "baseDamage": [
+        20,
+        35,
+        50,
+        65,
+        80
+      ],
+      "apRatio": 0.4,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        16,
+        15,
+        14,
+        13,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "돌진+표식.",
+      "_dakId": 1044400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "VF폭주[바이퍼]",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "VF폭주(변신). 제외.",
+      "_dakId": 1044500,
+      "_maxLevel": 3
+    },
+    {
+      "slot": "R",
+      "name": "독사의 진노[바이퍼]",
+      "damageType": "physical",
+      "baseDamage": [
+        90,
+        200,
+        250
+      ],
+      "apRatio": 0.9,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        3,
+        3,
+        3
+      ],
+      "excludeFromDps": false,
+      "note": "VF 방출(무기군별 상이) 대표값.",
+      "_dakId": 1044510,
+      "_maxLevel": 3
+    }
+  ]
+}

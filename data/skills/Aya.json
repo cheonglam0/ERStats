@@ -1,0 +1,71 @@
+{
+  "characterId": "Aya",
+  "characterName": "아야",
+  "source": "나무위키 아야(이터널 리턴) — 11.x 기준. 공격력·스킬증폭 하이브리드.",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "아야의 정의",
+      "damageType": "physical",
+      "baseDamage": [0, 0],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [0, 0],
+      "excludeFromDps": true,
+      "note": "패시브 보호막 [50/75/100](+공격력50%)(+스증25%). 직접 피해 없음.",
+      "_dakId": 1002100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "2연발",
+      "damageType": "physical",
+      "baseDamage": [40, 70, 100, 130, 160],
+      "apRatio": 1.3,
+      "skillAmpRatio": 0.7,
+      "cooldown": [10, 9, 8, 7, 6],
+      "note": "1탄(공격력 100%) + 2탄[40~160](+공격력30%)(+스증70%) 합산 근사.",
+      "_dakId": 1002200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "고정 사격",
+      "damageType": "physical",
+      "baseDamage": [30, 40, 50, 60, 70],
+      "apRatio": 0.5,
+      "skillAmpRatio": [0.35, 0.4, 0.45, 0.5, 0.55],
+      "cooldown": [10, 9, 8, 7, 6],
+      "hitCount": 10,
+      "note": "최대 10발 연사(틱당 피해). 스증 아야 핵심 딜.",
+      "_dakId": 1002300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "무빙턴",
+      "damageType": "physical",
+      "baseDamage": [0, 0, 0, 0, 0],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [15, 14, 13, 12, 11],
+      "excludeFromDps": true,
+      "note": "순수 이동기 + Q/W 쿨 감소. 직접 피해 없음 → 제외.",
+      "_dakId": 1002400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "공포탄",
+      "damageType": "magic",
+      "baseDamage": [120, 240, 360],
+      "apRatio": 0.2,
+      "skillAmpRatio": 1.0,
+      "cooldown": [100, 85, 70],
+      "note": "쿨다운 추정값(나무위키 미표기). 공포 CC 포함.",
+      "_dakId": 1002500,
+      "_maxLevel": 3
+    }
+  ]
+}

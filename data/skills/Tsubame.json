@@ -1,0 +1,123 @@
+{
+  "characterId": "Tsubame",
+  "characterName": "츠바메",
+  "source": "나무위키 츠바메(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "오의 - 생사 각인",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(생사 각인). 제외.",
+      "_dakId": 1070100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "수리검 전개",
+      "damageType": "physical",
+      "baseDamage": [
+        40,
+        60,
+        80,
+        100,
+        120
+      ],
+      "apRatio": 0.55,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        7,
+        6.5,
+        6,
+        5.5,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "수리검 전개. 경로 [20~100](+45%) 별도.",
+      "_dakId": 1070200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "제비걸음",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        13,
+        12.5,
+        12,
+        11.5,
+        11
+      ],
+      "excludeFromDps": true,
+      "note": "제비걸음(이동기). 제외.",
+      "_dakId": 1070300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "안개의 술",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        15,
+        14.5,
+        14,
+        13.5,
+        13
+      ],
+      "excludeFromDps": true,
+      "note": "안개의 술(은신/유틸). 제외.",
+      "_dakId": 1070400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "히구루마류 암살술",
+      "damageType": "physical",
+      "baseDamage": [
+        80,
+        160,
+        240
+      ],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        50,
+        40,
+        30
+      ],
+      "excludeFromDps": false,
+      "note": "히구루마류 암살술.",
+      "_dakId": 1070500,
+      "_maxLevel": 3
+    }
+  ]
+}

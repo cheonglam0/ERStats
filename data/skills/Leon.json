@@ -1,0 +1,123 @@
+{
+  "characterId": "Leon",
+  "characterName": "레온",
+  "source": "나무위키 레온(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "인간 어뢰",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(인간 어뢰). 제외.",
+      "_dakId": 1029100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "물길",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        115,
+        150,
+        185,
+        220
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.8,
+      "cooldown": [
+        11,
+        10,
+        9,
+        8,
+        7
+      ],
+      "excludeFromDps": false,
+      "note": "물길.",
+      "_dakId": 1029200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "물보라",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": true,
+      "note": "물보라(보호막). 직접 피해 없음 → 제외.",
+      "_dakId": 1029300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "잠영",
+      "damageType": "magic",
+      "baseDamage": [
+        70,
+        105,
+        140,
+        175,
+        210
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.8,
+      "cooldown": [
+        16,
+        15,
+        14,
+        13,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "잠영.",
+      "_dakId": 1029400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "파도타기",
+      "damageType": "magic",
+      "baseDamage": [
+        100,
+        150,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.75,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "파도타기. 벽 충돌 [100~300](+70%) 별도.",
+      "_dakId": 1029500,
+      "_maxLevel": 3
+    }
+  ]
+}

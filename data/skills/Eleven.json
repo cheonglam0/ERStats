@@ -1,0 +1,123 @@
+{
+  "characterId": "Eleven",
+  "characterName": "일레븐",
+  "source": "나무위키 일레븐(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "힘내자고!",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(버거 회복). 제외.",
+      "_dakId": 1030100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "방해하지마!",
+      "damageType": "physical",
+      "baseDamage": [
+        160,
+        220,
+        280,
+        340,
+        400
+      ],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        5.5,
+        5,
+        4.5,
+        4,
+        3.5
+      ],
+      "excludeFromDps": false,
+      "note": "최대 충전 기준(+최대체력). 최소 [80~200](+40%).",
+      "_dakId": 1030200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "자~ 집중!",
+      "damageType": "physical",
+      "baseDamage": [
+        40,
+        60,
+        80,
+        100,
+        120
+      ],
+      "apRatio": 0.2,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "excludeFromDps": false,
+      "note": "도발 + 최대 충전 기준.",
+      "_dakId": 1030300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "나 불렀어?",
+      "damageType": "physical",
+      "baseDamage": [
+        120,
+        160,
+        200,
+        240,
+        280
+      ],
+      "apRatio": 0.5,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        16,
+        15.5,
+        15,
+        14.5,
+        14
+      ],
+      "excludeFromDps": false,
+      "note": "최대 충전 기준(+추가체력).",
+      "_dakId": 1030400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "다 덤벼보라구!",
+      "damageType": "physical",
+      "baseDamage": [
+        10,
+        15,
+        20
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        65,
+        50
+      ],
+      "excludeFromDps": true,
+      "note": "탱킹/회복 위주. 직접 피해 미미 → 제외.",
+      "_dakId": 1030500,
+      "_maxLevel": 3
+    }
+  ]
+}

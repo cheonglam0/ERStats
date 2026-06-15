@@ -1,0 +1,148 @@
+{
+  "characterId": "Xiukai",
+  "characterName": "쇼우",
+  "source": "나무위키 쇼우(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "요리사의 열정",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(요리사의 열정). 제외.",
+      "_dakId": 1013100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "소스범벅",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        120,
+        160,
+        200,
+        240
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "소스범벅(+현재체력25%). 쿨다운 추정.",
+      "_dakId": 1013200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "식사 시간",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "excludeFromDps": true,
+      "note": "식사 시간(회복/버프). 제외.",
+      "_dakId": 1013300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "웍 돌진",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        75,
+        100,
+        125,
+        150
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        18,
+        16,
+        14,
+        12,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "웍 돌진(+최대체력7%).",
+      "_dakId": 1013400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "내려 찍기",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        95,
+        130,
+        165,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        18,
+        16,
+        14,
+        12,
+        10
+      ],
+      "excludeFromDps": true,
+      "note": "내려 찍기(대체 폼) → 제외.",
+      "_dakId": 1013410,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "뜨거운 맛",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        95,
+        130
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "뜨거운 맛(+최대체력5%).",
+      "_dakId": 1013500,
+      "_maxLevel": 3
+    }
+  ]
+}

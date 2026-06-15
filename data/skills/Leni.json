@@ -1,0 +1,123 @@
+{
+  "characterId": "Leni",
+  "characterName": "레니",
+  "source": "나무위키 레니(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "곰돌이! 공격",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(곰돌이 공격). 제외.",
+      "_dakId": 1069100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "당근! 바주카",
+      "damageType": "magic",
+      "baseDamage": [
+        40,
+        55,
+        70,
+        85,
+        100
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.35,
+      "cooldown": [
+        11,
+        10,
+        9,
+        8,
+        7
+      ],
+      "excludeFromDps": false,
+      "note": "당근 바주카. 레니 레벨×18 비례분 미반영(레벨 의존).",
+      "_dakId": 1069200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "뿅! 망치",
+      "damageType": "magic",
+      "baseDamage": [
+        20,
+        45,
+        70,
+        95,
+        120
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.35,
+      "cooldown": [
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "excludeFromDps": false,
+      "note": "뿅 망치. 레벨×10 비례분 미반영.",
+      "_dakId": 1069300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "에어 호른! 건",
+      "damageType": "magic",
+      "baseDamage": [
+        20,
+        40,
+        60,
+        80,
+        100
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.35,
+      "cooldown": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "에어 호른 건(보호막). 레벨×9 비례분 미반영. 쿨다운 추정.",
+      "_dakId": 1069400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "스프링! 트랩",
+      "damageType": "magic",
+      "baseDamage": [
+        100,
+        150,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        20,
+        17,
+        14
+      ],
+      "excludeFromDps": false,
+      "note": "스프링 트랩. 레벨×12·벽 충돌 [40~120] 미반영.",
+      "_dakId": 1069500,
+      "_maxLevel": 3
+    }
+  ]
+}

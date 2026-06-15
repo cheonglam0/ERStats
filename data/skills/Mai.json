@@ -1,0 +1,148 @@
+{
+  "characterId": "Mai",
+  "characterName": "마이",
+  "source": "나무위키 마이(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "오뜨꾸뛰르",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(오뜨꾸뛰르). 제외.",
+      "_dakId": 1045100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "드레이프",
+      "damageType": "magic",
+      "baseDamage": [
+        40,
+        75,
+        110,
+        145,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        5,
+        4.5,
+        4,
+        3.5,
+        3
+      ],
+      "excludeFromDps": false,
+      "note": "드레이프(+최대체력7%).",
+      "_dakId": 1045200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "숄 장막",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.45,
+      "cooldown": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "숄 장막(받는 피해 감소). 쿨다운 추정.",
+      "_dakId": 1045300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "캣 워크",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        18,
+        17,
+        16,
+        15,
+        14
+      ],
+      "excludeFromDps": true,
+      "note": "캣 워크(이동 폼). 제외.",
+      "_dakId": 1045400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "피날레",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        18,
+        17,
+        16,
+        15,
+        14
+      ],
+      "excludeFromDps": false,
+      "note": "피날레(도발 폼).",
+      "_dakId": 1045410,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "익스클루시브",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        90,
+        75,
+        60
+      ],
+      "excludeFromDps": true,
+      "note": "익스클루시브(아군 지원). 제외.",
+      "_dakId": 1045500,
+      "_maxLevel": 3
+    }
+  ]
+}

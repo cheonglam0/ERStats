@@ -1,0 +1,123 @@
+{
+  "characterId": "Vanya",
+  "characterName": "바냐",
+  "source": "나무위키 바냐(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "몽환 나비",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(몽환 나비). 제외.",
+      "_dakId": 1064100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "꿈 길잡이",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        75,
+        100,
+        125,
+        150
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [
+        11,
+        10,
+        9,
+        8,
+        7
+      ],
+      "excludeFromDps": false,
+      "note": "꿈 길잡이.",
+      "_dakId": 1064200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "쪽빛 바람",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        95,
+        130,
+        165,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.9,
+      "cooldown": [
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "excludeFromDps": false,
+      "note": "장막 피해 기준. 바람 [20~36](+16%) 별도.",
+      "_dakId": 1064300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "염원",
+      "damageType": "magic",
+      "baseDamage": [
+        90,
+        125,
+        160,
+        195,
+        230
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.8,
+      "cooldown": [
+        16,
+        15,
+        14,
+        13,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "염원 바깥쪽 기준. 안쪽 [80~200](+80%).",
+      "_dakId": 1064400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "꿈결 가루",
+      "damageType": "magic",
+      "baseDamage": [
+        70,
+        140,
+        210
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.35,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "꿈결 가루. 수면 추가 [100~260](+70%) 별도.",
+      "_dakId": 1064500,
+      "_maxLevel": 3
+    }
+  ]
+}

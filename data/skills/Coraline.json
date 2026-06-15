@@ -1,0 +1,119 @@
+{
+  "characterId": "Coraline",
+  "characterName": "코렐라인",
+  "source": "나무위키 코렐라인(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "인과의 이면",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(인과의 이면). 제외.",
+      "_dakId": 1087100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "단죄의 섬광",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        90,
+        130,
+        170,
+        210
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.8,
+      "cooldown": [
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      "excludeFromDps": false,
+      "note": "단죄의 섬광. 백/흑경 [60~240](+80%, 현재/잃은 체력) 별도.",
+      "_dakId": 1087200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "진실의 거울 / 거짓의 거울",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "거울. 백/흑경 [80~200](+65%)·보호막 별도.",
+      "_dakId": 1087300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "죄의 굴레",
+      "damageType": "magic",
+      "baseDamage": [
+        70,
+        110,
+        150
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.35,
+      "cooldown": [
+        32,
+        29,
+        26
+      ],
+      "excludeFromDps": false,
+      "note": "죄의 굴레(이동, 원문 일부 불명확).",
+      "_dakId": 1087400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "이세계의 잔영",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": true,
+      "note": "이세계의 잔영(계수 미확인) → 제외.",
+      "_dakId": 1087500,
+      "_maxLevel": 3
+    }
+  ]
+}

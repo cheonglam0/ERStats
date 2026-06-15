@@ -1,0 +1,124 @@
+{
+  "characterId": "Karla",
+  "characterName": "칼라",
+  "source": "나무위키 칼라(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "작살 장전",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(작살 장전, 강화평타). 제외.",
+      "_dakId": 1054100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "관통 작살",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        1.3,
+        1.3,
+        1.3,
+        1.3,
+        1.3
+      ],
+      "excludeFromDps": false,
+      "note": "관통 작살: 공격력 120~160%×기본공격증폭. 평타성 단순화.",
+      "_dakId": 1054200,
+      "_maxLevel": 5,
+      "scalesWithBasicAttack": false
+    },
+    {
+      "slot": "W",
+      "name": "회수",
+      "damageType": "physical",
+      "baseDamage": [
+        70,
+        95,
+        120,
+        145,
+        170
+      ],
+      "apRatio": 0.3,
+      "skillAmpRatio": 0.75,
+      "cooldown": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ],
+      "excludeFromDps": false,
+      "note": "회수(+치명타확률 65% 비례).",
+      "_dakId": 1054300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "작살 기동",
+      "damageType": "physical",
+      "baseDamage": [
+        60,
+        100,
+        140,
+        180,
+        220
+      ],
+      "apRatio": 0.5,
+      "skillAmpRatio": 0.8,
+      "cooldown": [
+        20,
+        19,
+        18,
+        17,
+        16
+      ],
+      "excludeFromDps": false,
+      "note": "작살 기동.",
+      "_dakId": 1054400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "구속의 사슬",
+      "damageType": "physical",
+      "baseDamage": [
+        80,
+        170,
+        260
+      ],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0.9,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "2타 기준. 1타 [50~150](+50%/+70%).",
+      "_dakId": 1054500,
+      "_maxLevel": 3
+    }
+  ]
+}

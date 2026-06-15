@@ -1,0 +1,123 @@
+{
+  "characterId": "Isaac",
+  "characterName": "아이작",
+  "source": "나무위키 아이작(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "착취",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(착취 3중첩 추가피해/회복). 제외.",
+      "_dakId": 1059100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "현장 급습",
+      "damageType": "physical",
+      "baseDamage": [
+        30,
+        70,
+        110,
+        150,
+        190
+      ],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        10,
+        9,
+        8,
+        7,
+        6
+      ],
+      "excludeFromDps": false,
+      "note": "돌진.",
+      "_dakId": 1059200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "경화",
+      "damageType": "physical",
+      "baseDamage": [
+        30,
+        40,
+        50,
+        60,
+        70
+      ],
+      "apRatio": 0.65,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        9,
+        7.5,
+        6,
+        4.5,
+        3
+      ],
+      "excludeFromDps": false,
+      "note": "평타 강화.",
+      "_dakId": 1059300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "추격 / 검거",
+      "damageType": "physical",
+      "baseDamage": [
+        30,
+        60,
+        90,
+        120,
+        150
+      ],
+      "apRatio": 0.6,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "excludeFromDps": false,
+      "note": "돌진(추격/검거).",
+      "_dakId": 1059400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "강탈",
+      "damageType": "physical",
+      "baseDamage": [
+        120,
+        180,
+        240
+      ],
+      "apRatio": 1,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "강탈. 잃은 체력 비례 추가피해 미반영.",
+      "_dakId": 1059500,
+      "_maxLevel": 3
+    }
+  ]
+}

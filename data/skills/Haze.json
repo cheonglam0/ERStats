@@ -1,0 +1,173 @@
+{
+  "characterId": "Haze",
+  "characterName": "헤이즈",
+  "source": "나무위키 헤이즈(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "웨폰 케이스",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(웨폰케이스 proc). 제외.",
+      "_dakId": 1058100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "40mm 유탄",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        115,
+        150,
+        185,
+        220
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.85,
+      "cooldown": [
+        10,
+        9,
+        8,
+        7,
+        6
+      ],
+      "excludeFromDps": false,
+      "note": "40mm 유탄(돌격소총 폼).",
+      "_dakId": 1058200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "Q",
+      "name": "기관단총 연사",
+      "damageType": "magic",
+      "baseDamage": [
+        40,
+        80,
+        120,
+        160,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "excludeFromDps": true,
+      "note": "기관단총 연사(무기 대체 폼) → 제외.",
+      "_dakId": 1058210,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "Q",
+      "name": "엑셀러레이션 로켓",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        105,
+        130,
+        155,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "excludeFromDps": true,
+      "note": "엑셀러레이션 로켓(대체 폼) → 제외.",
+      "_dakId": 1058220,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "산탄 포화",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        120,
+        160,
+        200,
+        240
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.75,
+      "cooldown": [
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "excludeFromDps": false,
+      "note": "산탄 포화.",
+      "_dakId": 1058300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "기관단총",
+      "damageType": "magic",
+      "baseDamage": [
+        8,
+        11,
+        14,
+        17,
+        20
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.04,
+      "cooldown": [
+        12,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "기관단총(스증 25당 1).",
+      "_dakId": 1058400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "로켓 런처",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        130,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        30,
+        26,
+        22
+      ],
+      "excludeFromDps": false,
+      "note": "로켓 기준. 휘두르기 [30~90](+30%).",
+      "_dakId": 1058500,
+      "_maxLevel": 3
+    }
+  ]
+}

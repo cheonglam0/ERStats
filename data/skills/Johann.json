@@ -1,0 +1,123 @@
+{
+  "characterId": "Johann",
+  "characterName": "요한",
+  "source": "나무위키 요한(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "빛의 가호",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(빛의 가호). 제외.",
+      "_dakId": 1041100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "찬란한 광휘",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        95,
+        130,
+        165,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        12,
+        11,
+        10,
+        9,
+        8
+      ],
+      "excludeFromDps": false,
+      "note": "강화 [100~300](+110%)·회복 별도.",
+      "_dakId": 1041200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "신성의 향로",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        80,
+        110,
+        140,
+        170
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        11,
+        10.5,
+        10,
+        9.5,
+        9
+      ],
+      "excludeFromDps": false,
+      "note": "향로. 강화 [80~220]·보호막 별도.",
+      "_dakId": 1041300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "인도하는 빛",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        20,
+        18,
+        16,
+        14,
+        12
+      ],
+      "excludeFromDps": true,
+      "note": "아군 버프/둔화제거(서포트). 제외.",
+      "_dakId": 1041400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "구원의 성역",
+      "damageType": "magic",
+      "baseDamage": [
+        180,
+        240,
+        300
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        90,
+        75,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "성역(밀치기+회복/방어).",
+      "_dakId": 1041500,
+      "_maxLevel": 3
+    }
+  ]
+}

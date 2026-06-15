@@ -1,0 +1,198 @@
+{
+  "characterId": "DebiMarlene",
+  "characterName": "데비&마를렌",
+  "source": "나무위키 데비&마를렌(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "블루&레드",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(블루&레드). 제외.",
+      "_dakId": 1065100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "하드 슬래시",
+      "damageType": "physical",
+      "baseDamage": [
+        50,
+        75,
+        100,
+        125,
+        150
+      ],
+      "apRatio": 0.85,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "하드 슬래시. 쿨다운 추정.",
+      "_dakId": 1065200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "Q",
+      "name": "크레센트 슬래시",
+      "damageType": "physical",
+      "baseDamage": [
+        50,
+        75,
+        100,
+        125,
+        150
+      ],
+      "apRatio": 0.7,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "excludeFromDps": true,
+      "note": "크레센트 슬래시(폼) → 제외.",
+      "_dakId": 1065210,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "휠 댄스",
+      "damageType": "physical",
+      "baseDamage": [
+        40,
+        70,
+        100,
+        130,
+        160
+      ],
+      "apRatio": 0.6,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "휠 댄스(+최대체력 5~7%). 쿨다운 추정.",
+      "_dakId": 1065300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "크레센트 댄스",
+      "damageType": "physical",
+      "baseDamage": [
+        15,
+        30,
+        45,
+        60,
+        75
+      ],
+      "apRatio": 0.5,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "excludeFromDps": true,
+      "note": "크레센트 댄스(폼) → 제외.",
+      "_dakId": 1065310,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "엄호해줘, 마를렌!",
+      "damageType": "physical",
+      "baseDamage": [
+        30,
+        70,
+        110,
+        150,
+        190
+      ],
+      "apRatio": 0.6,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "excludeFromDps": false,
+      "note": "엄호해줘 마를렌(데비 피해 기준).",
+      "_dakId": 1065400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "지금이야, 데비!",
+      "damageType": "physical",
+      "baseDamage": [
+        30,
+        70,
+        110,
+        150,
+        190
+      ],
+      "apRatio": 0.7,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "excludeFromDps": true,
+      "note": "지금이야 데비(폼) → 제외.",
+      "_dakId": 1065410,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "트윈즈 러시",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": true,
+      "note": "트윈즈 러시(계수 미확인) → 제외.",
+      "_dakId": 1065500,
+      "_maxLevel": 3
+    }
+  ]
+}

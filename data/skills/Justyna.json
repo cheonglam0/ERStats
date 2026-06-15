@@ -1,0 +1,123 @@
+{
+  "characterId": "Justyna",
+  "characterName": "유스티나",
+  "source": "나무위키 유스티나(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "아스트라 에너지",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(아스트라 에너지). 제외.",
+      "_dakId": 1079100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "연속 포격&섬멸 포격",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        75,
+        100,
+        125,
+        150
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.45,
+      "cooldown": [
+        11,
+        10.5,
+        10,
+        9.5,
+        9
+      ],
+      "excludeFromDps": false,
+      "note": "연속 포격. 재사용 섬멸 [70~250](+70%).",
+      "_dakId": 1079200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "집중 포격",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        75,
+        100,
+        125,
+        150
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.35,
+      "cooldown": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "집중 포격(둔화). 쿨다운 추정.",
+      "_dakId": 1079300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "부스트 대쉬",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        75,
+        100,
+        125,
+        150
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.3,
+      "cooldown": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "부스트 대쉬(이동). 쿨다운 추정.",
+      "_dakId": 1079400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "아스트라 버스트!",
+      "damageType": "magic",
+      "baseDamage": [
+        30,
+        50,
+        70
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.22,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "아스트라 버스트.",
+      "_dakId": 1079500,
+      "_maxLevel": 3
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "characterId": "Fenrir",
+  "characterName": "펜리르",
+  "source": "나무위키 펜리르(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "최후의 발악",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(최후의 발악). 제외.",
+      "_dakId": 1086100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "찢는 손톱",
+      "damageType": "physical",
+      "baseDamage": [
+        40,
+        70,
+        100,
+        130,
+        160
+      ],
+      "apRatio": 0.9,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        5,
+        4.25,
+        3.5,
+        2.75,
+        2
+      ],
+      "excludeFromDps": false,
+      "note": "찢는 손톱. 강화 [60~240](+135%).",
+      "_dakId": 1086200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "먹잇감 추적",
+      "damageType": "physical",
+      "baseDamage": [
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        14,
+        13.5,
+        13,
+        12.5,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "먹잇감 추적.",
+      "_dakId": 1086300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "본능적 후퇴",
+      "damageType": "physical",
+      "baseDamage": [
+        30,
+        55,
+        80,
+        105,
+        130
+      ],
+      "apRatio": 0.6,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        14,
+        13.5,
+        13,
+        12.5,
+        12
+      ],
+      "excludeFromDps": true,
+      "note": "본능적 후퇴(폼) → 제외.",
+      "_dakId": 1086310,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "사냥 개시",
+      "damageType": "physical",
+      "baseDamage": [
+        40,
+        60,
+        80,
+        100,
+        120
+      ],
+      "apRatio": 0.55,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "사냥 개시(강화평타).",
+      "_dakId": 1086400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "숨통 끊기",
+      "damageType": "physical",
+      "baseDamage": [
+        150,
+        225,
+        300
+      ],
+      "apRatio": 1.2,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "숨통 끊기.",
+      "_dakId": 1086500,
+      "_maxLevel": 3
+    }
+  ]
+}

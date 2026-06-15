@@ -1,0 +1,123 @@
+{
+  "characterId": "Charlotte",
+  "characterName": "샬럿",
+  "source": "나무위키 샬럿(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "고결한 마음",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(고결한 마음). 제외.",
+      "_dakId": 1073100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "빛무리",
+      "damageType": "magic",
+      "baseDamage": [
+        120,
+        150,
+        180,
+        210,
+        240
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 1,
+      "cooldown": [
+        8,
+        7.5,
+        7,
+        6.5,
+        6
+      ],
+      "excludeFromDps": false,
+      "note": "빛무리(주력).",
+      "_dakId": 1073200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "치유의 빛",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        9,
+        8.5,
+        8,
+        7.5,
+        7
+      ],
+      "excludeFromDps": true,
+      "note": "치유의 빛(회복). 제외.",
+      "_dakId": 1073300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "희망의 궤적",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "excludeFromDps": true,
+      "note": "희망의 궤적(이동/유틸). 제외.",
+      "_dakId": 1073400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "기적 실현",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": true,
+      "note": "기적 실현(스킬 증폭 버프 서포트). 제외.",
+      "_dakId": 1073500,
+      "_maxLevel": 3
+    }
+  ]
+}

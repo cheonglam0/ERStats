@@ -1,0 +1,219 @@
+{
+  "characterId": "Silvia",
+  "characterName": "실비아",
+  "source": "나무위키 실비아(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "그란투리스모",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(그란투리스모). 제외.",
+      "_dakId": 1016100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "스피드건",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [
+        6,
+        5.5,
+        5,
+        4.5,
+        4
+      ],
+      "excludeFromDps": false,
+      "note": "스피드건.",
+      "_dakId": 1016200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "Q",
+      "name": "파워슬라이드",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        80,
+        110,
+        140,
+        170
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [
+        3.5,
+        3,
+        2.5,
+        2,
+        1.5
+      ],
+      "excludeFromDps": true,
+      "note": "파워슬라이드(바이크 폼) → 제외.",
+      "_dakId": 1016600,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "피니시라인",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        100,
+        120,
+        140,
+        160
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "피니시라인.",
+      "_dakId": 1016300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "프론트 플립",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        100,
+        140,
+        180,
+        220
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [
+        8,
+        7.5,
+        7,
+        6.5,
+        6
+      ],
+      "excludeFromDps": true,
+      "note": "프론트 플립(폼) → 제외.",
+      "_dakId": 1016700,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "스페어휠",
+      "damageType": "magic",
+      "baseDamage": [
+        242,
+        286,
+        330,
+        374,
+        418
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 1.1,
+      "cooldown": [
+        14,
+        13.5,
+        13,
+        12.5,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "스페어휠 최대 충전 기준.",
+      "_dakId": 1016400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "윌리",
+      "damageType": "magic",
+      "baseDamage": [
+        40,
+        70,
+        100,
+        130,
+        160
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.55,
+      "cooldown": [
+        12,
+        11,
+        10,
+        9,
+        8
+      ],
+      "excludeFromDps": true,
+      "note": "윌리(폼) → 제외.",
+      "_dakId": 1016800,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "기동전",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        5,
+        4,
+        3
+      ],
+      "excludeFromDps": true,
+      "note": "기동전(폼 전환). 제외.",
+      "_dakId": 1016500,
+      "_maxLevel": 3
+    },
+    {
+      "slot": "R",
+      "name": "기동전",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        5,
+        4,
+        3
+      ],
+      "excludeFromDps": true,
+      "note": "기동전(폼 전환). 제외.",
+      "_dakId": 1016900,
+      "_maxLevel": 3
+    }
+  ]
+}

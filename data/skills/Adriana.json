@@ -1,0 +1,71 @@
+{
+  "characterId": "Adriana",
+  "characterName": "아드리아나",
+  "source": "나무위키 아드리아나(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "활활",
+      "damageType": "magic",
+      "baseDamage": [20, 35, 50],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [0, 0, 0],
+      "excludeFromDps": true,
+      "note": "패시브 화상 DoT + 방어 감소. 회전 DPS 밖 → 제외.",
+      "_dakId": 1029100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "방화",
+      "damageType": "magic",
+      "baseDamage": [30, 40, 50, 60, 70],
+      "apRatio": 0,
+      "skillAmpRatio": [0.25, 0.27, 0.29, 0.31, 0.33],
+      "cooldown": [4, 4, 4, 4, 4],
+      "hitCount": 9,
+      "note": "채널: 2초간 최대 9회(틱당 피해 기준).",
+      "_dakId": 1029200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "기름 뿌리기",
+      "damageType": "magic",
+      "baseDamage": [0, 0, 0, 0, 0],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [0, 0, 0, 0, 0],
+      "excludeFromDps": true,
+      "note": "기름 지대 설치(둔화·패시브 연계용). 직접 피해 없음 → 제외.",
+      "_dakId": 1029300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "불길 쇄도",
+      "damageType": "magic",
+      "baseDamage": [26, 32, 38, 44, 50],
+      "apRatio": 0,
+      "skillAmpRatio": 0.15,
+      "cooldown": [19, 18, 17, 16, 15],
+      "note": "화염 지대(지속 틱) 근사 — 단발 기준.",
+      "_dakId": 1029400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "화염 난사",
+      "damageType": "magic",
+      "baseDamage": [110, 155, 200],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [24, 22, 20],
+      "note": "최대 3충전(충전 시간 기준). 투척 내부쿨 1초.",
+      "_dakId": 1029500,
+      "_maxLevel": 3
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "characterId": "Priya",
+  "characterName": "프리야",
+  "source": "나무위키 프리야(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "자연의 응답",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(자연의 응답). 제외.",
+      "_dakId": 1051100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "개화의 선율",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        12,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "개화의 선율(충전).",
+      "_dakId": 1051200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "포르타멘토",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        100,
+        140,
+        180,
+        220
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "포르타멘토(보호막). 쿨다운 추정.",
+      "_dakId": 1051300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "프리비티의 노래",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [
+        11,
+        11,
+        11,
+        11,
+        11
+      ],
+      "excludeFromDps": false,
+      "note": "프리비티의 노래.",
+      "_dakId": 1051400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "대지의 메아리",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        150,
+        220
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [
+        80,
+        75,
+        70
+      ],
+      "excludeFromDps": false,
+      "note": "1타+메아리(+65%)·회복.",
+      "_dakId": 1051500,
+      "_maxLevel": 3,
+      "hitCount": 2
+    }
+  ]
+}

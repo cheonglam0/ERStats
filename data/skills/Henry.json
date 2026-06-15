@@ -1,0 +1,123 @@
+{
+  "characterId": "Henry",
+  "characterName": "헨리",
+  "source": "나무위키 헨리(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "시차 균열",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(시차 균열). 제외.",
+      "_dakId": 1083100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "시계바늘",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        85,
+        110,
+        135,
+        160
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        9,
+        8,
+        7,
+        6,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "시침 기준(+최대체력5%). 분침 [40~140](+60%).",
+      "_dakId": 1083200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "시간 제어 장치",
+      "damageType": "magic",
+      "baseDamage": [
+        8,
+        16,
+        24,
+        32,
+        40
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.22,
+      "cooldown": [
+        14,
+        14,
+        14,
+        14,
+        14
+      ],
+      "excludeFromDps": false,
+      "note": "시간 제어 장치(둔화 영역). 쿨다운 추정.",
+      "_dakId": 1083300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "시간 도약",
+      "damageType": "magic",
+      "baseDamage": [
+        40,
+        80,
+        120,
+        160,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [
+        12,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "시간 도약.",
+      "_dakId": 1083400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "시간 재구축 영역",
+      "damageType": "magic",
+      "baseDamage": [
+        150,
+        250,
+        350
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 1,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "폭발 기준. 영역 [100~180](+45%)·보호막 별도.",
+      "_dakId": 1083500,
+      "_maxLevel": 3
+    }
+  ]
+}

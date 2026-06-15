@@ -1,0 +1,8 @@
+node_modules/
+dist/
+# 공식 API 원본 덤프(대용량, 재현 가능) — 정규화 결과 data/game/* 만 커밋
+data/raw/
+.env
+.env.*
+*.log
+.DS_Store

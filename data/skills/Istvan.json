@@ -1,0 +1,123 @@
+{
+  "characterId": "Istvan",
+  "characterName": "이슈트반",
+  "source": "나무위키 이슈트반(이터널 리턴) — 11.x 기준 (사용자 제공)",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "연산",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(연산, 다른 가능성). 제외.",
+      "_dakId": 1080100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "관측",
+      "damageType": "physical",
+      "baseDamage": [
+        40,
+        80,
+        120,
+        160,
+        200
+      ],
+      "apRatio": 1,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        4.5,
+        4,
+        3.5,
+        3,
+        2.5
+      ],
+      "excludeFromDps": false,
+      "note": "관측. 다른 가능성 [40~200](+100%)·강화 [100~300](+200%) 별도.",
+      "_dakId": 1080200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "양자 얽힘",
+      "damageType": "physical",
+      "baseDamage": [
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "apRatio": 0.9,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        8,
+        7.5,
+        7,
+        6.5,
+        6
+      ],
+      "excludeFromDps": false,
+      "note": "양자 얽힘(보호막/회복). 다른 가능성 동일 계수.",
+      "_dakId": 1080300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "경로 적분",
+      "damageType": "physical",
+      "baseDamage": [
+        60,
+        80,
+        100,
+        120,
+        140
+      ],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        12,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "경로 적분(방어 감소). 다른 가능성 [60~220](+100%) 별도.",
+      "_dakId": 1080400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "파동 함수 붕괴",
+      "damageType": "physical",
+      "baseDamage": [
+        80,
+        160,
+        240
+      ],
+      "apRatio": 0.9,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "파동 함수 붕괴. 3가지 가능성 [50~150](+50%) 별도.",
+      "_dakId": 1080500,
+      "_maxLevel": 3
+    }
+  ]
+}

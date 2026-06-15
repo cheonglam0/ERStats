@@ -1,0 +1,123 @@
+{
+  "characterId": "Darko",
+  "characterName": "다르코",
+  "source": "나무위키 다르코(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "압류",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(압류). 제외.",
+      "_dakId": 1074100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "고리대금",
+      "damageType": "physical",
+      "baseDamage": [
+        20,
+        40,
+        60,
+        80,
+        100
+      ],
+      "apRatio": 0.4,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "excludeFromDps": false,
+      "note": "고리대금(+적 최대체력 2~6%). 쿨다운 추정.",
+      "_dakId": 1074200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "수금",
+      "damageType": "physical",
+      "baseDamage": [
+        70,
+        115,
+        160,
+        205,
+        250
+      ],
+      "apRatio": 0.85,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "수금.",
+      "_dakId": 1074300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "추심",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "excludeFromDps": true,
+      "note": "추심(이동/잡기). 제외.",
+      "_dakId": 1074400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "강제집행",
+      "damageType": "physical",
+      "baseDamage": [
+        50,
+        125,
+        200
+      ],
+      "apRatio": 0.3,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        90,
+        75,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "강제집행(+붙잡은 적 최대체력25%).",
+      "_dakId": 1074500,
+      "_maxLevel": 3
+    }
+  ]
+}

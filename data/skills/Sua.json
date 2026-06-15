@@ -1,0 +1,123 @@
+{
+  "characterId": "Sua",
+  "characterName": "수아",
+  "source": "나무위키 수아(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "마음의 양식",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(마음의 양식). 제외.",
+      "_dakId": 1028100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "오딧세이",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        100,
+        140,
+        180,
+        220
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [
+        12,
+        11,
+        10,
+        9,
+        8
+      ],
+      "excludeFromDps": false,
+      "note": "오딧세이. 책갈피 [20~100](+40%) 별도.",
+      "_dakId": 1028200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "파랑새",
+      "damageType": "magic",
+      "baseDamage": [
+        30,
+        65,
+        100,
+        135,
+        170
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        19,
+        18.5,
+        18,
+        17.5,
+        17
+      ],
+      "excludeFromDps": false,
+      "note": "파랑새(실명).",
+      "_dakId": 1028300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "돈키호테",
+      "damageType": "magic",
+      "baseDamage": [
+        110,
+        140,
+        170,
+        200,
+        230
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [
+        16,
+        15,
+        14,
+        13,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "돈키호테. 책갈피 [150~310](+85%)·회복 별도.",
+      "_dakId": 1028400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "기억력",
+      "damageType": "magic",
+      "baseDamage": [
+        180,
+        230,
+        280
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.8,
+      "cooldown": [
+        26,
+        22,
+        18
+      ],
+      "excludeFromDps": false,
+      "note": "기억력.",
+      "_dakId": 1028500,
+      "_maxLevel": 3
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "characterId": "Lenore",
+  "characterName": "르노어",
+  "source": "나무위키 르노어(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "고통의 선율",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(고통의 선율, 비명 중첩). 제외.",
+      "_dakId": 1075100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "스타카토",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        100,
+        120,
+        140,
+        160
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [
+        7,
+        6.5,
+        6,
+        5.5,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "스타카토.",
+      "_dakId": 1075200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "피네",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        110,
+        140,
+        170,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [
+        12,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "피네(보호막).",
+      "_dakId": 1075300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "달 세뇨",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        95,
+        130,
+        165,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.75,
+      "cooldown": [
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "excludeFromDps": false,
+      "note": "달 세뇨.",
+      "_dakId": 1075400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "고뇌의 광시곡",
+      "damageType": "magic",
+      "baseDamage": [
+        150,
+        225,
+        300
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [
+        90,
+        80,
+        70
+      ],
+      "excludeFromDps": false,
+      "note": "광시곡 폭발 기준. 지속 [10~20](+3%) 별도.",
+      "_dakId": 1075500,
+      "_maxLevel": 3
+    }
+  ]
+}

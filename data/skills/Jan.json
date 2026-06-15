@@ -1,0 +1,148 @@
+{
+  "characterId": "Jan",
+  "characterName": "얀",
+  "source": "나무위키 얀(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "열혈의 의지",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(열혈의 의지). 제외.",
+      "_dakId": 1035100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "니 스트라이크",
+      "damageType": "physical",
+      "baseDamage": [
+        100,
+        120,
+        140,
+        160,
+        180
+      ],
+      "apRatio": 0.65,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        12,
+        11,
+        10,
+        9,
+        8
+      ],
+      "excludeFromDps": false,
+      "note": "니 스트라이크(+적 최대체력6%).",
+      "_dakId": 1035200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "Q",
+      "name": "리핑 니 스트라이크",
+      "damageType": "physical",
+      "baseDamage": [
+        65,
+        90,
+        115,
+        140,
+        165
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        12,
+        11,
+        10,
+        9,
+        8
+      ],
+      "excludeFromDps": true,
+      "note": "리핑(강화 폼) → 제외.",
+      "_dakId": 1035210,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "토마호크 스핀",
+      "damageType": "physical",
+      "baseDamage": [
+        50,
+        80,
+        110,
+        140,
+        170
+      ],
+      "apRatio": 0.65,
+      "skillAmpRatio": 0.85,
+      "cooldown": [
+        15,
+        15,
+        15,
+        15,
+        15
+      ],
+      "excludeFromDps": false,
+      "note": "토마호크 스핀. 강화 [80~220] 별도.",
+      "_dakId": 1035300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "위빙",
+      "damageType": "physical",
+      "baseDamage": [
+        15,
+        25,
+        35,
+        45,
+        55
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.45,
+      "cooldown": [
+        10,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
+      "excludeFromDps": true,
+      "note": "위빙(이동/회복기). 제외.",
+      "_dakId": 1035400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "쿼드라곤",
+      "damageType": "physical",
+      "baseDamage": [
+        100,
+        200,
+        300
+      ],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        70,
+        60,
+        50
+      ],
+      "excludeFromDps": false,
+      "note": "쿼드라곤(링).",
+      "_dakId": 1035500,
+      "_maxLevel": 3
+    }
+  ]
+}

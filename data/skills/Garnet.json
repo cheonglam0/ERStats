@@ -1,0 +1,123 @@
+{
+  "characterId": "Garnet",
+  "characterName": "가넷",
+  "source": "나무위키 가넷(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "익숙한 아픔",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(익숙한 아픔). 제외.",
+      "_dakId": 1076100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "짓뭉개기&꿰뚫기",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        75,
+        100,
+        125,
+        150
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        6,
+        5.5,
+        5,
+        4.5,
+        4
+      ],
+      "excludeFromDps": false,
+      "note": "꿰뚫기 기준(+최대체력). 짓뭉개기 별도.",
+      "_dakId": 1076200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "억누른 고통",
+      "damageType": "magic",
+      "baseDamage": [
+        120,
+        165,
+        210,
+        255,
+        300
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.75,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "최대 충전 기준(+최대체력12%). 최소 [80~200](+50%).",
+      "_dakId": 1076300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "그릇된 집착",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        85,
+        110,
+        135,
+        160
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.55,
+      "cooldown": [
+        12,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "그릇된 집착(+최대체력6%).",
+      "_dakId": 1076400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "처형식",
+      "damageType": "magic",
+      "baseDamage": [
+        75,
+        150,
+        225
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "처형식(+대상 현재체력15%).",
+      "_dakId": 1076500,
+      "_maxLevel": 3
+    }
+  ]
+}

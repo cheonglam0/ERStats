@@ -1,0 +1,71 @@
+{
+  "characterId": "LiDailin",
+  "characterName": "리 다이린",
+  "source": "나무위키 리 다이린(이터널 리턴) — 11.x 기준 (사용자 제공)",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "취기",
+      "damageType": "physical",
+      "baseDamage": [0, 0],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [0, 0],
+      "excludeFromDps": true,
+      "note": "패시브(취기 자원). 맹호청권으로 평타 강화(2타 +공격력30~50%). 평타 강화라 제외.",
+      "_dakId": 1010100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "호연각",
+      "damageType": "physical",
+      "baseDamage": [20, 40, 60, 80, 100],
+      "apRatio": 0.7,
+      "skillAmpRatio": 0,
+      "cooldown": [13, 12.5, 12, 11.5, 11],
+      "note": "돌진(2회 재사용). 취권 강화 [40~140](+공격력85%) 미반영.",
+      "_dakId": 1010200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "술 마시기",
+      "damageType": "physical",
+      "baseDamage": [0, 0, 0, 0, 0],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [9, 8, 7, 6, 5],
+      "excludeFromDps": true,
+      "note": "취기 충전 + 회피 + 받는 피해 감소(유틸/방어). 직접 피해 없음 → 제외.",
+      "_dakId": 1010300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "술 뿌리기",
+      "damageType": "physical",
+      "baseDamage": [50, 100, 150, 200, 250],
+      "apRatio": 0.9,
+      "skillAmpRatio": 0,
+      "cooldown": [10, 9.5, 9, 8.5, 8],
+      "note": "부채꼴 광역 + 둔화. 취권 시 둔화 강화.",
+      "_dakId": 1010400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "취호격파산",
+      "damageType": "physical",
+      "baseDamage": [30, 105, 180],
+      "apRatio": 0.9,
+      "skillAmpRatio": 0,
+      "cooldown": [80, 70, 60],
+      "hitCount": 4,
+      "note": "최대 피해 기준 4회 타격(잃은 체력·소모 취기 비례 미반영). 최소 [20~120](+60%).",
+      "_dakId": 1010500,
+      "_maxLevel": 3
+    }
+  ]
+}

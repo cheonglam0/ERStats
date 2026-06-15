@@ -1,0 +1,123 @@
+{
+  "characterId": "Shoichi",
+  "characterName": "쇼이치",
+  "source": "나무위키 쇼이치(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "부당거래",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(부당거래). 제외.",
+      "_dakId": 1018100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "표리",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        85,
+        120,
+        155,
+        190
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "excludeFromDps": false,
+      "note": "표리(주력). 쿨다운 추정.",
+      "_dakId": 1018200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "비약",
+      "damageType": "magic",
+      "baseDamage": [
+        30,
+        50,
+        70,
+        90,
+        110
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [
+        16,
+        15,
+        14,
+        13,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "비약.",
+      "_dakId": 1018300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "협상",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        100,
+        140,
+        180,
+        220
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.75,
+      "cooldown": [
+        13,
+        12,
+        11,
+        10,
+        9
+      ],
+      "excludeFromDps": false,
+      "note": "협상.",
+      "_dakId": 1018400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "무자비",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        150,
+        250
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "무자비. 단검 [10~70](+25%) 별도.",
+      "_dakId": 1018500,
+      "_maxLevel": 3
+    }
+  ]
+}

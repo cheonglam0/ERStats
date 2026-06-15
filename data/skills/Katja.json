@@ -1,0 +1,123 @@
+{
+  "characterId": "Katja",
+  "characterName": "카티야",
+  "source": "나무위키 카티야(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "잿빛 사신",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(잿빛 사신, 강화평타). 제외.",
+      "_dakId": 1072100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "조준 사격",
+      "damageType": "physical",
+      "baseDamage": [
+        60,
+        120,
+        180,
+        240,
+        300
+      ],
+      "apRatio": 1.05,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      "excludeFromDps": false,
+      "note": "조준 사격 최대 기준. 최소 [40~200](+70%).",
+      "_dakId": 1072200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "목표물 포착",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        30,
+        27,
+        24,
+        21,
+        18
+      ],
+      "excludeFromDps": true,
+      "note": "목표물 포착(드론/스캔 유틸). 제외.",
+      "_dakId": 1072300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "접근 금지",
+      "damageType": "physical",
+      "baseDamage": [
+        50,
+        75,
+        100,
+        125,
+        150
+      ],
+      "apRatio": 1,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        12,
+        11,
+        10,
+        9,
+        8
+      ],
+      "excludeFromDps": false,
+      "note": "접근 금지(둔화).",
+      "_dakId": 1072400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "정밀 조준",
+      "damageType": "physical",
+      "baseDamage": [
+        400,
+        700,
+        1000
+      ],
+      "apRatio": 2,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "정밀 조준 3타 기준. 1타 [300~600](+150%)·2타 별도.",
+      "_dakId": 1072500,
+      "_maxLevel": 3
+    }
+  ]
+}

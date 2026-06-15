@@ -1,0 +1,124 @@
+{
+  "characterId": "Fiora",
+  "characterName": "피오라",
+  "source": "나무위키 피오라(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "뚜셰",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(뚜셰 표식/쿨감). 제외.",
+      "_dakId": 1003100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "팡뜨",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        110,
+        140,
+        170,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.75,
+      "cooldown": [
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      "excludeFromDps": false,
+      "note": "끝 적중 추가 [50~230](+15%) 별도.",
+      "_dakId": 1003200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "아따끄 꽁뽀제",
+      "damageType": "magic",
+      "baseDamage": [
+        30,
+        65,
+        100,
+        135,
+        170
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.3,
+      "cooldown": [
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      "excludeFromDps": false,
+      "note": "2타.",
+      "_dakId": 1003300,
+      "_maxLevel": 5,
+      "hitCount": 2
+    },
+    {
+      "slot": "E",
+      "name": "마르셰 & 롱빼",
+      "damageType": "magic",
+      "baseDamage": [
+        70,
+        105,
+        140,
+        175,
+        210
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.55,
+      "cooldown": [
+        8.5,
+        8.5,
+        8.5,
+        8.5,
+        8.5
+      ],
+      "excludeFromDps": false,
+      "note": "돌진.",
+      "_dakId": 1003400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "플레슈",
+      "damageType": "magic",
+      "baseDamage": [
+        160,
+        270,
+        380
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.8,
+      "cooldown": [
+        70,
+        60,
+        50
+      ],
+      "excludeFromDps": false,
+      "note": "3타 기준. 1타 [100~220](+45%).",
+      "_dakId": 1003500,
+      "_maxLevel": 3
+    }
+  ]
+}

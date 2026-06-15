@@ -1,0 +1,124 @@
+{
+  "characterId": "Eva",
+  "characterName": "이바",
+  "source": "나무위키 이바(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "텔레키네시스",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(염력/상호작용). 제외.",
+      "_dakId": 1036100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "빛의 트라이어드",
+      "damageType": "magic",
+      "baseDamage": [
+        45,
+        80,
+        115,
+        150,
+        185
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        9,
+        8,
+        7,
+        6,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "폭발 기준. 기본타 [40~120](+40%).",
+      "_dakId": 1036200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "위상의 소용돌이",
+      "damageType": "magic",
+      "baseDamage": [
+        40,
+        70,
+        100,
+        130,
+        160
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        11,
+        10.5,
+        10,
+        9.5,
+        9
+      ],
+      "excludeFromDps": false,
+      "note": "생성+종료 2회.",
+      "_dakId": 1036300,
+      "_maxLevel": 5,
+      "hitCount": 2
+    },
+    {
+      "slot": "E",
+      "name": "자수정의 물결",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "excludeFromDps": true,
+      "note": "이동/버프기. 제외.",
+      "_dakId": 1036400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "VF 방출",
+      "damageType": "magic",
+      "baseDamage": [
+        30,
+        50,
+        70
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.3,
+      "cooldown": [
+        5,
+        5,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "VF 방출 채널 근사.",
+      "_dakId": 1036500,
+      "_maxLevel": 3
+    }
+  ]
+}

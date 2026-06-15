@@ -1,0 +1,125 @@
+{
+  "characterId": "Jenny",
+  "characterName": "제니",
+  "source": "나무위키 제니(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "죽음의 연기",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(배역). 제외.",
+      "_dakId": 1038100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "스포트라이트",
+      "damageType": "magic",
+      "baseDamage": [
+        70,
+        80,
+        90,
+        100,
+        110
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        9,
+        8.5,
+        8,
+        7.5,
+        7
+      ],
+      "excludeFromDps": false,
+      "note": "스포트라이트 3회.",
+      "_dakId": 1038200,
+      "_maxLevel": 5,
+      "hitCount": 3
+    },
+    {
+      "slot": "W",
+      "name": "레드 카펫",
+      "damageType": "magic",
+      "baseDamage": [
+        30,
+        55,
+        80,
+        105,
+        130
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        15,
+        15,
+        15,
+        15,
+        15
+      ],
+      "excludeFromDps": false,
+      "note": "레드 카펫(재사용 포함).",
+      "_dakId": 1038300,
+      "_maxLevel": 5,
+      "hitCount": 2
+    },
+    {
+      "slot": "E",
+      "name": "페르소나",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.58,
+      "cooldown": [
+        13,
+        12,
+        11,
+        10,
+        9
+      ],
+      "excludeFromDps": false,
+      "note": "페르소나(배역 전환 추가타).",
+      "_dakId": 1038400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "시상식의 여왕",
+      "damageType": "magic",
+      "baseDamage": [
+        150,
+        240,
+        330
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        80,
+        65,
+        50
+      ],
+      "excludeFromDps": false,
+      "note": "매혹.",
+      "_dakId": 1038500,
+      "_maxLevel": 3
+    }
+  ]
+}

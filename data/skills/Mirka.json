@@ -1,0 +1,123 @@
+{
+  "characterId": "Mirka",
+  "characterName": "미르카",
+  "source": "나무위키 미르카(이터널 리턴) — 11.x 기준 (사용자 제공)",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "리펄스 게이지",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(리펄스 게이지). 이동불가 시 피해 proc → 제외.",
+      "_dakId": 1085100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "크래시 해머",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        95,
+        130,
+        165,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        10,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
+      "excludeFromDps": false,
+      "note": "크래시 해머(+최대체력6%, 충전 2회). 강화/여진 [10~50] 별도.",
+      "_dakId": 1085200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "리펄스 배리어",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "excludeFromDps": true,
+      "note": "리펄스 배리어(돌진+보호막). 직접 피해 없음 → 제외.",
+      "_dakId": 1085300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "백스텝 러시",
+      "damageType": "magic",
+      "baseDamage": [
+        70,
+        95,
+        120,
+        145,
+        170
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.55,
+      "cooldown": [
+        14,
+        13.5,
+        13,
+        12.5,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "파워 히트 기준(+최대체력7%). 돌진 [40~120](+50%) 별도.",
+      "_dakId": 1085400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "다운버스트",
+      "damageType": "magic",
+      "baseDamage": [
+        150,
+        250,
+        350
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.9,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "다운버스트(+대상 최대체력15%).",
+      "_dakId": 1085500,
+      "_maxLevel": 3
+    }
+  ]
+}

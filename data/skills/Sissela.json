@@ -1,0 +1,123 @@
+{
+  "characterId": "Sissela",
+  "characterName": "시셀라",
+  "source": "나무위키 시셀라(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "삶은 고통이에요.",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(삶은 고통이에요). 제외.",
+      "_dakId": 1015100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "윌슨! 도와줘",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        115,
+        150,
+        185,
+        220
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      "excludeFromDps": false,
+      "note": "도착 피해 기준. 경로 [40~80](+30%).",
+      "_dakId": 1015200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "어딨어 윌슨?",
+      "damageType": "magic",
+      "baseDamage": [
+        100,
+        135,
+        170,
+        205,
+        240
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.8,
+      "cooldown": [
+        17,
+        16,
+        15,
+        14,
+        13
+      ],
+      "excludeFromDps": false,
+      "note": "윌슨 회수(체력 소모).",
+      "_dakId": 1015300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "나랑 놀자",
+      "damageType": "magic",
+      "baseDamage": [
+        110,
+        125,
+        140,
+        155,
+        170
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        11,
+        10.5,
+        10,
+        9.5,
+        9
+      ],
+      "excludeFromDps": false,
+      "note": "나랑 놀자.",
+      "_dakId": 1015400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "모두 해방이에요.",
+      "damageType": "magic",
+      "baseDamage": [
+        150,
+        200,
+        250
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.95,
+      "cooldown": [
+        90,
+        80,
+        70
+      ],
+      "excludeFromDps": false,
+      "note": "모두 해방이에요.",
+      "_dakId": 1015500,
+      "_maxLevel": 3
+    }
+  ]
+}

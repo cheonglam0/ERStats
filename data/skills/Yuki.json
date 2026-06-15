@@ -1,0 +1,123 @@
+{
+  "characterId": "Yuki",
+  "characterName": "유키",
+  "source": "나무위키 유키(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "완벽한 옷매무새",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(완벽한 옷매무새, 단추 자원). 제외.",
+      "_dakId": 1011100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "머리치기!",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": true,
+      "note": "머리치기(다음 평타 강화). 제외.",
+      "_dakId": 1011200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "옷매무새 정리",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": true,
+      "note": "옷매무새 정리(자원 관리 유틸). 제외.",
+      "_dakId": 1011300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "빗겨치고 일격",
+      "damageType": "physical",
+      "baseDamage": [
+        40,
+        75,
+        110,
+        145,
+        170
+      ],
+      "apRatio": 0.9,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "excludeFromDps": false,
+      "note": "빗겨치고 일격(이동).",
+      "_dakId": 1011400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "화무십일홍(花無十日紅)",
+      "damageType": "physical",
+      "baseDamage": [
+        200,
+        250,
+        300
+      ],
+      "apRatio": 2,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        90,
+        75,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "화무십일홍(+최대체력 6~14%).",
+      "_dakId": 1011500,
+      "_maxLevel": 3
+    }
+  ]
+}

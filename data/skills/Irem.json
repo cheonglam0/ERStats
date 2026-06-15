@@ -1,0 +1,219 @@
+{
+  "characterId": "Irem",
+  "characterName": "이렘",
+  "source": "나무위키 이렘(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "고양이의 습성",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(고양이 습성). 제외.",
+      "_dakId": 1061100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "바운싱 볼",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        70,
+        90,
+        110,
+        130
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.55,
+      "cooldown": [
+        7,
+        6.5,
+        6,
+        5.5,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "바운싱 볼(이렘 폼).",
+      "_dakId": 1061200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "Q",
+      "name": "냥냥 펀치",
+      "damageType": "magic",
+      "baseDamage": [
+        30,
+        60,
+        90,
+        120,
+        150
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [
+        5.5,
+        5,
+        4.5,
+        4,
+        3.5
+      ],
+      "excludeFromDps": true,
+      "note": "냥냥 펀치(고양이 폼) → 제외.",
+      "_dakId": 1061210,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "친구할래요?",
+      "damageType": "magic",
+      "baseDamage": [
+        40,
+        80,
+        120,
+        160,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.75,
+      "cooldown": [
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "excludeFromDps": false,
+      "note": "친구할래요(장판).",
+      "_dakId": 1061300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "혼 좀 나볼래?",
+      "damageType": "magic",
+      "baseDamage": [
+        40,
+        80,
+        120,
+        160,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        15,
+        14.5,
+        14,
+        13.5,
+        13
+      ],
+      "excludeFromDps": true,
+      "note": "혼 좀 나볼래(고양이 폼, 매혹) → 제외.",
+      "_dakId": 1061310,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "사뿐~",
+      "damageType": "magic",
+      "baseDamage": [
+        40,
+        80,
+        120,
+        160,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        11,
+        10,
+        9,
+        8,
+        7
+      ],
+      "excludeFromDps": false,
+      "note": "사뿐(이렘 폼).",
+      "_dakId": 1061400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "폴짝!",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        17,
+        16,
+        15,
+        14,
+        13
+      ],
+      "excludeFromDps": true,
+      "note": "폴짝(고양이 폼 도약) → 제외.",
+      "_dakId": 1061410,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "고양이로 펑!",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "폼 전환(고양이로 펑). 제외.",
+      "_dakId": 1061500,
+      "_maxLevel": 3
+    },
+    {
+      "slot": "R",
+      "name": "이렘으로 짠~",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "폼 전환(이렘으로 짠). 제외.",
+      "_dakId": 1061510,
+      "_maxLevel": 3
+    }
+  ]
+}

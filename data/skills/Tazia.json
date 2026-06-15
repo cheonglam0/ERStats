@@ -1,0 +1,148 @@
+{
+  "characterId": "Tazia",
+  "characterName": "타지아",
+  "source": "나무위키 타지아(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "아르띠지아나토",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(아르띠지아나토). 제외.",
+      "_dakId": 1060100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "스틸레토",
+      "damageType": "magic",
+      "baseDamage": [
+        30,
+        60,
+        90,
+        120,
+        150
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "excludeFromDps": false,
+      "note": "스틸레토. 쿨다운 추정.",
+      "_dakId": 1060200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "Q",
+      "name": "스파다",
+      "damageType": "magic",
+      "baseDamage": [
+        30,
+        60,
+        90,
+        120,
+        150
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "excludeFromDps": true,
+      "note": "스파다(폼). 폭발 [40~160](+55%) → 제외.",
+      "_dakId": 1060210,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "피아스코",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        85,
+        120,
+        155,
+        190
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.55,
+      "cooldown": [
+        20,
+        19,
+        18,
+        17,
+        16
+      ],
+      "excludeFromDps": false,
+      "note": "피아스코(기절).",
+      "_dakId": 1060300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "프리치아",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.45,
+      "cooldown": [
+        13,
+        12,
+        11,
+        10,
+        9
+      ],
+      "excludeFromDps": false,
+      "note": "프리치아(보호막+이동).",
+      "_dakId": 1060400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "파라디소",
+      "damageType": "magic",
+      "baseDamage": [
+        90,
+        180,
+        270
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "파라디소 폭발 기준. 설치 [60~140](+40%).",
+      "_dakId": 1060500,
+      "_maxLevel": 3
+    }
+  ]
+}

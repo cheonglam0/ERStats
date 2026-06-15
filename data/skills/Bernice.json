@@ -1,0 +1,70 @@
+{
+  "characterId": "Bernice",
+  "characterName": "버니스",
+  "source": "나무위키 버니스(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "산탄",
+      "damageType": "physical",
+      "baseDamage": [0, 0],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [0, 0],
+      "excludeFromDps": true,
+      "note": "패시브: 치명타 대신 추가 탄환(평타 75%) + 장탄/재장전. 평타 강화 → 제외.",
+      "_dakId": 1023100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "레그샷",
+      "damageType": "physical",
+      "baseDamage": [60, 90, 120, 150, 180],
+      "apRatio": 1.0,
+      "skillAmpRatio": 0,
+      "cooldown": [7, 6.5, 6, 5.5, 5],
+      "note": "기본 기준. 강화 [90~250](+공격력100%) 미반영.",
+      "_dakId": 1023200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "사냥 덫",
+      "damageType": "physical",
+      "baseDamage": [40, 70, 100, 130, 160],
+      "apRatio": 0.6,
+      "skillAmpRatio": 0,
+      "cooldown": [10, 9, 8, 7, 6],
+      "note": "설치형 덫.",
+      "_dakId": 1023300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "매의 눈",
+      "damageType": "physical",
+      "baseDamage": [0, 0, 0, 0, 0],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [0, 0, 0, 0, 0],
+      "excludeFromDps": true,
+      "note": "시야/사냥 표식 유틸. 직접 피해 없음 → 제외.",
+      "_dakId": 1023400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "올가미 탄",
+      "damageType": "physical",
+      "baseDamage": [150, 200, 250],
+      "apRatio": 0.85,
+      "skillAmpRatio": 0,
+      "cooldown": [90, 75, 60],
+      "note": "1타 기준. 2타 [80~160](+공격력45%)·속박 미반영.",
+      "_dakId": 1023500,
+      "_maxLevel": 3
+    }
+  ]
+}

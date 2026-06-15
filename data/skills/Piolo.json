@@ -1,0 +1,123 @@
+{
+  "characterId": "Piolo",
+  "characterName": "피올로",
+  "source": "나무위키 피올로(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "단련광",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(단련광). 제외.",
+      "_dakId": 1056100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "쌍절난격&내려치기",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        80,
+        110,
+        140,
+        170
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.85,
+      "cooldown": [
+        9,
+        8.5,
+        8,
+        7.5,
+        7
+      ],
+      "excludeFromDps": false,
+      "note": "내려치기 중앙 기준. 쌍절난격 별도.",
+      "_dakId": 1056200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "튕겨내기&휘두르기",
+      "damageType": "magic",
+      "baseDamage": [
+        70,
+        115,
+        160,
+        205,
+        250
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.85,
+      "cooldown": [
+        12,
+        11,
+        10,
+        9,
+        8
+      ],
+      "excludeFromDps": false,
+      "note": "휘두르기 기준.",
+      "_dakId": 1056300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "사슬묶기&올려치기",
+      "damageType": "magic",
+      "baseDamage": [
+        30,
+        50,
+        70,
+        90,
+        110
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        10,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
+      "excludeFromDps": false,
+      "note": "사슬묶기 최대 기준. 올려치기 별도.",
+      "_dakId": 1056400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "응징자",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": true,
+      "note": "응징자(계수 미확인) → 제외.",
+      "_dakId": 1056500,
+      "_maxLevel": 3
+    }
+  ]
+}

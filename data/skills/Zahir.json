@@ -1,0 +1,123 @@
+{
+  "characterId": "Zahir",
+  "characterName": "자히르",
+  "source": "나무위키 자히르(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "사신의 눈",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(사신의 눈). 제외.",
+      "_dakId": 1005100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "나라야나스트라",
+      "damageType": "magic",
+      "baseDamage": [
+        30,
+        70,
+        110,
+        150,
+        190
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [
+        6,
+        5.5,
+        5,
+        4.5,
+        4
+      ],
+      "excludeFromDps": false,
+      "note": "나라야나스트라. 강화 [60~260](+70%).",
+      "_dakId": 1005200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "간디바",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        85,
+        110,
+        135,
+        160
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "excludeFromDps": false,
+      "note": "간디바(충전형).",
+      "_dakId": 1005300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "바이바야스트라",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "excludeFromDps": false,
+      "note": "바이바야스트라.",
+      "_dakId": 1005400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "바르가바스트라",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        120,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "바르가바스트라(장판). 추가 [50~100](+30%).",
+      "_dakId": 1005500,
+      "_maxLevel": 3
+    }
+  ]
+}

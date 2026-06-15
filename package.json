@@ -1,0 +1,31 @@
+{
+  "name": "eternalreturn-stat",
+  "version": "0.1.0",
+  "private": true,
+  "description": "이터널리턴 실험체 스탯 비교 — 캐릭터×무기군 빌드별 DPS/EHP 효율 계산 엔진",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "demo": "tsx src/demo.ts",
+    "fetch:data": "tsx scripts/fetchGameData.ts",
+    "gen:skills": "tsx scripts/genSkillSkeletons.ts"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vitest": "^2.1.8"
+  }
+}

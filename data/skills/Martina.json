@@ -1,0 +1,123 @@
+{
+  "characterId": "Martina",
+  "characterName": "마르티나",
+  "source": "나무위키 마르티나(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "재생",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(재생). 제외.",
+      "_dakId": 1057100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "빨리감기 - 취재 중",
+      "damageType": "physical",
+      "baseDamage": [
+        60,
+        75,
+        90,
+        105,
+        120
+      ],
+      "apRatio": 0.7,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        7,
+        6.5,
+        6,
+        5.5,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "빨리감기. 방송중 [50~170](+90%) 별도.",
+      "_dakId": 1057200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "일시정지 - 취재 중",
+      "damageType": "physical",
+      "baseDamage": [
+        90,
+        120,
+        150,
+        180,
+        210
+      ],
+      "apRatio": 0.7,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "일시정지. 방송중 [110~230](+85%) 별도.",
+      "_dakId": 1057300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "되감기 - 취재 중",
+      "damageType": "physical",
+      "baseDamage": [
+        50,
+        80,
+        110,
+        140,
+        170
+      ],
+      "apRatio": 0.4,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        17,
+        16,
+        15,
+        14,
+        13
+      ],
+      "excludeFromDps": false,
+      "note": "되감기(받은 피해 회복).",
+      "_dakId": 1057400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "녹화 - 취재 중",
+      "damageType": "physical",
+      "baseDamage": [
+        100,
+        200,
+        300
+      ],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        20,
+        15,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "녹화 가장자리 종료 기준. 지속피해 별도.",
+      "_dakId": 1057500,
+      "_maxLevel": 3
+    }
+  ]
+}

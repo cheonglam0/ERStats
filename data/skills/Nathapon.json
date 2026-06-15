@@ -1,0 +1,124 @@
+{
+  "characterId": "Nathapon",
+  "characterName": "나타폰",
+  "source": "나무위키 나타폰(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "슬로우 셔터",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(슬로우 셔터). 제외.",
+      "_dakId": 1034100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "스냅샷",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        90,
+        130,
+        170,
+        210
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.75,
+      "cooldown": [
+        5,
+        4.5,
+        4,
+        3.5,
+        3
+      ],
+      "excludeFromDps": false,
+      "note": "스냅샷.",
+      "_dakId": 1034200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "타임 랩스",
+      "damageType": "magic",
+      "baseDamage": [
+        40,
+        60,
+        80,
+        100,
+        120
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.25,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "타임 랩스. 추가 [50~190](+75%) 별도.",
+      "_dakId": 1034300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "인스턴트 포토",
+      "damageType": "magic",
+      "baseDamage": [
+        30,
+        50,
+        70,
+        90,
+        110
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.35,
+      "cooldown": [
+        12,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "인스턴트 포토(추가타).",
+      "_dakId": 1034400,
+      "_maxLevel": 5,
+      "hitCount": 2
+    },
+    {
+      "slot": "R",
+      "name": "셔터 찬스",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": true,
+      "note": "셔터 찬스(계수 미확인) → 제외.",
+      "_dakId": 1034500,
+      "_maxLevel": 3
+    }
+  ]
+}

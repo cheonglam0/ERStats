@@ -1,0 +1,123 @@
+{
+  "characterId": "Felix",
+  "characterName": "펠릭스",
+  "source": "나무위키 펠릭스(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "연계 창술",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(연계 강화평타). 제외.",
+      "_dakId": 1049100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "선풍참",
+      "damageType": "physical",
+      "baseDamage": [
+        55,
+        80,
+        105,
+        130,
+        155
+      ],
+      "apRatio": 0.65,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "연계 공유 쿨(중첩 시 최대 8초↓). 3연계 별도.",
+      "_dakId": 1049200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "질풍뇌격",
+      "damageType": "physical",
+      "baseDamage": [
+        70,
+        100,
+        130,
+        160,
+        190
+      ],
+      "apRatio": 0.5,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "연계 공유 쿨.",
+      "_dakId": 1049300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "반월참",
+      "damageType": "physical",
+      "baseDamage": [
+        19,
+        38,
+        57,
+        76,
+        95
+      ],
+      "apRatio": 0.45,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "연계 공유 쿨.",
+      "_dakId": 1049400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "뇌룡격",
+      "damageType": "physical",
+      "baseDamage": [
+        360,
+        540,
+        720
+      ],
+      "apRatio": 2,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        60,
+        50,
+        40
+      ],
+      "excludeFromDps": false,
+      "note": "최대 충전 기준. 최소 [120~240](+100%).",
+      "_dakId": 1049500,
+      "_maxLevel": 3
+    }
+  ]
+}

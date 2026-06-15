@@ -1,0 +1,123 @@
+{
+  "characterId": "Cathy",
+  "characterName": "캐시",
+  "source": "나무위키 캐시(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "외과 전문의",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(치유감소/평타강화). 제외.",
+      "_dakId": 1023100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "동맥절제술",
+      "damageType": "magic",
+      "baseDamage": [
+        90,
+        120,
+        150,
+        180,
+        210
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.8,
+      "cooldown": [
+        15,
+        15,
+        15,
+        15,
+        15
+      ],
+      "excludeFromDps": false,
+      "note": "돌진+적중 시 자체 쿨감.",
+      "_dakId": 1023200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "엠퓨테이션",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        100,
+        150,
+        200,
+        250
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.9,
+      "cooldown": [
+        12,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "바깥 적중 기준. 안쪽 [30~130](+70%).",
+      "_dakId": 1023300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "수쳐",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        60,
+        70,
+        80,
+        90
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.45,
+      "cooldown": [
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "excludeFromDps": false,
+      "note": "관통 투사체. 추가 [30~110](+50%).",
+      "_dakId": 1023400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "이머전시 OP",
+      "damageType": "magic",
+      "baseDamage": [
+        200,
+        350,
+        500
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 1.4,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "최대 피해 기준(저체력). 최소 [100~250](+70%).",
+      "_dakId": 1023500,
+      "_maxLevel": 3
+    }
+  ]
+}

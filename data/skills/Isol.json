@@ -1,0 +1,124 @@
+{
+  "characterId": "Isol",
+  "characterName": "아이솔",
+  "source": "나무위키 아이솔(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "유격전",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(유격전). 제외.",
+      "_dakId": 1009100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "셈텍스 폭탄",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        85,
+        110,
+        135,
+        160
+      ],
+      "apRatio": 0.25,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        11,
+        10,
+        9,
+        8,
+        7
+      ],
+      "excludeFromDps": false,
+      "note": "셈텍스 폭탄(부착/폭발).",
+      "_dakId": 1009200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "화망",
+      "damageType": "magic",
+      "baseDamage": [
+        13,
+        16,
+        19,
+        22,
+        25
+      ],
+      "apRatio": 0.6,
+      "skillAmpRatio": 0.24,
+      "cooldown": [
+        12,
+        11,
+        10,
+        9,
+        8
+      ],
+      "excludeFromDps": false,
+      "note": "화망(부채꼴 지속 난사) 근사.",
+      "_dakId": 1009300,
+      "_maxLevel": 5,
+      "hitCount": 3
+    },
+    {
+      "slot": "E",
+      "name": "은밀 기동",
+      "damageType": "magic",
+      "baseDamage": [
+        40,
+        65,
+        90,
+        115,
+        140
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "은밀 기동(구르기 은신+피해).",
+      "_dakId": 1009400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "Mok제 폭탄",
+      "damageType": "magic",
+      "baseDamage": [
+        100,
+        200,
+        300
+      ],
+      "apRatio": 0.4,
+      "skillAmpRatio": 0.65,
+      "cooldown": [
+        30,
+        22,
+        14
+      ],
+      "excludeFromDps": false,
+      "note": "지뢰(충전형, +현재체력12%).",
+      "_dakId": 1009500,
+      "_maxLevel": 3
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "characterId": "Hyejin",
+  "characterName": "혜진",
+  "source": "나무위키 혜진(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "삼재",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(삼재). 제외.",
+      "_dakId": 1012100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "제압부",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        110,
+        140,
+        170,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.8,
+      "cooldown": [
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      "excludeFromDps": false,
+      "note": "주력기(관통).",
+      "_dakId": 1012200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "흡령부",
+      "damageType": "magic",
+      "baseDamage": [
+        70,
+        100,
+        130,
+        160,
+        190
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.8,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "흡령부(둔화).",
+      "_dakId": 1012300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "이동부",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        95,
+        130,
+        165,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [
+        13,
+        12.5,
+        12,
+        11.5,
+        11
+      ],
+      "excludeFromDps": false,
+      "note": "부적 기준. 도착 [60~140](+55%).",
+      "_dakId": 1012400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "오대존명왕진",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        115,
+        130
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "부적 기준. 진 [50~150](+30%).",
+      "_dakId": 1012500,
+      "_maxLevel": 3
+    }
+  ]
+}

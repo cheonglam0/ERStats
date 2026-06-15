@@ -1,0 +1,123 @@
+{
+  "characterId": "Rozzi",
+  "characterName": "로지",
+  "source": "나무위키 로지(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "더블샷",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(더블샷). 제외.",
+      "_dakId": 1021100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "이지샷",
+      "damageType": "physical",
+      "baseDamage": [
+        30,
+        55,
+        80,
+        105,
+        130
+      ],
+      "apRatio": 1,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "이지샷(돌진).",
+      "_dakId": 1021200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "스핀샷",
+      "damageType": "physical",
+      "baseDamage": [
+        30,
+        60,
+        90,
+        120,
+        150
+      ],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "스핀샷(방어 감소). 쿨다운 추정.",
+      "_dakId": 1021300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "에어샷",
+      "damageType": "physical",
+      "baseDamage": [
+        30,
+        50,
+        70,
+        90,
+        110
+      ],
+      "apRatio": 0.5,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        18,
+        17,
+        16,
+        15,
+        14
+      ],
+      "excludeFromDps": false,
+      "note": "에어샷.",
+      "_dakId": 1021400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "셈텍스탄 Mk-II",
+      "damageType": "physical",
+      "baseDamage": [
+        60,
+        120,
+        180
+      ],
+      "apRatio": 0.5,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "셈텍스탄(+최대체력 6~12% 고정피해). 쿨다운 추정.",
+      "_dakId": 1021500,
+      "_maxLevel": 3
+    }
+  ]
+}

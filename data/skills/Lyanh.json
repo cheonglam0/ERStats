@@ -1,0 +1,123 @@
+{
+  "characterId": "Lyanh",
+  "characterName": "이안",
+  "source": "나무위키 이안(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "사로잡힌 육신",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(사로잡힌 육신). 제외.",
+      "_dakId": 1063100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "피하세요! / 옥죄는 손아귀",
+      "damageType": "physical",
+      "baseDamage": [
+        40,
+        70,
+        100,
+        130,
+        160
+      ],
+      "apRatio": 0.6,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        4,
+        3.5,
+        3,
+        2.5,
+        2
+      ],
+      "excludeFromDps": false,
+      "note": "이안/옥죄는 손아귀 폼.",
+      "_dakId": 1063200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "미안해요.. / 피투성이 손톱",
+      "damageType": "physical",
+      "baseDamage": [
+        5,
+        45,
+        85,
+        125,
+        165
+      ],
+      "apRatio": 0.5,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        11,
+        10,
+        9,
+        8,
+        7
+      ],
+      "excludeFromDps": false,
+      "note": "미안해요/피투성이 손톱 폼.",
+      "_dakId": 1063300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "비키세요! / 갈퀴손",
+      "damageType": "physical",
+      "baseDamage": [
+        20,
+        40,
+        60,
+        80,
+        100
+      ],
+      "apRatio": 0.65,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        16,
+        15,
+        14,
+        13,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "비키세요/갈퀴손 폼.",
+      "_dakId": 1063400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "해방",
+      "damageType": "physical",
+      "baseDamage": [
+        200,
+        300,
+        400
+      ],
+      "apRatio": 0.6,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        70,
+        60,
+        50
+      ],
+      "excludeFromDps": false,
+      "note": "해방(변신).",
+      "_dakId": 1063500,
+      "_maxLevel": 3
+    }
+  ]
+}

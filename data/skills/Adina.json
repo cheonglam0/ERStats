@@ -1,0 +1,71 @@
+{
+  "characterId": "Adina",
+  "characterName": "아디나",
+  "source": "나무위키 아디나(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "별읽기",
+      "damageType": "magic",
+      "baseDamage": [0, 0],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [0, 0],
+      "excludeFromDps": true,
+      "note": "패시브(천체 해/달/별 부여). 직접 피해 없음.",
+      "_dakId": 1030100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "루미너리",
+      "damageType": "magic",
+      "baseDamage": [50, 75, 100, 125, 150],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [6, 5.5, 5, 4.5, 4],
+      "note": "기본 기준. 컨정션 강화 [90/150/210/270](+스증100%) 미반영.",
+      "_dakId": 1030200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "트라인 에스펙트",
+      "damageType": "magic",
+      "baseDamage": [60, 80, 100, 120, 140],
+      "apRatio": 0,
+      "skillAmpRatio": 0.65,
+      "cooldown": [9, 8.5, 8, 7.5, 7],
+      "note": "기본 기준. 별 보호막/컨정션 [50/90/130/170](+스증45%)x2 미반영.",
+      "_dakId": 1030300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "폴 디그니티",
+      "damageType": "magic",
+      "baseDamage": [0, 0, 0, 0, 0],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [10, 9.5, 9, 8.5, 8],
+      "excludeFromDps": true,
+      "note": "보호막/회복·CC 위주 유틸. 직접 피해 미미 → 제외.",
+      "_dakId": 1030400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "수정구에 비친 운명",
+      "damageType": "magic",
+      "baseDamage": [0, 0, 0],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [0, 0, 0],
+      "excludeFromDps": true,
+      "note": "저장 천체 교환(Q/W 컨정션 강화). 자체 직접 피해 없음 → 제외.",
+      "_dakId": 1030500,
+      "_maxLevel": 3
+    }
+  ]
+}

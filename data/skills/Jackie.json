@@ -1,0 +1,59 @@
+{
+  "characterId": "Jackie",
+  "characterName": "재키",
+  "source": "나무위키 재키(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "P",
+      "name": "피의 축제",
+      "damageType": "physical",
+      "baseDamage": [10, 20, 30],
+      "apRatio": 0.25,
+      "skillAmpRatio": 0,
+      "cooldown": [0, 0, 0],
+      "excludeFromDps": true,
+      "note": "출혈 DoT + 아드레날린. 회전 DPS 모델 밖이라 제외(정보용 저장)."
+    },
+    {
+      "slot": "Q",
+      "name": "연참",
+      "damageType": "physical",
+      "baseDamage": [30, 50, 70, 90, 110],
+      "apRatio": 0.55,
+      "skillAmpRatio": 0,
+      "cooldown": [12, 11, 10, 9, 8],
+      "note": "(+대상 현재 체력 5%) 비례분 미반영. 적중 시 3초 내 2회 재시전 가능(미반영)."
+    },
+    {
+      "slot": "W",
+      "name": "힘줄 절단",
+      "damageType": "physical",
+      "baseDamage": [10, 20, 30, 40, 50],
+      "apRatio": [0.2, 0.3, 0.4, 0.5, 0.6],
+      "skillAmpRatio": 0,
+      "cooldown": [6, 6, 6, 6, 6],
+      "note": "다음 기본 공격 강화 + 둔화."
+    },
+    {
+      "slot": "E",
+      "name": "습격",
+      "damageType": "physical",
+      "baseDamage": [50, 90, 130, 170, 210],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0,
+      "cooldown": [16, 15, 14, 13, 12],
+      "note": "점프 이동기 + 범위 피해. 패시브로 쿨 초기화 가능(미반영)."
+    },
+    {
+      "slot": "R",
+      "name": "전기톱(학살)",
+      "damageType": "physical",
+      "baseDamage": [100, 250, 400],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0,
+      "cooldown": [70, 65, 60],
+      "note": "학살 최대 피해 기준. 최소 피해 [50/125/200](+공격력 40%). 처치 관여 시 재사용."
+    }
+  ]
+}

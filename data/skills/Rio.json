@@ -1,0 +1,123 @@
+{
+  "characterId": "Rio",
+  "characterName": "리오",
+  "source": "나무위키 리오(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "카이",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(카이). 제외.",
+      "_dakId": 1031100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "카에유미",
+      "damageType": "physical",
+      "baseDamage": [
+        50,
+        70,
+        90,
+        110,
+        130
+      ],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        6,
+        5.75,
+        5.5,
+        5.25,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "단궁 기준. 화궁 [90~150](+90%).",
+      "_dakId": 1031200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "하나레",
+      "damageType": "physical",
+      "baseDamage": [
+        70,
+        90,
+        110,
+        130,
+        150
+      ],
+      "apRatio": 0.4,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "excludeFromDps": false,
+      "note": "화궁 기준. 단궁 [10~50](+30%).",
+      "_dakId": 1031300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "비상",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        12,
+        11,
+        10,
+        9,
+        8
+      ],
+      "excludeFromDps": true,
+      "note": "비상(도약 이동기). 제외.",
+      "_dakId": 1031400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "연사 / 정사필중",
+      "damageType": "physical",
+      "baseDamage": [
+        200,
+        340,
+        480
+      ],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "화궁 정사필중 기준. 단궁 연사 별도.",
+      "_dakId": 1031500,
+      "_maxLevel": 3
+    }
+  ]
+}

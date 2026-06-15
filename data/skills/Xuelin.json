@@ -1,0 +1,123 @@
+{
+  "characterId": "Xuelin",
+  "characterName": "슈린",
+  "source": "나무위키 슈린(이터널 리턴) — 11.x 기준 (사용자 제공)",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "결심응진",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(결심응진, 3중첩 강화평타). 제외.",
+      "_dakId": 1082100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "비검잔위",
+      "damageType": "physical",
+      "baseDamage": [
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "apRatio": 0.6,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        13,
+        12,
+        11,
+        10,
+        9
+      ],
+      "excludeFromDps": false,
+      "note": "비검잔위 투사체. 어검 지속 [20~80](+40%)·회수 별도.",
+      "_dakId": 1082200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "무진검결",
+      "damageType": "physical",
+      "baseDamage": [
+        50,
+        70,
+        90,
+        110,
+        130
+      ],
+      "apRatio": 0.9,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        21,
+        19.5,
+        18,
+        16.5,
+        15
+      ],
+      "excludeFromDps": false,
+      "note": "무진검결. 방해 막을 시 강화 [100~220](+100%)·기절.",
+      "_dakId": 1082300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "비섬보",
+      "damageType": "physical",
+      "baseDamage": [
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "apRatio": 0.7,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        14,
+        13.5,
+        13,
+        12.5,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "비섬보 어검 기준. 돌진 [60~100](+55%).",
+      "_dakId": 1082400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "만검귀종",
+      "damageType": "physical",
+      "baseDamage": [
+        80,
+        155,
+        230
+      ],
+      "apRatio": 0.6,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "만검귀종 영역. 어검/회수 [100~300](+75%) 별도.",
+      "_dakId": 1082500,
+      "_maxLevel": 3
+    }
+  ]
+}

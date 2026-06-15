@@ -1,0 +1,237 @@
+:root {
+  --bg: #0f1320;
+  --panel: #181d2e;
+  --panel-2: #20263a;
+  --line: #2c3450;
+  --text: #e6e9f2;
+  --muted: #8a92ad;
+  --offense: #ff6b6b;
+  --survival: #4dabf7;
+  --utility: #9775fa;
+  --accent: #ffd43b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", "Malgun Gothic", system-ui, sans-serif;
+  font-size: 14px;
+}
+
+.app { max-width: 1280px; margin: 0 auto; padding: 16px; }
+
+.topbar {
+  display: flex; align-items: baseline; gap: 12px;
+  border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 16px;
+}
+.topbar h1 { font-size: 20px; margin: 0; }
+.sample-tag { color: var(--accent); font-size: 12px; }
+
+.view-tabs { margin-left: auto; display: flex; gap: 6px; align-self: center; }
+.view-tabs button {
+  background: var(--panel-2); border: 1px solid var(--line); color: var(--text);
+  padding: 6px 12px; border-radius: 999px; cursor: pointer; font-size: 12px;
+}
+.view-tabs button.active { background: var(--accent); color: #1a1300; border-color: var(--accent); }
+
+.layout {
+  display: grid;
+  grid-template-columns: 240px 300px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+@media (max-width: 1100px) { .layout { grid-template-columns: 1fr !important; } }
+
+/* 전용 보기: 스탯만 / 아이템만 (1번 실험체 선택 패널은 항상 표시) */
+.layout.view-stats { grid-template-columns: 240px 1fr; }
+.layout.view-stats .browser-panel { display: none; }
+.layout.view-items { grid-template-columns: 240px 1fr; }
+.layout.view-items .stats-panel { display: none; }
+
+.scroll { max-height: 260px; overflow-y: auto; }
+.browser-panel { min-height: 70vh; }
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px;
+}
+.panel h2 { font-size: 15px; margin: 0 0 10px; }
+.panel h3 { font-size: 13px; margin: 16px 0 6px; color: var(--muted); }
+.panel h4 { font-size: 12px; margin: 12px 0 6px; color: var(--muted); }
+
+.search, .char-list, .weapon-tabs { width: 100%; }
+.search {
+  background: var(--panel-2); border: 1px solid var(--line);
+  color: var(--text); border-radius: 6px; padding: 8px 10px; margin-bottom: 8px;
+}
+
+.char-list { list-style: none; margin: 0; padding: 0; }
+.char {
+  width: 100%; display: flex; justify-content: flex-start; align-items: center; gap: 9px;
+  background: var(--panel-2); border: 1px solid transparent; color: var(--text);
+  padding: 6px 10px; border-radius: 6px; margin-bottom: 4px; cursor: pointer;
+}
+.char:hover { border-color: var(--line); }
+.char.active { border-color: var(--accent); }
+.char-icon {
+  width: 30px; height: 30px; border-radius: 6px; object-fit: cover; flex-shrink: 0;
+  background: var(--bg); border: 1px solid var(--line);
+}
+.char-name { flex: 1; text-align: left; }
+.char small { color: var(--muted); }
+.empty { color: var(--muted); padding: 8px; }
+
+.weapon-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab {
+  background: var(--panel-2); border: 1px solid var(--line); color: var(--text);
+  padding: 6px 12px; border-radius: 999px; cursor: pointer;
+}
+.tab.active { background: var(--accent); color: #1a1300; border-color: var(--accent); }
+
+.hint { color: var(--muted); font-size: 12px; line-height: 1.5; }
+
+input[type="range"] { width: 100%; accent-color: var(--accent); }
+
+.result-cards { display: flex; gap: 10px; }
+.card { flex: 1; background: var(--panel-2); border-radius: 8px; padding: 12px; border: 1px solid var(--line); }
+.card-label { color: var(--muted); font-size: 12px; }
+.card-value { font-size: 26px; font-weight: 700; margin: 4px 0; }
+.card.dps .card-value { color: var(--offense); }
+.card.ehp .card-value { color: var(--survival); }
+.card-sub { color: var(--muted); font-size: 11px; }
+
+.skill-dps { list-style: none; margin: 0; padding: 0; }
+.skill-dps li { display: flex; align-items: center; gap: 8px; padding: 4px 0; border-bottom: 1px dashed var(--line); }
+.slot { background: var(--panel-2); border-radius: 4px; padding: 1px 7px; font-weight: 700; }
+.skill-name { flex: 1; }
+.skill-val { color: var(--offense); font-variant-numeric: tabular-nums; }
+
+.equipped { list-style: none; margin: 0; padding: 0; }
+.equipped li { display: flex; align-items: center; gap: 8px; padding: 5px 0; flex-wrap: wrap; }
+.remove { background: none; border: none; color: var(--offense); cursor: pointer; font-size: 13px; }
+
+.pills { display: inline-flex; flex-wrap: wrap; gap: 4px; }
+.pills.empty { color: var(--muted); }
+.pill { font-size: 11px; padding: 1px 7px; border-radius: 999px; background: var(--panel-2); border: 1px solid var(--line); }
+.pill.offense { color: var(--offense); }
+.pill.survival { color: var(--survival); }
+.pill.utility { color: var(--utility); }
+.pill b { color: var(--text); }
+
+.metric-toggle { display: flex; gap: 6px; margin-bottom: 8px; }
+.metric-toggle button {
+  flex: 1; background: var(--panel-2); border: 1px solid var(--line);
+  color: var(--text); padding: 7px; border-radius: 6px; cursor: pointer;
+}
+.metric-toggle button.active { background: var(--accent); color: #1a1300; border-color: var(--accent); }
+.metric-toggle.lens { flex-wrap: wrap; }
+.metric-toggle.lens button { flex: 1 1 44%; font-size: 12px; padding: 6px 4px; }
+.metric-toggle button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.rank-list { list-style: none; margin: 0; padding: 0; }
+.rank-row {
+  display: flex; gap: 10px; align-items: flex-start;
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px;
+  padding: 10px; margin-bottom: 6px; cursor: pointer;
+}
+.rank-row:hover { border-color: var(--accent); }
+.rank-no { font-weight: 700; color: var(--muted); width: 18px; text-align: center; }
+.rank-main { flex: 1; }
+.rank-head { display: flex; justify-content: space-between; align-items: baseline; }
+.rank-name { font-weight: 600; }
+.rank-delta { color: var(--accent); font-variant-numeric: tabular-nums; }
+.rank-delta small { color: var(--muted); }
+.bar { height: 6px; background: var(--bg); border-radius: 3px; margin: 6px 0; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 3px; }
+.bar-fill.dps { background: var(--offense); }
+.bar-fill.ehp { background: var(--survival); }
+
+.eq-name { flex: 1; }
+.skill-badge { color: var(--accent); font-style: normal; margin-left: 4px; font-size: 11px; }
+
+/* --- 아이템 브라우저 (ER2Route 스타일) --- */
+.browser-controls {
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px;
+}
+.slot-tabs { display: flex; flex-wrap: wrap; gap: 4px; }
+.browser-controls .search { width: auto; flex: 1; min-width: 140px; margin: 0; }
+.weapon-filter { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--muted); }
+.weapon-filter input { accent-color: var(--accent); }
+.count { color: var(--muted); font-size: 12px; }
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 8px;
+  max-height: 64vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+.item-card {
+  text-align: left; cursor: pointer; color: var(--text);
+  background: var(--panel-2); border: 1px solid var(--line);
+  border-left: 3px solid var(--line);
+  border-radius: 8px; padding: 9px 10px;
+  display: flex; flex-direction: column; gap: 5px;
+}
+.item-card:hover { border-color: var(--accent); }
+.item-card.equipped { outline: 2px solid var(--accent); }
+.item-head { display: flex; justify-content: flex-start; align-items: center; gap: 6px; }
+.item-icon {
+  width: 26px; height: 26px; border-radius: 5px; object-fit: cover; flex-shrink: 0;
+  background: var(--bg); border: 1px solid var(--line);
+}
+.item-name { font-weight: 600; font-size: 13px; flex: 1; }
+.item-slot { color: var(--muted); font-size: 11px; }
+.item-grade { font-size: 10px; }
+
+.g-Legend { color: #ffd43b; }
+.g-Mythic { color: #ff8787; }
+.g-Epic { color: #b197fc; }
+.g-Rare { color: #74c0fc; }
+.g-Uncommon { color: #8ce99a; }
+.g-Common { color: var(--muted); }
+.item-card.grade-Legend { border-left-color: #ffd43b; }
+.item-card.grade-Mythic { border-left-color: #ff8787; }
+.item-card.grade-Epic { border-left-color: #b197fc; }
+.item-card.grade-Rare { border-left-color: #74c0fc; }
+.item-card.grade-Uncommon { border-left-color: #8ce99a; }
+
+.item-eff { display: flex; align-items: center; gap: 8px; margin-top: 2px; }
+.item-eff .bar { flex: 1; margin: 0; }
+.eff-pos { color: var(--accent); font-size: 11px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.eff-zero { color: var(--muted); font-size: 11px; white-space: nowrap; }
+
+/* --- 스탯 구성 비율 분해 --- */
+.bd-base { color: var(--survival); }
+.bd-growth { color: var(--accent); }
+.bd-item { color: var(--offense); }
+
+.bd-legend { display: flex; gap: 12px; font-size: 11px; margin-bottom: 8px; }
+.bd-key::before {
+  content: ""; display: inline-block; width: 9px; height: 9px;
+  border-radius: 2px; margin-right: 4px; vertical-align: middle;
+}
+.bd-key.bd-base::before { background: var(--survival); }
+.bd-key.bd-growth::before { background: var(--accent); }
+.bd-key.bd-item::before { background: var(--offense); }
+
+.bd-list { list-style: none; margin: 0; padding: 0; }
+.bd-row { margin-bottom: 9px; }
+.bd-head { display: flex; justify-content: space-between; align-items: baseline; }
+.bd-label { font-size: 12px; }
+.bd-total { font-variant-numeric: tabular-nums; font-weight: 600; font-size: 12px; }
+.bd-bar {
+  display: flex; height: 8px; border-radius: 4px; overflow: hidden;
+  background: var(--bg); margin: 4px 0 3px;
+}
+.bd-seg { height: 100%; }
+.bd-seg.bd-base { background: var(--survival); }
+.bd-seg.bd-growth { background: var(--accent); }
+.bd-seg.bd-item { background: var(--offense); }
+.bd-shares { display: flex; gap: 10px; font-size: 10px; font-variant-numeric: tabular-nums; }

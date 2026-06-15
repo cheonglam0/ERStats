@@ -1,0 +1,123 @@
+{
+  "characterId": "Nadine",
+  "characterName": "나딘",
+  "source": "나무위키 나딘(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "야성",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(야성 중첩). 제외.",
+      "_dakId": 1006100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "황소의 눈",
+      "damageType": "physical",
+      "baseDamage": [
+        120,
+        190,
+        260,
+        330,
+        400
+      ],
+      "apRatio": 2.2,
+      "skillAmpRatio": 1.3,
+      "cooldown": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "excludeFromDps": false,
+      "note": "황소의 눈 최대 충전 기준. 최소 [60~200](+110%/+65%). 쿨다운 추정.",
+      "_dakId": 1006200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "다람쥐 덫",
+      "damageType": "physical",
+      "baseDamage": [
+        80,
+        120,
+        160,
+        200,
+        240
+      ],
+      "apRatio": 1,
+      "skillAmpRatio": 0.8,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "덫/표식 연계.",
+      "_dakId": 1006300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "원숭이 와이어",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        17,
+        16,
+        15,
+        14,
+        13
+      ],
+      "excludeFromDps": true,
+      "note": "원숭이 와이어(이동기). 제외.",
+      "_dakId": 1006400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "늑대 맹습",
+      "damageType": "physical",
+      "baseDamage": [
+        100,
+        150,
+        200
+      ],
+      "apRatio": 0.75,
+      "skillAmpRatio": 0.8,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "늑대 맹습(+야성 중첩).",
+      "_dakId": 1006500,
+      "_maxLevel": 3
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "characterId": "Magnus",
+  "characterName": "매그너스",
+  "source": "나무위키 매그너스(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "근성",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(근성). 제외.",
+      "_dakId": 1004100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "파쇄탄",
+      "damageType": "physical",
+      "baseDamage": [
+        80,
+        125,
+        170,
+        215,
+        260
+      ],
+      "apRatio": 1.15,
+      "skillAmpRatio": 0.9,
+      "cooldown": [
+        11,
+        10,
+        9,
+        8,
+        7
+      ],
+      "excludeFromDps": false,
+      "note": "파쇄탄.",
+      "_dakId": 1004200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "17대 1",
+      "damageType": "physical",
+      "baseDamage": [
+        16,
+        22,
+        28,
+        34,
+        40
+      ],
+      "apRatio": 0.45,
+      "skillAmpRatio": 0.2,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "17대 1(+최대체력 2.5%).",
+      "_dakId": 1004300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "강타",
+      "damageType": "physical",
+      "baseDamage": [
+        40,
+        75,
+        110,
+        145,
+        180
+      ],
+      "apRatio": 0.5,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        11,
+        10,
+        9,
+        8,
+        7
+      ],
+      "excludeFromDps": false,
+      "note": "강타(+최대체력8%, 추가타 별도).",
+      "_dakId": 1004400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "폭주 바이크",
+      "damageType": "physical",
+      "baseDamage": [
+        100,
+        250,
+        400
+      ],
+      "apRatio": 1.5,
+      "skillAmpRatio": 0.9,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "폭주 바이크(+현재체력30%).",
+      "_dakId": 1004500,
+      "_maxLevel": 3
+    }
+  ]
+}

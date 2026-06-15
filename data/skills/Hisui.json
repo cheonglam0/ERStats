@@ -1,0 +1,123 @@
+{
+  "characterId": "Hisui",
+  "characterName": "히스이",
+  "source": "나무위키 히스이(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "검의 기억",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(검의 기억). 제외.",
+      "_dakId": 1078100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "쾌연격",
+      "damageType": "physical",
+      "baseDamage": [
+        70,
+        85,
+        100,
+        115,
+        130
+      ],
+      "apRatio": 1.1,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        10,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
+      "excludeFromDps": false,
+      "note": "쾌연격 2타 기준. 1타 [70~90](+70~90%).",
+      "_dakId": 1078200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "거합일섬",
+      "damageType": "physical",
+      "baseDamage": [
+        50,
+        80,
+        110,
+        140,
+        170
+      ],
+      "apRatio": 1.4,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "거합일섬 2중첩 일섬 기준(중첩별 상이). 쿨다운 추정.",
+      "_dakId": 1078300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "월륜참",
+      "damageType": "physical",
+      "baseDamage": [
+        70,
+        100,
+        130,
+        160,
+        190
+      ],
+      "apRatio": 1.1,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "월륜참. 쿨다운 추정.",
+      "_dakId": 1078400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "모노호시자오 / 츠바메가에시",
+      "damageType": "physical",
+      "baseDamage": [
+        100,
+        200,
+        300
+      ],
+      "apRatio": 1.5,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        65,
+        55,
+        45
+      ],
+      "excludeFromDps": false,
+      "note": "츠바메가에시(계수 추정).",
+      "_dakId": 1078500,
+      "_maxLevel": 3
+    }
+  ]
+}

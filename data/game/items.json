@@ -1,0 +1,4390 @@
+[
+  {
+    "code": 101401,
+    "name": "카른웬난",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "OneHandSword",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 50,
+      "attackSpeed": 0.2,
+      "cooldownReduction": 0.08,
+      "moveSpeed": 0.04
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_101401.png"
+  },
+  {
+    "code": 101402,
+    "name": "파산검",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "OneHandSword",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 25,
+      "skillAmp": 33,
+      "cooldownReduction": 0.1,
+      "moveSpeed": 0.06
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_101402.png"
+  },
+  {
+    "code": 101404,
+    "name": "초진동나이프",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "OneHandSword",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 45,
+      "attackSpeed": 0.25
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_101404.png"
+  },
+  {
+    "code": 101406,
+    "name": "다마스커스가시",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "OneHandSword",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 52,
+      "maxHp": 140
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_101406.png"
+  },
+  {
+    "code": 101407,
+    "name": "마하라자",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "OneHandSword",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 42,
+      "defense": 12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_101407.png"
+  },
+  {
+    "code": 101408,
+    "name": "하이랜더더크",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "OneHandSword",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 30,
+      "skillAmp": 48,
+      "maxHp": 100
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_101408.png"
+  },
+  {
+    "code": 101405,
+    "name": "프라가라흐",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "OneHandSword",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 62,
+      "attackSpeed": 0.5,
+      "moveSpeed": 0.04
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_101405.png"
+  },
+  {
+    "code": 101501,
+    "name": "월식",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "OneHandSword",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 45,
+      "skillAmp": 74,
+      "cooldownReduction": 0.1,
+      "moveSpeed": 0.1
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_101501.png"
+  },
+  {
+    "code": 101502,
+    "name": "소울리퍼",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "OneHandSword",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 60,
+      "attackSpeed": 0.35,
+      "moveSpeed": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_101502.png"
+  },
+  {
+    "code": 102405,
+    "name": "뚜언띠엔",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "TwoHandSword",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 67,
+      "defense": 9,
+      "cooldownReduction": 0.08
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_102405.png"
+  },
+  {
+    "code": 102406,
+    "name": "아론다이트",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "TwoHandSword",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 53,
+      "maxHp": 80,
+      "attackSpeed": 0.2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_102406.png"
+  },
+  {
+    "code": 102407,
+    "name": "엑스칼리버",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "TwoHandSword",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 55,
+      "maxHp": 180,
+      "attackSpeed": 0.2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_102407.png"
+  },
+  {
+    "code": 102409,
+    "name": "레바테인",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "TwoHandSword",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 63
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_102409.png"
+  },
+  {
+    "code": 102410,
+    "name": "모노호시자오",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "TwoHandSword",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 65,
+      "attackSpeed": 0.2,
+      "lifesteal": 0.08
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_102410.png"
+  },
+  {
+    "code": 102411,
+    "name": "호푸어드",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "TwoHandSword",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 51,
+      "critChance": 0.29,
+      "critDamage": 0.08
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_102411.png"
+  },
+  {
+    "code": 102412,
+    "name": "빛의검",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "TwoHandSword",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 65,
+      "attackSpeed": 0.38
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_102412.png"
+  },
+  {
+    "code": 102413,
+    "name": "아케인엣지",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "TwoHandSword",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 38,
+      "skillAmp": 52,
+      "lifesteal": 0.05
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_102413.png"
+  },
+  {
+    "code": 102501,
+    "name": "다인슬라이프",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "TwoHandSword",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 80,
+      "attackSpeed": 0.2,
+      "lifesteal": 0.12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_102501.png"
+  },
+  {
+    "code": 102502,
+    "name": "알마스",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "TwoHandSword",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 40,
+      "skillAmp": 63
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_102502.png"
+  },
+  {
+    "code": 102503,
+    "name": "하데스엣지",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "TwoHandSword",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 40,
+      "skillAmp": 84
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_102503.png"
+  },
+  {
+    "code": 103401,
+    "name": "이천일류",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DualSword",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 38,
+      "attackSpeed": 0.2,
+      "lifesteal": 0.1
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_103401.png"
+  },
+  {
+    "code": 103402,
+    "name": "자웅일대검",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DualSword",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 57,
+      "attackSpeed": 0.45
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_103402.png"
+  },
+  {
+    "code": 103403,
+    "name": "아수라",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DualSword",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 31,
+      "skillAmp": 40,
+      "cooldownReduction": 0.12,
+      "lifesteal": 0.06
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_103403.png"
+  },
+  {
+    "code": 103404,
+    "name": "검은나비",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DualSword",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 30,
+      "skillAmp": 47
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_103404.png"
+  },
+  {
+    "code": 103501,
+    "name": "디오스쿠로이",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DualSword",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 47,
+      "attackSpeed": 0.35
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_103501.png"
+  },
+  {
+    "code": 103502,
+    "name": "로이거 차르",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DualSword",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 31,
+      "skillAmp": 67
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_103502.png"
+  },
+  {
+    "code": 103503,
+    "name": "간장과막야",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DualSword",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 66,
+      "attackSpeed": 0.18
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_103503.png"
+  },
+  {
+    "code": 104401,
+    "name": "낭아봉",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Hammer",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 52,
+      "skillAmp": 52
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_104401.png"
+  },
+  {
+    "code": 104402,
+    "name": "다그다의망치",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Hammer",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 100
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_104402.png"
+  },
+  {
+    "code": 104403,
+    "name": "토르의망치",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Hammer",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 84,
+      "attackSpeed": 0.3
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_104403.png"
+  },
+  {
+    "code": 104404,
+    "name": "개밥바라기",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Hammer",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 68,
+      "skillAmp": 85
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_104404.png"
+  },
+  {
+    "code": 104406,
+    "name": "천근추",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Hammer",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 77,
+      "critChance": 0.22,
+      "critDamage": 0.08,
+      "cooldownReduction": 0.12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_104406.png"
+  },
+  {
+    "code": 104409,
+    "name": "아는것이힘",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Hammer",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 52,
+      "skillAmp": 36,
+      "cooldownReduction": 0.12
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_104409.png"
+  },
+  {
+    "code": 104501,
+    "name": "피스브링어",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Hammer",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 106,
+      "lifesteal": 0.12,
+      "armorPenPct": 0.12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_104501.png"
+  },
+  {
+    "code": 104502,
+    "name": "뿅망치",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Hammer",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 99,
+      "attackSpeed": 0.3
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_104502.png"
+  },
+  {
+    "code": 105402,
+    "name": "빔엑스",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Axe",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 67
+    },
+    "statsByLv": {
+      "attackPower": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_105402.png"
+  },
+  {
+    "code": 105403,
+    "name": "산타무에르떼",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Axe",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 75,
+      "maxHp": 200
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_105403.png"
+  },
+  {
+    "code": 105404,
+    "name": "스퀴테",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Axe",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 50,
+      "skillAmp": 48
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_105404.png"
+  },
+  {
+    "code": 105405,
+    "name": "파라슈",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Axe",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 75,
+      "critChance": 0.17,
+      "cooldownReduction": 0.1,
+      "moveSpeed": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_105405.png"
+  },
+  {
+    "code": 105406,
+    "name": "하르페",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Axe",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 69,
+      "attackSpeed": 0.3
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_105406.png"
+  },
+  {
+    "code": 105407,
+    "name": "저거너트",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Axe",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 57,
+      "attackSpeed": 0.2,
+      "moveSpeed": 0.04
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_105407.png"
+  },
+  {
+    "code": 105408,
+    "name": "반고부",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Axe",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 97,
+      "attackSpeed": 0.35,
+      "tenacity": 0.3
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_105408.png"
+  },
+  {
+    "code": 105501,
+    "name": "낙원의낫",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Axe",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 60,
+      "skillAmp": 78
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_105501.png"
+  },
+  {
+    "code": 107402,
+    "name": "애각창",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Spear",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 87,
+      "attackSpeed": 0.4,
+      "moveSpeed": 0.1
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_107402.png"
+  },
+  {
+    "code": 107403,
+    "name": "장팔사모",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Spear",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 75,
+      "attackSpeed": 0.25,
+      "moveSpeed": 0.04
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_107403.png"
+  },
+  {
+    "code": 107404,
+    "name": "코스믹바이던트",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Spear",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 57,
+      "skillAmp": 73
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_107404.png"
+  },
+  {
+    "code": 107405,
+    "name": "트리아이나",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Spear",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 51,
+      "skillAmp": 46,
+      "cooldownReduction": 0.12
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_107405.png"
+  },
+  {
+    "code": 107406,
+    "name": "화첨창",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Spear",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 90
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_107406.png"
+  },
+  {
+    "code": 107407,
+    "name": "방천화극",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Spear",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 50,
+      "skillAmp": 50
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_107407.png"
+  },
+  {
+    "code": 107408,
+    "name": "청룡언월도",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Spear",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 90,
+      "maxHp": 120
+    },
+    "statsByLv": {
+      "maxHp": 5
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_107408.png"
+  },
+  {
+    "code": 107501,
+    "name": "롱기누스의창",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Spear",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 103,
+      "attackSpeed": 0.2,
+      "lifesteal": 0.1
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_107501.png"
+  },
+  {
+    "code": 107502,
+    "name": "별사냥꾼",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Spear",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 55,
+      "skillAmp": 63,
+      "cooldownReduction": 0.12
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_107502.png"
+  },
+  {
+    "code": 108403,
+    "name": "구원의여신상",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bat",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 75,
+      "attackSpeed": 0.3,
+      "lifesteal": 0.12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_108403.png"
+  },
+  {
+    "code": 108404,
+    "name": "타구봉",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bat",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 69,
+      "attackSpeed": 0.4
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_108404.png"
+  },
+  {
+    "code": 108501,
+    "name": "스파이의우산",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bat",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 48,
+      "skillAmp": 35
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_108501.png"
+  },
+  {
+    "code": 104405,
+    "name": "마법봉",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bat",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 40,
+      "skillAmp": 70,
+      "lifesteal": 0.12
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_104405.png"
+  },
+  {
+    "code": 104407,
+    "name": "금강저",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bat",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 72,
+      "critChance": 0.25,
+      "critDamage": 0.07
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_104407.png"
+  },
+  {
+    "code": 104408,
+    "name": "팔괘장",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bat",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 34,
+      "skillAmp": 30,
+      "cooldownReduction": 0.08
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_104408.png"
+  },
+  {
+    "code": 108502,
+    "name": "여의봉",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bat",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 102,
+      "attackSpeed": 0.1
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_108502.png"
+  },
+  {
+    "code": 108503,
+    "name": "터럭손방망이",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bat",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 40,
+      "skillAmp": 60,
+      "cooldownReduction": 0.1
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_108503.png"
+  },
+  {
+    "code": 109401,
+    "name": "뇌룡편",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Whip",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 40,
+      "skillAmp": 48,
+      "attackSpeed": 0.12
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_109401.png"
+  },
+  {
+    "code": 109403,
+    "name": "글레이프니르",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Whip",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 40,
+      "skillAmp": 35,
+      "moveSpeed": 0.04
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_109403.png"
+  },
+  {
+    "code": 109404,
+    "name": "플라즈마윕",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Whip",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 65,
+      "attackSpeed": 0.4
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_109404.png"
+  },
+  {
+    "code": 109405,
+    "name": "캐소드라쉬",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Whip",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 54,
+      "attackSpeed": 0.25,
+      "cooldownReduction": 0.12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_109405.png"
+  },
+  {
+    "code": 109406,
+    "name": "우라누스",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Whip",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 66,
+      "attackSpeed": 0.35
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_109406.png"
+  },
+  {
+    "code": 109501,
+    "name": "혈화구절편",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Whip",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 56,
+      "skillAmp": 93,
+      "cooldownReduction": 0.13,
+      "lifesteal": 0.1
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_109501.png"
+  },
+  {
+    "code": 109502,
+    "name": "사복검",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Whip",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 45,
+      "skillAmp": 60,
+      "moveSpeed": 0.04
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_109502.png"
+  },
+  {
+    "code": 110405,
+    "name": "단영촌천투",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Glove",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 52,
+      "defense": 6,
+      "lifesteal": 0.16
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_110405.png"
+  },
+  {
+    "code": 110406,
+    "name": "디바인피스트",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Glove",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 54
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_110406.png"
+  },
+  {
+    "code": 110407,
+    "name": "블러드윙너클",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Glove",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 54,
+      "maxHp": 100,
+      "moveSpeed": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_110407.png"
+  },
+  {
+    "code": 110408,
+    "name": "빙화현옥수",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Glove",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 32,
+      "skillAmp": 50
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_110408.png"
+  },
+  {
+    "code": 110409,
+    "name": "여래수투",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Glove",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 32,
+      "skillAmp": 39,
+      "cooldownReduction": 0.1
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_110409.png"
+  },
+  {
+    "code": 110410,
+    "name": "브레이질건틀릿",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Glove",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 42,
+      "defense": 4
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_110410.png"
+  },
+  {
+    "code": 110411,
+    "name": "소수",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Glove",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 45,
+      "critChance": 0.29,
+      "critDamage": 0.05
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_110411.png"
+  },
+  {
+    "code": 110412,
+    "name": "천잠장갑",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Glove",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 72,
+      "attackSpeed": 0.2,
+      "moveSpeed": 0.08
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_110412.png"
+  },
+  {
+    "code": 110501,
+    "name": "주작자문",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Glove",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 58
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_110501.png"
+  },
+  {
+    "code": 110502,
+    "name": "프로스트팽",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Glove",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 38,
+      "skillAmp": 62,
+      "cooldownReduction": 0.1
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_110502.png"
+  },
+  {
+    "code": 111402,
+    "name": "택티컬톤파",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Tonfa",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 48,
+      "skillAmp": 54,
+      "lifesteal": 0.07
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_111402.png"
+  },
+  {
+    "code": 111403,
+    "name": "마이쏙",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Tonfa",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 40,
+      "skillAmp": 49,
+      "defense": 5
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_111403.png"
+  },
+  {
+    "code": 111404,
+    "name": "플라즈마톤파",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Tonfa",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 45,
+      "defense": 4,
+      "attackSpeed": 0.25,
+      "lifesteal": 0.14
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_111404.png"
+  },
+  {
+    "code": 111405,
+    "name": "윈드러너",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Tonfa",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 42,
+      "skillAmp": 65,
+      "defense": 8,
+      "moveSpeed": 0.08
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_111405.png"
+  },
+  {
+    "code": 111406,
+    "name": "홀스터톤파",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Tonfa",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 51,
+      "defense": 4,
+      "attackSpeed": 0.3
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_111406.png"
+  },
+  {
+    "code": 111501,
+    "name": "흑요석짓테",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Tonfa",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 47,
+      "skillAmp": 89,
+      "defense": 8
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_111501.png"
+  },
+  {
+    "code": 111502,
+    "name": "만년한파",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Tonfa",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 57,
+      "defense": 8,
+      "attackSpeed": 0.4
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_111502.png"
+  },
+  {
+    "code": 112302,
+    "name": "소이탄",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "HighAngleFire",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 38,
+      "skillAmp": 30,
+      "attackSpeed": 0.2,
+      "cooldownReduction": 0.12
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_112302.png"
+  },
+  {
+    "code": 112404,
+    "name": "안티오크의수류탄",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "HighAngleFire",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 72,
+      "attackSpeed": 0.2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_112404.png"
+  },
+  {
+    "code": 112401,
+    "name": "다비드슬링",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "HighAngleFire",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 69
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_112401.png"
+  },
+  {
+    "code": 112402,
+    "name": "연막탄",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "HighAngleFire",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 62,
+      "attackSpeed": 0.1
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_112402.png"
+  },
+  {
+    "code": 112501,
+    "name": "루테늄구슬",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "HighAngleFire",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 40,
+      "skillAmp": 40
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_112501.png"
+  },
+  {
+    "code": 112405,
+    "name": "파이어볼",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "HighAngleFire",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 45,
+      "skillAmp": 40,
+      "attackSpeed": 0.2
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_112405.png"
+  },
+  {
+    "code": 112406,
+    "name": "프리즘볼",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "HighAngleFire",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 82,
+      "attackSpeed": 0.2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_112406.png"
+  },
+  {
+    "code": 112407,
+    "name": "아스트라페",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "HighAngleFire",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 53,
+      "critChance": 0.24,
+      "critDamage": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_112407.png"
+  },
+  {
+    "code": 112408,
+    "name": "점착폭탄",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "HighAngleFire",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 43,
+      "skillAmp": 19,
+      "attackSpeed": 0.2
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_112408.png"
+  },
+  {
+    "code": 112502,
+    "name": "여의주",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "HighAngleFire",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 42,
+      "skillAmp": 54
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_112502.png"
+  },
+  {
+    "code": 113401,
+    "name": "미치광이왕의카드",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DirectFire",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 39,
+      "attackSpeed": 0.4,
+      "critChance": 0.15,
+      "critDamage": 0.1
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_113401.png"
+  },
+  {
+    "code": 113405,
+    "name": "옥전결",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DirectFire",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 44,
+      "skillAmp": 38
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_113405.png"
+  },
+  {
+    "code": 113406,
+    "name": "풍마수리검",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DirectFire",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 41,
+      "skillAmp": 40,
+      "cooldownReduction": 0.15
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_113406.png"
+  },
+  {
+    "code": 113408,
+    "name": "빙백은침",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DirectFire",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 51,
+      "skillAmp": 57
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_113408.png"
+  },
+  {
+    "code": 113409,
+    "name": "푸른색단도",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DirectFire",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 30,
+      "skillAmp": 46,
+      "cooldownReduction": 0.08
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_113409.png"
+  },
+  {
+    "code": 113410,
+    "name": "플레솃",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DirectFire",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 60,
+      "critDamage": 0.12,
+      "moveSpeed": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_113410.png"
+  },
+  {
+    "code": 113411,
+    "name": "건곤권",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DirectFire",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 31,
+      "skillAmp": 37
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_113411.png"
+  },
+  {
+    "code": 113412,
+    "name": "생사부",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DirectFire",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 57,
+      "skillAmp": 57
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_113412.png"
+  },
+  {
+    "code": 113501,
+    "name": "수다르사나",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DirectFire",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 66
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_113501.png"
+  },
+  {
+    "code": 113502,
+    "name": "만천화우",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "DirectFire",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 50,
+      "attackSpeed": 0.4
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_113502.png"
+  },
+  {
+    "code": 114401,
+    "name": "편전",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bow",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 58,
+      "attackSpeed": 0.15
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_114401.png"
+  },
+  {
+    "code": 114403,
+    "name": "골든래쇼보우",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bow",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 43,
+      "skillAmp": 42,
+      "cooldownReduction": 0.1
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_114403.png"
+  },
+  {
+    "code": 114405,
+    "name": "트윈보우",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bow",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 28,
+      "attackSpeed": 0.4
+    },
+    "statsByLv": {
+      "attackPower": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_114405.png"
+  },
+  {
+    "code": 114501,
+    "name": "엘리멘탈보우",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bow",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 39,
+      "skillAmp": 37,
+      "moveSpeed": 0.06
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_114501.png"
+  },
+  {
+    "code": 114406,
+    "name": "제베의활",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bow",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 60,
+      "attackSpeed": 0.33,
+      "moveSpeed": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_114406.png"
+  },
+  {
+    "code": 114502,
+    "name": "페일노트",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bow",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 81,
+      "lifesteal": 0.12
+    },
+    "statsByLv": {
+      "attackSpeed": 0.02
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_114502.png"
+  },
+  {
+    "code": 114503,
+    "name": "아르기로톡소스",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bow",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 58,
+      "skillAmp": 85,
+      "armorPenPct": 0.1
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_114503.png"
+  },
+  {
+    "code": 114504,
+    "name": "적궁백시",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bow",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 68,
+      "attackSpeed": 0.15
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_114504.png"
+  },
+  {
+    "code": 114407,
+    "name": "아르테미스",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Bow",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 55,
+      "skillAmp": 78,
+      "maxHp": 100
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_114407.png"
+  },
+  {
+    "code": 115402,
+    "name": "대황",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "CrossBow",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 63,
+      "attackSpeed": 0.4,
+      "armorPenPct": 0.05
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_115402.png"
+  },
+  {
+    "code": 115403,
+    "name": "발리스타",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "CrossBow",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 43,
+      "skillAmp": 34,
+      "armorPenPct": 0.05
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_115403.png"
+  },
+  {
+    "code": 115404,
+    "name": "저격크로스보우",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "CrossBow",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 67,
+      "armorPenPct": 0.05
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_115404.png"
+  },
+  {
+    "code": 115405,
+    "name": "영광금귀신기노",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "CrossBow",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 51,
+      "skillAmp": 57,
+      "armorPenPct": 0.07
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_115405.png"
+  },
+  {
+    "code": 115406,
+    "name": "포이즌드크로스보우",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "CrossBow",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 42,
+      "skillAmp": 28,
+      "armorPenPct": 0.05
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_115406.png"
+  },
+  {
+    "code": 115501,
+    "name": "샤릉가",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "CrossBow",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 87,
+      "attackSpeed": 0.2,
+      "armorPenPct": 0.1
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_115501.png"
+  },
+  {
+    "code": 116403,
+    "name": "마탄의사수",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Pistol",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 29,
+      "skillAmp": 57,
+      "attackSpeed": 0.3,
+      "moveSpeed": 0.06
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_116403.png"
+  },
+  {
+    "code": 116404,
+    "name": "엘레강스",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Pistol",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 40,
+      "skillAmp": 44,
+      "moveSpeed": 0.06
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_116404.png"
+  },
+  {
+    "code": 116405,
+    "name": "일렉트론블라스터",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Pistol",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 77,
+      "attackSpeed": 0.4,
+      "moveSpeed": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_116405.png"
+  },
+  {
+    "code": 116406,
+    "name": "매그넘-보아",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Pistol",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 40,
+      "skillAmp": 41,
+      "attackSpeed": 0.25,
+      "lifesteal": 0.04,
+      "moveSpeed": 0.06
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_116406.png"
+  },
+  {
+    "code": 116407,
+    "name": "글록48",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Pistol",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 65,
+      "attackSpeed": 0.3,
+      "moveSpeed": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_116407.png"
+  },
+  {
+    "code": 116409,
+    "name": "스탬피드",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Pistol",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 23,
+      "skillAmp": 30,
+      "moveSpeed": 0.06
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_116409.png"
+  },
+  {
+    "code": 116410,
+    "name": "플라즈마건",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Pistol",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 52,
+      "attackSpeed": 0.35,
+      "moveSpeed": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_116410.png"
+  },
+  {
+    "code": 116501,
+    "name": "악켈테",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Pistol",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 82,
+      "attackSpeed": 0.4,
+      "moveSpeed": 0.08
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_116501.png"
+  },
+  {
+    "code": 116502,
+    "name": "알타이르",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Pistol",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 45,
+      "skillAmp": 74,
+      "attackSpeed": 0.25,
+      "moveSpeed": 0.08
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_116502.png"
+  },
+  {
+    "code": 117403,
+    "name": "95식자동소총",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "AssaultRifle",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 78,
+      "armorPenPct": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_117403.png"
+  },
+  {
+    "code": 117501,
+    "name": "아그니",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "AssaultRifle",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 67,
+      "attackSpeed": 0.25,
+      "armorPenPct": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_117501.png"
+  },
+  {
+    "code": 117404,
+    "name": "AK-12",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "AssaultRifle",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 74,
+      "critChance": 0.22,
+      "critDamage": 0.05,
+      "armorPenPct": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_117404.png"
+  },
+  {
+    "code": 117405,
+    "name": "XCR",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "AssaultRifle",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 50,
+      "skillAmp": 44,
+      "armorPenPct": 0.05
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_117405.png"
+  },
+  {
+    "code": 117406,
+    "name": "저지먼트",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "AssaultRifle",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 87,
+      "armorPenPct": 0.14
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_117406.png"
+  },
+  {
+    "code": 117407,
+    "name": "골드러시",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "AssaultRifle",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 45,
+      "skillAmp": 48,
+      "attackSpeed": 0.25,
+      "armorPenPct": 0.05
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_117407.png"
+  },
+  {
+    "code": 117502,
+    "name": "피안화",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "AssaultRifle",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 60,
+      "skillAmp": 69,
+      "attackSpeed": 0.3,
+      "armorPenPct": 0.09
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_117502.png"
+  },
+  {
+    "code": 118403,
+    "name": "Tac-50",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "SniperRifle",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 73,
+      "lifesteal": 0.11
+    },
+    "statsByLv": {
+      "attackPower": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_118403.png"
+  },
+  {
+    "code": 118404,
+    "name": "인터벤션",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "SniperRifle",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 65
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_118404.png"
+  },
+  {
+    "code": 118405,
+    "name": "NTW-20",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "SniperRifle",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 46,
+      "skillAmp": 44
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_118405.png"
+  },
+  {
+    "code": 118406,
+    "name": "폴라리스",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "SniperRifle",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 68,
+      "attackSpeed": 0.2
+    },
+    "statsByLv": {
+      "attackSpeed": 0.02
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_118406.png"
+  },
+  {
+    "code": 118407,
+    "name": "가우스라이플",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "SniperRifle",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 45,
+      "skillAmp": 40,
+      "attackSpeed": 0.3
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_118407.png"
+  },
+  {
+    "code": 118501,
+    "name": "사사성광",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "SniperRifle",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 60,
+      "skillAmp": 66,
+      "attackSpeed": 0.25
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_118501.png"
+  },
+  {
+    "code": 118502,
+    "name": "현자총통",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "SniperRifle",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 102
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_118502.png"
+  },
+  {
+    "code": 118503,
+    "name": "안드로메다",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "SniperRifle",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 74,
+      "attackSpeed": 0.2,
+      "lifesteal": 0.11
+    },
+    "statsByLv": {
+      "attackSpeed": 0.02
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_118503.png"
+  },
+  {
+    "code": 119401,
+    "name": "대소반룡곤",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Nunchaku",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 37,
+      "skillAmp": 39
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_119401.png"
+  },
+  {
+    "code": 119402,
+    "name": "초진동눈차크",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Nunchaku",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 60,
+      "attackSpeed": 0.3
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_119402.png"
+  },
+  {
+    "code": 119403,
+    "name": "케르베로스",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Nunchaku",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 80,
+      "attackSpeed": 0.25
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_119403.png"
+  },
+  {
+    "code": 119404,
+    "name": "블루3",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Nunchaku",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 55,
+      "critChance": 0.25,
+      "cooldownReduction": 0.1
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_119404.png"
+  },
+  {
+    "code": 119501,
+    "name": "히드라",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Nunchaku",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 50,
+      "skillAmp": 104,
+      "cooldownReduction": 0.12,
+      "lifesteal": 0.2
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_119501.png"
+  },
+  {
+    "code": 119502,
+    "name": "비익련리",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Nunchaku",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 43,
+      "skillAmp": 64
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_119502.png"
+  },
+  {
+    "code": 120302,
+    "name": "활빈검",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Rapier",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 23,
+      "skillAmp": 33,
+      "critDamage": 0.15,
+      "cooldownReduction": 0.12
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_120302.png"
+  },
+  {
+    "code": 120401,
+    "name": "듀랜달Mk2",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Rapier",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 54,
+      "critChance": 0.2,
+      "critDamage": 0.06,
+      "cooldownReduction": 0.08,
+      "lifesteal": 0.07
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_120401.png"
+  },
+  {
+    "code": 120402,
+    "name": "미스틸테인",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Rapier",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 28,
+      "skillAmp": 60,
+      "critDamage": 0.15,
+      "cooldownReduction": 0.15
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_120402.png"
+  },
+  {
+    "code": 120403,
+    "name": "볼틱레토",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Rapier",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 43,
+      "attackSpeed": 0.4,
+      "critChance": 0.2,
+      "cooldownReduction": 0.08
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_120403.png"
+  },
+  {
+    "code": 120404,
+    "name": "유성검",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Rapier",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 55,
+      "critChance": 0.22,
+      "critDamage": 0.12,
+      "cooldownReduction": 0.12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_120404.png"
+  },
+  {
+    "code": 120405,
+    "name": "주와이외즈",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Rapier",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 54,
+      "attackSpeed": 0.4,
+      "critChance": 0.1,
+      "critDamage": 0.07,
+      "moveSpeed": 0.1
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_120405.png"
+  },
+  {
+    "code": 120406,
+    "name": "레드팬서",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Rapier",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 35,
+      "skillAmp": 43,
+      "maxHp": 100
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_120406.png"
+  },
+  {
+    "code": 120407,
+    "name": "에스프리",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Rapier",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 59,
+      "critChance": 0.24
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_120407.png"
+  },
+  {
+    "code": 120501,
+    "name": "아르고스의눈",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Rapier",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 39,
+      "skillAmp": 84
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_120501.png"
+  },
+  {
+    "code": 121401,
+    "name": "보헤미안",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Guitar",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 55,
+      "maxHp": 200,
+      "critChance": 0.22,
+      "critDamage": 0.05
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_121401.png"
+  },
+  {
+    "code": 121402,
+    "name": "천국의계단",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Guitar",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 44,
+      "skillAmp": 33,
+      "cooldownReduction": 0.05
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_121402.png"
+  },
+  {
+    "code": 121403,
+    "name": "퍼플헤이즈",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Guitar",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 62,
+      "skillAmp": 49
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_121403.png"
+  },
+  {
+    "code": 121404,
+    "name": "새티스팩션",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Guitar",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 55,
+      "attackSpeed": 0.35,
+      "lifesteal": 0.15
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_121404.png"
+  },
+  {
+    "code": 121405,
+    "name": "원더풀투나잇",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Guitar",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 64,
+      "attackSpeed": 0.2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_121405.png"
+  },
+  {
+    "code": 121406,
+    "name": "더월",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Guitar",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 53,
+      "attackSpeed": 0.23
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_121406.png"
+  },
+  {
+    "code": 121407,
+    "name": "틴스피릿",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Guitar",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 51,
+      "attackSpeed": 0.4
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_121407.png"
+  },
+  {
+    "code": 121501,
+    "name": "캡틴페퍼",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Guitar",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 53,
+      "skillAmp": 62,
+      "cooldownReduction": 0.12
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_121501.png"
+  },
+  {
+    "code": 122401,
+    "name": "미러리스",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Camera",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 25,
+      "skillAmp": 36
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_122401.png"
+  },
+  {
+    "code": 122402,
+    "name": "컴파운드사이트",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Camera",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 35,
+      "cooldownReduction": 0.15
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_122402.png"
+  },
+  {
+    "code": 122403,
+    "name": "카메라캐논",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Camera",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 73,
+      "attackSpeed": 0.2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_122403.png"
+  },
+  {
+    "code": 122404,
+    "name": "VICG",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Camera",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 62,
+      "attackSpeed": 0.2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_122404.png"
+  },
+  {
+    "code": 122405,
+    "name": "폴라로이드카메라",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Camera",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 22,
+      "skillAmp": 25,
+      "armorPenPct": 0.07
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_122405.png"
+  },
+  {
+    "code": 122501,
+    "name": "울트라비전",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Camera",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 50,
+      "skillAmp": 69
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_122501.png"
+  },
+  {
+    "code": 130401,
+    "name": "은둔자",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Arcana",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 30,
+      "skillAmp": 42
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_130401.png"
+  },
+  {
+    "code": 130402,
+    "name": "운명의수레바퀴",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Arcana",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 25,
+      "skillAmp": 30,
+      "maxHp": 100,
+      "cooldownReduction": 0.08
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_130402.png"
+  },
+  {
+    "code": 130403,
+    "name": "절제",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Arcana",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 30,
+      "skillAmp": 30
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_130403.png"
+  },
+  {
+    "code": 130404,
+    "name": "더스타",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Arcana",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 48,
+      "skillAmp": 35,
+      "cooldownReduction": 0.12
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_130404.png"
+  },
+  {
+    "code": 130405,
+    "name": "더문",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Arcana",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 45,
+      "skillAmp": 60
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_130405.png"
+  },
+  {
+    "code": 130501,
+    "name": "여제",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Arcana",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 43,
+      "skillAmp": 66,
+      "cooldownReduction": 0.1
+    },
+    "statsByLv": {
+      "skillAmp": 2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_130501.png"
+  },
+  {
+    "code": 131401,
+    "name": "데스애더퀸",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 53,
+      "attackSpeed": 0.15
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_131401.png"
+  },
+  {
+    "code": 131402,
+    "name": "블랙맘바킹",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 47,
+      "lifesteal": 0.12
+    },
+    "statsByLv": {
+      "maxHp": 7
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_131402.png"
+  },
+  {
+    "code": 131403,
+    "name": "슈퍼사이드와인더",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 58,
+      "cooldownReduction": 0.08,
+      "moveSpeed": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_131403.png"
+  },
+  {
+    "code": 131501,
+    "name": "데스애더퀸-MT",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 61,
+      "attackSpeed": 0.2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_131501.png"
+  },
+  {
+    "code": 131502,
+    "name": "데스애더퀸-FC",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 67,
+      "attackSpeed": 0.25,
+      "tenacity": 0.15
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_131502.png"
+  },
+  {
+    "code": 131503,
+    "name": "데스애더퀸-VBS",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 71,
+      "attackSpeed": 0.25
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_131503.png"
+  },
+  {
+    "code": 131504,
+    "name": "블랙맘바킹-TL",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 52,
+      "lifesteal": 0.12
+    },
+    "statsByLv": {
+      "maxHp": 8
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_131504.png"
+  },
+  {
+    "code": 131505,
+    "name": "블랙맘바킹-FC",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 60,
+      "lifesteal": 0.17,
+      "tenacity": 0.15
+    },
+    "statsByLv": {
+      "maxHp": 11
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_131505.png"
+  },
+  {
+    "code": 131506,
+    "name": "블랙맘바킹-VBS",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 64,
+      "lifesteal": 0.17
+    },
+    "statsByLv": {
+      "maxHp": 11
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_131506.png"
+  },
+  {
+    "code": 131507,
+    "name": "슈퍼사이드와인더-ML",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 65,
+      "cooldownReduction": 0.1,
+      "moveSpeed": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_131507.png"
+  },
+  {
+    "code": 131508,
+    "name": "슈퍼사이드와인더-FC",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 71,
+      "cooldownReduction": 0.15,
+      "moveSpeed": 0.1,
+      "tenacity": 0.15
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_131508.png"
+  },
+  {
+    "code": 131509,
+    "name": "슈퍼사이드와인더-VBS",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 75,
+      "cooldownReduction": 0.15,
+      "moveSpeed": 0.1
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_131509.png"
+  },
+  {
+    "code": 601501,
+    "name": "데스애더퀸-MT2",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 61,
+      "attackSpeed": 0.2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_601501.png"
+  },
+  {
+    "code": 601502,
+    "name": "데스애더퀸-FC2",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 67,
+      "attackSpeed": 0.25,
+      "tenacity": 0.15
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_601502.png"
+  },
+  {
+    "code": 601503,
+    "name": "데스애더퀸-VBS2",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 71,
+      "attackSpeed": 0.25
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_601503.png"
+  },
+  {
+    "code": 601504,
+    "name": "블랙맘바킹-TL2",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 52,
+      "lifesteal": 0.12
+    },
+    "statsByLv": {
+      "maxHp": 8
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_601504.png"
+  },
+  {
+    "code": 601505,
+    "name": "블랙맘바킹-FC2",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 60,
+      "lifesteal": 0.17,
+      "tenacity": 0.15
+    },
+    "statsByLv": {
+      "maxHp": 11
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_601505.png"
+  },
+  {
+    "code": 601506,
+    "name": "블랙맘바킹-VBS2",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 64,
+      "lifesteal": 0.17
+    },
+    "statsByLv": {
+      "maxHp": 11
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_601506.png"
+  },
+  {
+    "code": 601507,
+    "name": "슈퍼사이드와인더-ML2",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 65,
+      "cooldownReduction": 0.1,
+      "moveSpeed": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_601507.png"
+  },
+  {
+    "code": 601508,
+    "name": "슈퍼사이드와인더-FC2",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 71,
+      "cooldownReduction": 0.15,
+      "moveSpeed": 0.1,
+      "tenacity": 0.15
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_601508.png"
+  },
+  {
+    "code": 601509,
+    "name": "슈퍼사이드와인더-VBS2",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "VFArm",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 75,
+      "cooldownReduction": 0.15,
+      "moveSpeed": 0.1
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_601509.png"
+  },
+  {
+    "code": 610501,
+    "name": "주작자문MK2",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Glove",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 40
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_610501.png"
+  },
+  {
+    "code": 602409,
+    "name": "레바테인MK2",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "TwoHandSword",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 48
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_602409.png"
+  },
+  {
+    "code": 607406,
+    "name": "화첨창MK2",
+    "itemType": "Weapon",
+    "slot": "무기",
+    "weaponType": "Spear",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 60
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_607406.png"
+  },
+  {
+    "code": 201304,
+    "name": "로빈",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 16,
+      "cooldownReduction": 0.12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201304.png"
+  },
+  {
+    "code": 201403,
+    "name": "미스릴투구",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Legend",
+    "stats": {
+      "defense": 22,
+      "attackSpeed": 0.3,
+      "cooldownReduction": 0.15,
+      "moveSpeed": 0.08
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201403.png"
+  },
+  {
+    "code": 201404,
+    "name": "수정티아라",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Epic",
+    "stats": {
+      "defense": 7,
+      "critChance": 0.25,
+      "critDamage": 0.05
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201404.png"
+  },
+  {
+    "code": 201405,
+    "name": "오토바이헬멧",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 52,
+      "maxHp": 115,
+      "attackSpeed": 0.28
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201405.png"
+  },
+  {
+    "code": 201406,
+    "name": "전술OPS헬멧",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Epic",
+    "stats": {
+      "defense": 6,
+      "maxHp": 90,
+      "attackSpeed": 0.28,
+      "cooldownReduction": 0.1
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201406.png"
+  },
+  {
+    "code": 201407,
+    "name": "기사단장의투구",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Epic",
+    "stats": {
+      "defense": 6,
+      "cooldownReduction": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201407.png"
+  },
+  {
+    "code": 201408,
+    "name": "월계관",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 21,
+      "defense": 3,
+      "cooldownReduction": 0.15,
+      "armorPenPct": 0.08
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201408.png"
+  },
+  {
+    "code": 201409,
+    "name": "제국왕관",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 54,
+      "defense": 8,
+      "cooldownReduction": 0.12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201409.png"
+  },
+  {
+    "code": 201410,
+    "name": "황실부르고넷",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 58,
+      "defense": 6,
+      "cooldownReduction": 0.06
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201410.png"
+  },
+  {
+    "code": 201411,
+    "name": "변검",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Legend",
+    "stats": {
+      "defense": 8,
+      "lifesteal": 0.12,
+      "moveSpeed": 0.08,
+      "armorPenPct": 0.18
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201411.png"
+  },
+  {
+    "code": 201412,
+    "name": "모호크헬멧",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Epic",
+    "stats": {
+      "maxHp": 195
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201412.png"
+  },
+  {
+    "code": 201413,
+    "name": "비질란테",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 48,
+      "defense": 7,
+      "maxHp": 155
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201413.png"
+  },
+  {
+    "code": 201414,
+    "name": "다이아뎀",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 16,
+      "defense": 3,
+      "cooldownReduction": 0.12,
+      "armorPenPct": 0.07
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201414.png"
+  },
+  {
+    "code": 201415,
+    "name": "성기사의투구",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 15,
+      "defense": 4
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201415.png"
+  },
+  {
+    "code": 201416,
+    "name": "만개하는선율",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 35,
+      "defense": 18,
+      "cooldownReduction": 0.1
+    },
+    "statsByLv": {
+      "skillAmp": 3
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201416.png"
+  },
+  {
+    "code": 201417,
+    "name": "카우보이모자",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 14,
+      "defense": 3,
+      "attackSpeed": 0.28
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201417.png"
+  },
+  {
+    "code": 201501,
+    "name": "천사의고리",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 25,
+      "defense": 13
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201501.png"
+  },
+  {
+    "code": 201502,
+    "name": "빛의증표",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Legend",
+    "stats": {
+      "defense": 11,
+      "critChance": 0.29,
+      "critDamage": 0.09
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201502.png"
+  },
+  {
+    "code": 201503,
+    "name": "페르소나",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 61,
+      "defense": 8,
+      "moveSpeed": 0.1
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201503.png"
+  },
+  {
+    "code": 201504,
+    "name": "예언자의터번",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 72,
+      "defense": 6,
+      "cooldownReduction": 0.08,
+      "moveSpeed": 0.08
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201504.png"
+  },
+  {
+    "code": 201505,
+    "name": "레이싱헬멧",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 69,
+      "maxHp": 140,
+      "attackSpeed": 0.35
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201505.png"
+  },
+  {
+    "code": 201506,
+    "name": "황야의별",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 18,
+      "defense": 6,
+      "attackSpeed": 0.38
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201506.png"
+  },
+  {
+    "code": 201507,
+    "name": "우주비행사의헬멧",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 66,
+      "defense": 6,
+      "maxHp": 100
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201507.png"
+  },
+  {
+    "code": 201508,
+    "name": "드워프의투구",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Legend",
+    "stats": {
+      "defense": 10,
+      "maxHp": 120
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_201508.png"
+  },
+  {
+    "code": 202307,
+    "name": "고위사제복",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 60,
+      "defense": 9,
+      "maxHp": 120
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202307.png"
+  },
+  {
+    "code": 202402,
+    "name": "석양의갑옷",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Epic",
+    "stats": {
+      "defense": 20,
+      "maxHp": 200
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202402.png"
+  },
+  {
+    "code": 202404,
+    "name": "어사의",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 38,
+      "defense": 16,
+      "cooldownReduction": 0.12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202404.png"
+  },
+  {
+    "code": 202405,
+    "name": "광학미채수트",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 14,
+      "defense": 10,
+      "critChance": 0.22
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202405.png"
+  },
+  {
+    "code": 202406,
+    "name": "락커의자켓",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 25,
+      "defense": 12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202406.png"
+  },
+  {
+    "code": 202407,
+    "name": "미스릴갑옷",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "defense": 34,
+      "attackSpeed": 0.35,
+      "moveSpeed": 0.08
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202407.png"
+  },
+  {
+    "code": 202408,
+    "name": "성기사의갑옷",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 12,
+      "defense": 15,
+      "maxHp": 50
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202408.png"
+  },
+  {
+    "code": 202410,
+    "name": "아마조네스아머",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Epic",
+    "stats": {
+      "defense": 20,
+      "maxHp": 170
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202410.png"
+  },
+  {
+    "code": 202411,
+    "name": "용의도복",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 26,
+      "defense": 9,
+      "cooldownReduction": 0.13
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202411.png"
+  },
+  {
+    "code": 202412,
+    "name": "지휘관의갑옷",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 55,
+      "defense": 20
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202412.png"
+  },
+  {
+    "code": 202413,
+    "name": "집사복",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 28,
+      "lifesteal": 0.12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202413.png"
+  },
+  {
+    "code": 202415,
+    "name": "배틀수트",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Epic",
+    "stats": {
+      "defense": 22,
+      "maxHp": 140
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202415.png"
+  },
+  {
+    "code": 202416,
+    "name": "불꽃드레스",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 5,
+      "defense": 25
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202416.png"
+  },
+  {
+    "code": 202417,
+    "name": "EOD수트",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 13,
+      "defense": 22,
+      "maxHp": 135,
+      "cooldownReduction": 0.1
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202417.png"
+  },
+  {
+    "code": 202418,
+    "name": "턱시도",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 25,
+      "defense": 10,
+      "lifesteal": 0.07
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202418.png"
+  },
+  {
+    "code": 202419,
+    "name": "제사장의예복",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 30,
+      "defense": 14,
+      "cooldownReduction": 0.15
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202419.png"
+  },
+  {
+    "code": 202420,
+    "name": "창파오",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 14,
+      "defense": 9,
+      "attackSpeed": 0.32
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202420.png"
+  },
+  {
+    "code": 202421,
+    "name": "미스릴크롭",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "defense": 45,
+      "attackSpeed": 0.38,
+      "moveSpeed": 0.12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202421.png"
+  },
+  {
+    "code": 202422,
+    "name": "방화복",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Epic",
+    "stats": {
+      "defense": 14,
+      "maxHp": 100,
+      "attackSpeed": 0.28
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202422.png"
+  },
+  {
+    "code": 202501,
+    "name": "카바나",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 75,
+      "defense": 22
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202501.png"
+  },
+  {
+    "code": 202502,
+    "name": "퀸오브하트",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 42,
+      "defense": 22,
+      "cooldownReduction": 0.3
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202502.png"
+  },
+  {
+    "code": 202503,
+    "name": "성법의",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 55,
+      "defense": 11,
+      "maxHp": 120
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202503.png"
+  },
+  {
+    "code": 202504,
+    "name": "버건디47",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 25,
+      "defense": 6,
+      "lifesteal": 0.1,
+      "moveSpeed": 0.08
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202504.png"
+  },
+  {
+    "code": 202505,
+    "name": "아오자이",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 45,
+      "defense": 20,
+      "cooldownReduction": 0.15
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202505.png"
+  },
+  {
+    "code": 202506,
+    "name": "팬텀자켓",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 15,
+      "defense": 25
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202506.png"
+  },
+  {
+    "code": 202507,
+    "name": "가디언슈트",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "defense": 26,
+      "maxHp": 150
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202507.png"
+  },
+  {
+    "code": 202508,
+    "name": "진은드레스",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 63,
+      "defense": 24,
+      "cooldownReduction": 0.15
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202508.png"
+  },
+  {
+    "code": 202509,
+    "name": "선녀강림",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 22,
+      "defense": 11,
+      "attackSpeed": 0.42
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202509.png"
+  },
+  {
+    "code": 202510,
+    "name": "고스트",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 19,
+      "defense": 11,
+      "critChance": 0.27
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202510.png"
+  },
+  {
+    "code": 202511,
+    "name": "핏빛망토",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 65,
+      "defense": 22
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202511.png"
+  },
+  {
+    "code": 202512,
+    "name": "오메르타",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 36,
+      "defense": 15,
+      "cooldownReduction": 0.15
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202512.png"
+  },
+  {
+    "code": 202513,
+    "name": "슈팅스타자켓",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 30,
+      "defense": 14,
+      "moveSpeed": 0.04
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_202513.png"
+  },
+  {
+    "code": 203306,
+    "name": "포이즌드",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 48,
+      "defense": 6
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203306.png"
+  },
+  {
+    "code": 203402,
+    "name": "소드스토퍼",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Epic",
+    "stats": {
+      "defense": 8
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203402.png"
+  },
+  {
+    "code": 203403,
+    "name": "드라우프니르",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 57,
+      "defense": 6
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203403.png"
+  },
+  {
+    "code": 203404,
+    "name": "미스릴방패",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 27,
+      "defense": 14,
+      "attackSpeed": 0.25,
+      "moveSpeed": 0.08
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203404.png"
+  },
+  {
+    "code": 203405,
+    "name": "바이탈센서",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Epic",
+    "stats": {
+      "defense": 6,
+      "attackSpeed": 0.3,
+      "critChance": 0.17
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203405.png"
+  },
+  {
+    "code": 203406,
+    "name": "기사의신조",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 26,
+      "defense": 10,
+      "critDamage": 0.14
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203406.png"
+  },
+  {
+    "code": 203407,
+    "name": "샤자한의검집",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 32,
+      "maxHp": 115,
+      "armorPenPct": 0.09
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203407.png"
+  },
+  {
+    "code": 203408,
+    "name": "큐브워치",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Legend",
+    "stats": {
+      "defense": 8,
+      "attackSpeed": 0.45
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203408.png"
+  },
+  {
+    "code": 203409,
+    "name": "아이기스",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 8,
+      "defense": 14,
+      "maxHp": 200
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203409.png"
+  },
+  {
+    "code": 203410,
+    "name": "틴달로스의팔찌",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 38,
+      "defense": 3,
+      "cooldownReduction": 0.12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203410.png"
+  },
+  {
+    "code": 203411,
+    "name": "나이팅게일",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 56,
+      "maxHp": 100
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203411.png"
+  },
+  {
+    "code": 203412,
+    "name": "플라즈마아크",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 23,
+      "defense": 8,
+      "attackSpeed": 0.24
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203412.png"
+  },
+  {
+    "code": 203413,
+    "name": "텔루리안타임피스",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 53,
+      "defense": 6,
+      "attackSpeed": 0.3
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203413.png"
+  },
+  {
+    "code": 203414,
+    "name": "스마트밴드",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 23,
+      "cooldownReduction": 0.12,
+      "lifesteal": 0.05,
+      "armorPenPct": 0.08
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203414.png"
+  },
+  {
+    "code": 203415,
+    "name": "미닛맨의표식",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 17,
+      "defense": 8,
+      "critChance": 0.22
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203415.png"
+  },
+  {
+    "code": 203501,
+    "name": "스카디의팔찌",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 64,
+      "maxHp": 125
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203501.png"
+  },
+  {
+    "code": 203502,
+    "name": "레이더",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Legend",
+    "stats": {
+      "defense": 8,
+      "attackSpeed": 0.35,
+      "critChance": 0.28
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203502.png"
+  },
+  {
+    "code": 203503,
+    "name": "오토암즈",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 37,
+      "defense": 22
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203503.png"
+  },
+  {
+    "code": 203504,
+    "name": "프로미넌스",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 44,
+      "maxHp": 185,
+      "cooldownReduction": 0.3
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203504.png"
+  },
+  {
+    "code": 203505,
+    "name": "가시지네견갑",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Legend",
+    "stats": {
+      "defense": 13
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203505.png"
+  },
+  {
+    "code": 203506,
+    "name": "스포츠시계",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 25,
+      "defense": 6,
+      "attackSpeed": 0.25
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203506.png"
+  },
+  {
+    "code": 203507,
+    "name": "틴달로스의군주",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 59,
+      "defense": 8,
+      "cooldownReduction": 0.18
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203507.png"
+  },
+  {
+    "code": 203508,
+    "name": "샤를마뉴의방패",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 30,
+      "defense": 15,
+      "critDamage": 0.2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203508.png"
+  },
+  {
+    "code": 203509,
+    "name": "혈사조",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 17,
+      "defense": 8,
+      "attackSpeed": 0.25,
+      "armorPenPct": 0.12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203509.png"
+  },
+  {
+    "code": 203510,
+    "name": "용의비늘",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 86,
+      "defense": 8
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203510.png"
+  },
+  {
+    "code": 203511,
+    "name": "서슬가시체인",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 34,
+      "cooldownReduction": 0.15,
+      "armorPenPct": 0.1
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203511.png"
+  },
+  {
+    "code": 203512,
+    "name": "아흐라만의손길",
+    "itemType": "Armor",
+    "slot": "팔",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 70,
+      "defense": 8
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_203512.png"
+  },
+  {
+    "code": 204303,
+    "name": "등산화",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Rare",
+    "stats": {
+      "moveSpeed": 0.19
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204303.png"
+  },
+  {
+    "code": 204304,
+    "name": "아이젠",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Epic",
+    "stats": {
+      "moveSpeed": 0.27,
+      "armorPenPct": 0.09
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204304.png"
+  },
+  {
+    "code": 204402,
+    "name": "경량화부츠",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Epic",
+    "stats": {
+      "attackSpeed": 0.32,
+      "moveSpeed": 0.27
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204402.png"
+  },
+  {
+    "code": 204403,
+    "name": "매버릭러너",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 14,
+      "moveSpeed": 0.27,
+      "tenacity": 0.2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204403.png"
+  },
+  {
+    "code": 204406,
+    "name": "풍화륜",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 23,
+      "moveSpeed": 0.27
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204406.png"
+  },
+  {
+    "code": 204407,
+    "name": "미스릴부츠",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Legend",
+    "stats": {
+      "defense": 11,
+      "attackSpeed": 0.48,
+      "moveSpeed": 0.35
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204407.png"
+  },
+  {
+    "code": 204408,
+    "name": "부케팔로스",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Epic",
+    "stats": {
+      "attackPower": 5,
+      "defense": 3,
+      "critChance": 0.18,
+      "moveSpeed": 0.27
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204408.png"
+  },
+  {
+    "code": 204409,
+    "name": "EOD부츠",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Epic",
+    "stats": {
+      "defense": 11,
+      "moveSpeed": 0.27
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204409.png"
+  },
+  {
+    "code": 204411,
+    "name": "클링온부츠",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Epic",
+    "stats": {
+      "attackSpeed": 0.12,
+      "moveSpeed": 0.27
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204411.png"
+  },
+  {
+    "code": 204410,
+    "name": "글레이셜슈즈",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 24,
+      "moveSpeed": 0.32
+    },
+    "statsByLv": {
+      "skillAmp": 1
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204410.png"
+  },
+  {
+    "code": 204412,
+    "name": "타키온브레이스",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Epic",
+    "stats": {
+      "defense": 5,
+      "cooldownReduction": 0.12,
+      "moveSpeed": 0.27
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204412.png"
+  },
+  {
+    "code": 204413,
+    "name": "탭루트",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Legend",
+    "stats": {
+      "cooldownReduction": 0.3,
+      "moveSpeed": 0.35
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204413.png"
+  },
+  {
+    "code": 204414,
+    "name": "아이언메이든",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Legend",
+    "stats": {
+      "moveSpeed": 0.32,
+      "armorPenPct": 0.15
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204414.png"
+  },
+  {
+    "code": 204415,
+    "name": "SCV",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Epic",
+    "stats": {
+      "skillAmp": 13,
+      "moveSpeed": 0.27,
+      "tenacity": 0.2
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204415.png"
+  },
+  {
+    "code": 204501,
+    "name": "헤르메스의부츠",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Legend",
+    "stats": {
+      "defense": 19,
+      "moveSpeed": 0.35,
+      "tenacity": 0.3
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204501.png"
+  },
+  {
+    "code": 204502,
+    "name": "분홍신",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 12,
+      "attackSpeed": 0.25,
+      "lifesteal": 0.06,
+      "moveSpeed": 0.35
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204502.png"
+  },
+  {
+    "code": 204503,
+    "name": "블레이드부츠",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 8,
+      "attackSpeed": 0.25,
+      "moveSpeed": 0.32
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204503.png"
+  },
+  {
+    "code": 204504,
+    "name": "알렉산드로스",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 8,
+      "defense": 5,
+      "critChance": 0.24,
+      "moveSpeed": 0.32
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204504.png"
+  },
+  {
+    "code": 204505,
+    "name": "칼날다리",
+    "itemType": "Armor",
+    "slot": "다리",
+    "grade": "Legend",
+    "stats": {
+      "skillAmp": 33,
+      "moveSpeed": 0.35
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_204505.png"
+  },
+  {
+    "code": 702503,
+    "name": "성법의MK2",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Legend",
+    "stats": {
+      "attackPower": 35,
+      "skillAmp": 45,
+      "defense": 25,
+      "maxHp": 200
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_702503.png"
+  },
+  {
+    "code": 702601,
+    "name": "이단심판관",
+    "itemType": "Armor",
+    "slot": "가슴",
+    "grade": "Mythic",
+    "stats": {
+      "attackPower": 30,
+      "skillAmp": 25,
+      "defense": 17,
+      "lifesteal": 0.12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_702601.png"
+  },
+  {
+    "code": 701451,
+    "name": "택티컬바이저",
+    "itemType": "Armor",
+    "slot": "머리",
+    "grade": "Legend",
+    "stats": {
+      "defense": 10,
+      "maxHp": 160,
+      "attackSpeed": 0.38,
+      "cooldownReduction": 0.12
+    },
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/ItemIcon_701451.png"
+  }
+]

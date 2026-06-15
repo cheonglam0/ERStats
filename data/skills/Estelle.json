@@ -1,0 +1,173 @@
+{
+  "characterId": "Estelle",
+  "characterName": "에스텔",
+  "source": "나무위키 에스텔(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "사명감",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(사명감). 제외.",
+      "_dakId": 1055100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "진압",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        80,
+        110,
+        140,
+        170
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "excludeFromDps": false,
+      "note": "기절(+최대체력).",
+      "_dakId": 1055200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "선제대응",
+      "damageType": "magic",
+      "baseDamage": [
+        20,
+        50,
+        80,
+        110,
+        140
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.55,
+      "cooldown": [
+        7,
+        6.5,
+        6,
+        5.5,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "선제대응(주력).",
+      "_dakId": 1055300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "긴급진화",
+      "damageType": "magic",
+      "baseDamage": [
+        10,
+        20,
+        30,
+        40,
+        50
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.25,
+      "cooldown": [
+        7,
+        6.5,
+        6,
+        5.5,
+        5
+      ],
+      "excludeFromDps": true,
+      "note": "긴급진화(대체 폼) → 제외.",
+      "_dakId": 1055310,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "방패방어",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        16,
+        15,
+        14,
+        13,
+        12
+      ],
+      "excludeFromDps": true,
+      "note": "방패방어(방어 폼) → 제외.",
+      "_dakId": 1055400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "방패돌진",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        85,
+        110,
+        135,
+        160
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.7,
+      "cooldown": [
+        16,
+        15,
+        14,
+        13,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "방패돌진(+최대체력).",
+      "_dakId": 1055410,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "헬기호출",
+      "damageType": "magic",
+      "baseDamage": [
+        70,
+        150,
+        230
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "헬기호출(+최대체력)·보호막.",
+      "_dakId": 1055500,
+      "_maxLevel": 3
+    }
+  ]
+}

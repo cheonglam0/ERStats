@@ -1,0 +1,123 @@
+{
+  "characterId": "William",
+  "characterName": "윌리엄",
+  "source": "나무위키 윌리엄(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "캐치볼",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(캐치볼). 제외.",
+      "_dakId": 1032100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "쉐도우 볼",
+      "damageType": "physical",
+      "baseDamage": [
+        50,
+        80,
+        110,
+        140,
+        170
+      ],
+      "apRatio": 0.7,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "excludeFromDps": false,
+      "note": "쉐도우 볼(방어 증가). 쿨다운 추정.",
+      "_dakId": 1032200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "와인드업",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "excludeFromDps": true,
+      "note": "와인드업(평타 강화 버프). 제외.",
+      "_dakId": 1032300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "슬라이딩 캐치",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": true,
+      "note": "슬라이딩 캐치(이동/포구). 제외.",
+      "_dakId": 1032400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "위닝샷",
+      "damageType": "physical",
+      "baseDamage": [
+        150,
+        250,
+        350
+      ],
+      "apRatio": 0.5,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        60,
+        50,
+        40
+      ],
+      "excludeFromDps": false,
+      "note": "위닝샷.",
+      "_dakId": 1032500,
+      "_maxLevel": 3
+    }
+  ]
+}

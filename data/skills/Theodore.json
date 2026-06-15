@@ -1,0 +1,123 @@
+{
+  "characterId": "Theodore",
+  "characterName": "테오도르",
+  "source": "나무위키 테오도르(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "에너지 프로토콜",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(에너지 프로토콜). 제외.",
+      "_dakId": 1062100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "에너지 포",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        90,
+        130,
+        170,
+        210
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.75,
+      "cooldown": [
+        12,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "에너지 포. 증폭 [70~230](+75%) 별도.",
+      "_dakId": 1062200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "증폭 스크린",
+      "damageType": "magic",
+      "baseDamage": [
+        30,
+        40,
+        50,
+        60,
+        70
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.26,
+      "cooldown": [
+        12,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "증폭 스크린(스킬 증폭/회복 보조).",
+      "_dakId": 1062300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "스파크탄",
+      "damageType": "magic",
+      "baseDamage": [
+        30,
+        60,
+        90,
+        120,
+        150
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "스파크탄(속박).",
+      "_dakId": 1062400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "에너지 필드",
+      "damageType": "magic",
+      "baseDamage": [
+        100,
+        230,
+        260
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.9,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "에너지 필드.",
+      "_dakId": 1062500,
+      "_maxLevel": 3
+    }
+  ]
+}

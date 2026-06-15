@@ -1,0 +1,123 @@
+{
+  "characterId": "Elena",
+  "characterName": "엘레나",
+  "source": "나무위키 엘레나(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "겨울여왕의 영지",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(얼음지대 proc). 제외.",
+      "_dakId": 1050100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "크리스탈 엘레강스",
+      "damageType": "magic",
+      "baseDamage": [
+        40,
+        70,
+        100,
+        130,
+        160
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.35,
+      "cooldown": [
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      "excludeFromDps": false,
+      "note": "2타 기준(+추가체력). 1타 [20~80](+25%).",
+      "_dakId": 1050200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "더블 악셀",
+      "damageType": "magic",
+      "baseDamage": [
+        50,
+        70,
+        90,
+        110,
+        130
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        16,
+        15,
+        14,
+        13,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "충전형(+추가체력).",
+      "_dakId": 1050300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "스파이럴",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "excludeFromDps": true,
+      "note": "스케이트 이동기. 제외.",
+      "_dakId": 1050400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "죽음의 무도",
+      "damageType": "magic",
+      "baseDamage": [
+        150,
+        230,
+        310
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.6,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "얼음 기둥 기준(+추가체력). 1타 [110~250](+40%).",
+      "_dakId": 1050500,
+      "_maxLevel": 3
+    }
+  ]
+}

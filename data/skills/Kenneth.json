@@ -1,0 +1,123 @@
+{
+  "characterId": "Kenneth",
+  "characterName": "케네스",
+  "source": "나무위키 케네스(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "억압된 분노",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(억압된 분노). 제외.",
+      "_dakId": 1071100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "분노의 일격",
+      "damageType": "physical",
+      "baseDamage": [
+        30,
+        40,
+        50,
+        60,
+        70
+      ],
+      "apRatio": 1.75,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        10,
+        9,
+        8,
+        7,
+        6
+      ],
+      "excludeFromDps": false,
+      "note": "분노의 일격(공격력 165~185%).",
+      "_dakId": 1071200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "업화",
+      "damageType": "physical",
+      "baseDamage": [
+        8,
+        16,
+        24,
+        32,
+        40
+      ],
+      "apRatio": 0.25,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "업화(쿨다운 반환).",
+      "_dakId": 1071300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "맹공격",
+      "damageType": "physical",
+      "baseDamage": [
+        40,
+        70,
+        100,
+        130,
+        160
+      ],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "맹공격(계수 추정).",
+      "_dakId": 1071400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "화염 분쇄",
+      "damageType": "physical",
+      "baseDamage": [
+        70,
+        170,
+        270
+      ],
+      "apRatio": 1.5,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "화염 분쇄 내려 베기 기준. 올려 베기 [50~150](+70%).",
+      "_dakId": 1071500,
+      "_maxLevel": 3
+    }
+  ]
+}

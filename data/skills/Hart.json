@@ -1,0 +1,123 @@
+{
+  "characterId": "Hart",
+  "characterName": "하트",
+  "source": "나무위키 하트(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "Feedback",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(피드백). 제외.",
+      "_dakId": 1008100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "Delay",
+      "damageType": "physical",
+      "baseDamage": [
+        40,
+        80,
+        120,
+        160,
+        200
+      ],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "excludeFromDps": false,
+      "note": "최대(4초 대기) 기준. 최소 [20~100](+40%). 음표 2발.",
+      "_dakId": 1008200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "Overdrive",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        14,
+        14,
+        14,
+        14,
+        14
+      ],
+      "excludeFromDps": true,
+      "note": "사거리/공격력 버프. 직접 피해 없음 → 제외.",
+      "_dakId": 1008300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "Flanger",
+      "damageType": "physical",
+      "baseDamage": [
+        70,
+        90,
+        110,
+        130,
+        150
+      ],
+      "apRatio": 0.6,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        15,
+        14.5,
+        14,
+        13.5,
+        13
+      ],
+      "excludeFromDps": false,
+      "note": "이동 + 음파.",
+      "_dakId": 1008400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "Peacemaker",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": true,
+      "note": "영역(회복/처형) 유틸. 제외.",
+      "_dakId": 1008500,
+      "_maxLevel": 3
+    }
+  ]
+}

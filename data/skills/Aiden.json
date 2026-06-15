@@ -1,0 +1,95 @@
+{
+  "characterId": "Aiden",
+  "characterName": "에이든",
+  "source": "나무위키 에이든(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "과전하",
+      "damageType": "physical",
+      "baseDamage": [0, 0],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [0, 0],
+      "excludeFromDps": true,
+      "note": "패시브(전하 스택/과전하 평타 치명타화). 직접 피해 없음.",
+      "_dakId": 1041100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "뇌격",
+      "damageType": "physical",
+      "baseDamage": [70, 100, 130, 160, 190],
+      "apRatio": 0.75,
+      "skillAmpRatio": 0,
+      "cooldown": [5, 4.5, 4, 3.5, 3],
+      "note": "평타 시 쿨 1.5초 감소(미반영). 과전하 시 전자포로 전환(동일 계수).",
+      "_dakId": 1041200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "Q",
+      "name": "전자포",
+      "damageType": "physical",
+      "baseDamage": [70, 100, 130, 160, 190],
+      "apRatio": 0.75,
+      "skillAmpRatio": 0,
+      "cooldown": [5, 4.5, 4, 3.5, 3],
+      "excludeFromDps": true,
+      "note": "뇌격의 과전하 전환형(동일 계수) → 중복 제외.",
+      "_dakId": 1041200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "전하 소산",
+      "damageType": "physical",
+      "baseDamage": [80, 100, 120, 140, 160],
+      "apRatio": 0.9,
+      "skillAmpRatio": 0,
+      "cooldown": [15, 14, 13, 12, 11],
+      "note": "최대 충전 피해 기준. 최소 [40~80](+45%)·추가 [50~170](+50%) 미반영.",
+      "_dakId": 1041300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "백스텝",
+      "damageType": "physical",
+      "baseDamage": [15, 30, 45, 60, 75],
+      "apRatio": 0.2,
+      "skillAmpRatio": 0,
+      "cooldown": [16, 15, 14, 13, 12],
+      "excludeFromDps": true,
+      "note": "기본 약식 폼(전하 미충전). 볼트 러시로 대체 계산 → 제외.",
+      "_dakId": 1041400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "볼트 러시",
+      "damageType": "physical",
+      "baseDamage": [55, 85, 115, 145, 175],
+      "apRatio": 0.55,
+      "skillAmpRatio": 0,
+      "cooldown": [16, 15, 14, 13, 12],
+      "note": "전하 충전 시 강화형(메인 콤보).",
+      "_dakId": 1041400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "낙뢰",
+      "damageType": "physical",
+      "baseDamage": [80, 130, 180],
+      "apRatio": 1.1,
+      "skillAmpRatio": 0,
+      "cooldown": [80, 70, 60],
+      "note": "첫 낙뢰 중심 기준(+110%). 외곽 [60~120](+75%)·2번째 [70~160](+80%) 미반영.",
+      "_dakId": 1041500,
+      "_maxLevel": 3
+    }
+  ]
+}

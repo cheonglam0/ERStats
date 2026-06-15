@@ -1,0 +1,123 @@
+{
+  "characterId": "Abigail",
+  "characterName": "아비게일",
+  "source": "나무위키 아비게일(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "티어링 블레이드",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(티어링 블레이드). 제외.",
+      "_dakId": 1067100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "바이너리 스핀",
+      "damageType": "magic",
+      "baseDamage": [
+        40,
+        75,
+        110,
+        145,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.35,
+      "cooldown": [
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      "excludeFromDps": false,
+      "note": "2타 기준. 1타 [20~100](+30%).",
+      "_dakId": 1067200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "호라이즌 클리브",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        110,
+        140,
+        170,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        11,
+        10,
+        9,
+        8,
+        7
+      ],
+      "excludeFromDps": false,
+      "note": "호라이즌 클리브(+대상 현재체력8%·보호막).",
+      "_dakId": 1067300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "워프 슬래시",
+      "damageType": "magic",
+      "baseDamage": [
+        70,
+        85,
+        100,
+        115,
+        130
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        13,
+        12.5,
+        12,
+        11.5,
+        11
+      ],
+      "excludeFromDps": false,
+      "note": "워프 슬래시.",
+      "_dakId": 1067400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "디멘션 스트라이크",
+      "damageType": "magic",
+      "baseDamage": [
+        150,
+        275,
+        400
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.85,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "디멘션 스트라이크.",
+      "_dakId": 1067500,
+      "_maxLevel": 3
+    }
+  ]
+}

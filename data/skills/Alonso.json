@@ -1,0 +1,123 @@
+{
+  "characterId": "Alonso",
+  "characterName": "알론소",
+  "source": "나무위키 알론소(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "플라즈마 베리어",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(플라즈마 베리어). 제외.",
+      "_dakId": 1068100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "마그네틱 펀치",
+      "damageType": "magic",
+      "baseDamage": [
+        100,
+        140,
+        180,
+        220,
+        260
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.4,
+      "cooldown": [
+        7,
+        6.5,
+        6,
+        5.5,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "마그네틱 펀치.",
+      "_dakId": 1068200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "바운싱 실드",
+      "damageType": "magic",
+      "baseDamage": [
+        80,
+        120,
+        160,
+        200,
+        240
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        14,
+        13.5,
+        13,
+        12.5,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "마무리 기준(+추가체력). 1타 [30~50](+25%).",
+      "_dakId": 1068300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "어트랙션 슬램!",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        95,
+        130,
+        165,
+        200
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "어트랙션 슬램(계수 추정).",
+      "_dakId": 1068400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "게더링 필드",
+      "damageType": "magic",
+      "baseDamage": [
+        200,
+        300,
+        400
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 1,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "게더링 필드 최대 마무리 기준(+추가체력24%). 지속/최소 별도.",
+      "_dakId": 1068500,
+      "_maxLevel": 3
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "characterId": "Markus",
+  "characterName": "마커스",
+  "source": "나무위키 마커스(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "전사의 투지",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(투지: 일격/충격). 제외.",
+      "_dakId": 1053100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "전투 교범",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      "excludeFromDps": true,
+      "note": "전투 교범(평타 강화 버프). 제외.",
+      "_dakId": 1053200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "파괴",
+      "damageType": "physical",
+      "baseDamage": [
+        60,
+        115,
+        170,
+        225,
+        280
+      ],
+      "apRatio": 0.6,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        13,
+        12,
+        11,
+        10,
+        9
+      ],
+      "excludeFromDps": false,
+      "note": "파괴(+추가체력10%).",
+      "_dakId": 1053300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "전사의 돌격",
+      "damageType": "physical",
+      "baseDamage": [
+        60,
+        105,
+        150,
+        195,
+        240
+      ],
+      "apRatio": 0.7,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        12,
+        11,
+        10,
+        9,
+        8
+      ],
+      "excludeFromDps": false,
+      "note": "전사의 돌격.",
+      "_dakId": 1053400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "지각변동",
+      "damageType": "physical",
+      "baseDamage": [
+        150,
+        300,
+        450
+      ],
+      "apRatio": 0.7,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "지각변동.",
+      "_dakId": 1053500,
+      "_maxLevel": 3
+    }
+  ]
+}

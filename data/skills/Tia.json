@@ -1,0 +1,123 @@
+{
+  "characterId": "Tia",
+  "characterName": "띠아",
+  "source": "나무위키 띠아(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "알록달록 컬러믹스",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(컬러믹스). 제외.",
+      "_dakId": 1048100,
+      "_maxLevel": 4
+    },
+    {
+      "slot": "Q",
+      "name": "브러쉬 스트로크 - 노란색",
+      "damageType": "magic",
+      "baseDamage": [
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.5,
+      "cooldown": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "브러쉬 스트로크(노랑). 색상별 추가 별도. 쿨다운 추정.",
+      "_dakId": 1048400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "팔레트 - 노란색",
+      "damageType": "magic",
+      "baseDamage": [
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        8,
+        6.5,
+        5
+      ],
+      "excludeFromDps": true,
+      "note": "팔레트(색상 전환 유틸). 제외.",
+      "_dakId": 1048500,
+      "_maxLevel": 3
+    },
+    {
+      "slot": "E",
+      "name": "색칠놀이 - 노란색",
+      "damageType": "magic",
+      "baseDamage": [
+        40,
+        90,
+        140,
+        190,
+        240
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0.9,
+      "cooldown": [
+        13,
+        12,
+        11,
+        10,
+        9
+      ],
+      "excludeFromDps": false,
+      "note": "색칠놀이(돌진).",
+      "_dakId": 1048600,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "무지개 드로잉",
+      "damageType": "magic",
+      "baseDamage": [
+        150,
+        250,
+        350
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 1,
+      "cooldown": [
+        90,
+        70,
+        50
+      ],
+      "excludeFromDps": false,
+      "note": "무지개 드로잉(기절).",
+      "_dakId": 1048700,
+      "_maxLevel": 3
+    }
+  ]
+}

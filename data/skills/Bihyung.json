@@ -1,0 +1,123 @@
+{
+  "characterId": "Bihyung",
+  "characterName": "비형",
+  "source": "나무위키 비형(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "도깨비 불",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(도깨비 불). 제외.",
+      "_dakId": 1088100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "뚝딱!",
+      "damageType": "physical",
+      "baseDamage": [
+        20,
+        40,
+        60,
+        80,
+        100
+      ],
+      "apRatio": 0.27,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        9,
+        8,
+        7,
+        6,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "뚝딱(공격력 9~45%, 2회 강화평타).",
+      "_dakId": 1088200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "천벌 받아라!",
+      "damageType": "physical",
+      "baseDamage": [
+        80,
+        110,
+        140,
+        170,
+        200
+      ],
+      "apRatio": 0.8,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "excludeFromDps": false,
+      "note": "천벌(+대상 최대체력 9~12%).",
+      "_dakId": 1088300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "내기 한판!",
+      "damageType": "physical",
+      "baseDamage": [
+        20,
+        40,
+        60,
+        80,
+        100
+      ],
+      "apRatio": 1,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "excludeFromDps": false,
+      "note": "내기 한판(도발). 쿨다운 추정.",
+      "_dakId": 1088400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "신명나게 놀아보자!",
+      "damageType": "physical",
+      "baseDamage": [
+        150,
+        300,
+        450
+      ],
+      "apRatio": 1.7,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "신명나게(추가공격력 170%·+최대체력10%).",
+      "_dakId": 1088500,
+      "_maxLevel": 3
+    }
+  ]
+}

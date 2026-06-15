@@ -1,0 +1,123 @@
+{
+  "characterId": "Hyunwoo",
+  "characterName": "현우",
+  "source": "나무위키 현우(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "도그파이트",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(도그파이트). 제외.",
+      "_dakId": 1007100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "발 밟기",
+      "damageType": "physical",
+      "baseDamage": [
+        50,
+        100,
+        150,
+        200,
+        250
+      ],
+      "apRatio": 0.6,
+      "skillAmpRatio": 0.85,
+      "cooldown": [
+        9,
+        8,
+        7,
+        6,
+        5
+      ],
+      "excludeFromDps": false,
+      "note": "발 밟기(추가공격력 계수).",
+      "_dakId": 1007200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "허세",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "excludeFromDps": true,
+      "note": "허세(방어 버프). 직접 피해 없음 → 제외.",
+      "_dakId": 1007300,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "E",
+      "name": "선빵필승",
+      "damageType": "physical",
+      "baseDamage": [
+        80,
+        115,
+        150,
+        185,
+        220
+      ],
+      "apRatio": 0.75,
+      "skillAmpRatio": 0.9,
+      "cooldown": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "excludeFromDps": false,
+      "note": "선빵필승(벽꿍, 추가공격력 계수).",
+      "_dakId": 1007400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "핵펀치",
+      "damageType": "physical",
+      "baseDamage": [
+        300,
+        420,
+        540
+      ],
+      "apRatio": 1.05,
+      "skillAmpRatio": 2.25,
+      "cooldown": [
+        60,
+        55,
+        50
+      ],
+      "excludeFromDps": false,
+      "note": "최대 충전 기준. 최소 [100~180](+35%/+75%).",
+      "_dakId": 1007500,
+      "_maxLevel": 3
+    }
+  ]
+}

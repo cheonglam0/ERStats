@@ -1,0 +1,124 @@
+{
+  "characterId": "Blair",
+  "characterName": "블레어",
+  "source": "나무위키 블레어(이터널 리턴) — 11.x 기준",
+  "filled": true,
+  "skills": [
+    {
+      "slot": "T",
+      "name": "블레이드 시프트",
+      "damageType": "physical",
+      "baseDamage": [
+        0,
+        0
+      ],
+      "apRatio": 0,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        0,
+        0
+      ],
+      "excludeFromDps": true,
+      "note": "패시브(블레이드 시프트, 강화평타). 제외.",
+      "_dakId": 1084100,
+      "_maxLevel": 2
+    },
+    {
+      "slot": "Q",
+      "name": "이중 참격 / 이중 휩쓸기",
+      "damageType": "physical",
+      "baseDamage": [
+        20,
+        50,
+        80,
+        110,
+        140
+      ],
+      "apRatio": 1.1,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        10,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
+      "excludeFromDps": false,
+      "note": "이중 참격 2타 기준(추가공격력 90~130%).",
+      "_dakId": 1084200,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "W",
+      "name": "말살 / 칼날폭풍",
+      "damageType": "physical",
+      "baseDamage": [
+        40,
+        65,
+        90,
+        115,
+        140
+      ],
+      "apRatio": 0.75,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        10,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
+      "excludeFromDps": false,
+      "note": "말살(2타·회복).",
+      "_dakId": 1084300,
+      "_maxLevel": 5,
+      "hitCount": 2
+    },
+    {
+      "slot": "E",
+      "name": "절단 베기 / 반격 베기",
+      "damageType": "physical",
+      "baseDamage": [
+        50,
+        80,
+        110,
+        140,
+        170
+      ],
+      "apRatio": 1,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        20,
+        19.5,
+        19,
+        18.5,
+        18
+      ],
+      "excludeFromDps": false,
+      "note": "절단 베기(방어 감소). 반격 베기 폼 별도.",
+      "_dakId": 1084400,
+      "_maxLevel": 5
+    },
+    {
+      "slot": "R",
+      "name": "XMS-5 활성화 / 끝없는 추적",
+      "damageType": "physical",
+      "baseDamage": [
+        40,
+        70,
+        100
+      ],
+      "apRatio": 1,
+      "skillAmpRatio": 0,
+      "cooldown": [
+        80,
+        70,
+        60
+      ],
+      "excludeFromDps": false,
+      "note": "끝없는 추적(추가공격력 60~100%, 원문 일부 불명확).",
+      "_dakId": 1084500,
+      "_maxLevel": 3
+    }
+  ]
+}
