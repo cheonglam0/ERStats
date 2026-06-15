@@ -138,6 +138,37 @@ export function hasSkillData(characterId: string): boolean {
   return charactersWithSkills.has(characterId);
 }
 
+/** number | number[] 계수의 대표값(레벨 평균). */
+function avgRatio(r: number | number[] | undefined): number {
+  if (r == null) return 0;
+  if (typeof r === "number") return r;
+  return r.length ? r.reduce((a, b) => a + b, 0) / r.length : 0;
+}
+
+/**
+ * 캐릭터의 주 공격 스탯 판별.
+ *
+ * 캐릭터 기본 스탯에는 스킬증폭이 모두 0이라(전 캐릭 공격력만 존재), 어떤 캐릭터가
+ * "스킬증폭 메인"인지 기본 스탯만으로는 알 수 없다. 그래서 스킬 계수 합으로 추정한다:
+ *   - 회전 DPS 대상 스킬들의 skillAmpRatio 합 > apRatio 합  →  "skillAmp"
+ *   - 그 외(스킬 데이터 없음 포함)                         →  "attackPower"
+ */
+export function mainOffenseStat(character: Character): "attackPower" | "skillAmp" {
+  let ap = 0;
+  let amp = 0;
+  for (const s of character.skills) {
+    if (s.excludeFromDps) continue;
+    ap += avgRatio(s.apRatio);
+    amp += avgRatio(s.skillAmpRatio);
+  }
+  return amp > ap ? "skillAmp" : "attackPower";
+}
+
+/** 캐릭터 id → 주 공격 스탯 (목록/배지에서 반복 조회용 캐시). */
+export const mainStatById = new Map<string, "attackPower" | "skillAmp">(
+  gameCharacters.map((c) => [c.id, mainOffenseStat(c)]),
+);
+
 /** 슬롯 필터 옵션 (등장 순서 고정). 장신구는 삭제된 부위라 제외. */
 export const ITEM_SLOTS = ["무기", "머리", "가슴", "팔", "다리"] as const;
 

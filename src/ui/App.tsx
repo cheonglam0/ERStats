@@ -1,9 +1,10 @@
 import { useMemo, useState } from "react";
 import { computeDps, computeEhp, mergeStats, resolveStats, type Metric } from "../engine.js";
 import type { BuildProfile, StatBlock } from "../types.js";
-import { gameCharacters, gameItems, weaponLabel, hasSkillData, itemStatsAtLevel } from "../gameData.js";
+import { gameCharacters, gameItems, weaponLabel, hasSkillData, itemStatsAtLevel, mainStatById } from "../gameData.js";
 import { StatPills } from "./StatPills.js";
 import { StatBreakdown } from "./StatBreakdown.js";
+import { StatScaling } from "./StatScaling.js";
 import { ItemBrowser } from "./ItemBrowser.js";
 
 const METRIC_LABEL: Record<Metric, string> = {
@@ -22,8 +23,13 @@ const itemByCode = new Map(gameItems.map((it) => [String(it.code), it]));
 type View = "all" | "stats" | "items";
 const VIEW_LABEL: Record<View, string> = {
   all: "전체 보기",
-  stats: "스탯만",
+  stats: "스탯",
   items: "아이템만",
+};
+
+const MAIN_STAT_LABEL: Record<"attackPower" | "skillAmp", string> = {
+  attackPower: "공격력",
+  skillAmp: "스킬증폭",
 };
 
 export function App() {
@@ -76,6 +82,7 @@ export function App() {
   const ehp = computeEhp(currentStats);
   const skillRows = character.skills.filter((s) => !s.excludeFromDps);
   const hasSkills = hasSkillData(character.id);
+  const mainStat = mainStatById.get(character.id) ?? "attackPower";
 
   return (
     <div className="app">
@@ -119,6 +126,9 @@ export function App() {
                   )}
                   <span className="char-name">
                     {c.name}
+                    {mainStatById.get(c.id) === "skillAmp" && (
+                      <em className="main-badge amp" title="스킬증폭 메인 캐릭터">스증</em>
+                    )}
                     {hasSkillData(c.id) && <em className="skill-badge" title="스킬 계수 입력됨">★</em>}
                   </span>
                 </button>
@@ -230,11 +240,24 @@ export function App() {
             </ul>
           )}
 
-          <h4>현재 종합 스탯</h4>
+          <h4>
+            현재 종합 스탯
+            <span className={`main-stat-tag ${mainStat === "skillAmp" ? "amp" : "ad"}`}>
+              주 공격 스탯: {MAIN_STAT_LABEL[mainStat]}
+            </span>
+          </h4>
           <StatPills stats={currentStats} />
 
           <h3>스탯 구성 비율 (기본 · 성장 · 아이템)</h3>
           <StatBreakdown character={character} level={level} itemStats={equippedStats} />
+
+          <h3>스탯 성장 · 효율</h3>
+          <StatScaling
+            character={character}
+            level={level}
+            totalStats={currentStats}
+            mainStat={mainStat}
+          />
         </section>
 
         {/* 3) ER2Route식 아이템 그리드 + 부위 필터 */}

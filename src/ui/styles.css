@@ -153,6 +153,11 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
 
 .eq-name { flex: 1; }
 .skill-badge { color: var(--accent); font-style: normal; margin-left: 4px; font-size: 11px; }
+.main-badge {
+  font-style: normal; margin-left: 5px; font-size: 9px; font-weight: 700;
+  padding: 1px 4px; border-radius: 3px; vertical-align: middle;
+}
+.main-badge.amp { color: var(--utility); border: 1px solid var(--utility); }
 
 /* --- 아이템 브라우저 (ER2Route 스타일) --- */
 .browser-controls {
@@ -235,3 +240,42 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
 .bd-seg.bd-growth { background: var(--accent); }
 .bd-seg.bd-item { background: var(--offense); }
 .bd-shares { display: flex; gap: 10px; font-size: 10px; font-variant-numeric: tabular-nums; }
+
+/* --- 주 공격 스탯 태그 --- */
+.main-stat-tag {
+  margin-left: 8px; font-size: 10px; font-weight: 700; padding: 1px 6px;
+  border-radius: 4px; vertical-align: middle;
+}
+.main-stat-tag.ad { color: var(--offense); border: 1px solid var(--offense); }
+.main-stat-tag.amp { color: var(--utility); border: 1px solid var(--utility); }
+
+/* --- 스탯 성장 · 효율 표 --- */
+.stat-scaling { margin-top: 2px; }
+.sc-table {
+  width: 100%; border-collapse: collapse;
+  font-size: 11px; font-variant-numeric: tabular-nums;
+}
+.sc-table th {
+  text-align: right; color: var(--muted); font-weight: 600;
+  padding: 3px 6px; border-bottom: 1px solid var(--line); white-space: nowrap;
+}
+.sc-table th.sc-stat { text-align: left; }
+.sc-table td { padding: 4px 6px; border-bottom: 1px solid var(--panel-2); }
+.sc-row.sc-main { background: rgba(151, 117, 250, 0.08); }
+.sc-stat { text-align: left; }
+.sc-num { text-align: right; }
+.sc-growth { color: var(--accent); }
+.sc-badge {
+  margin-left: 5px; font-size: 8px; font-weight: 700; color: var(--utility);
+  border: 1px solid var(--utility); border-radius: 3px; padding: 0 3px;
+}
+.sc-eff { width: 120px; }
+.sc-eff-wrap { display: flex; align-items: center; gap: 6px; justify-content: flex-end; }
+.sc-eff-bar {
+  flex: 1; height: 6px; background: var(--bg); border-radius: 3px; overflow: hidden;
+}
+.sc-eff-fill { display: block; height: 100%; background: var(--accent); }
+.sc-eff-val { white-space: nowrap; }
+.sc-note { color: var(--utility); font-size: 10px; }
+.sc-hint { margin-top: 8px; line-height: 1.5; }
+.sc-hint b { color: var(--text); }
