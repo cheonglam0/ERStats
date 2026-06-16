@@ -33,12 +33,13 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`;
 
 const itemByCode = new Map(gameItems.map((it) => [String(it.code), it]));
 
-type View = "all" | "stats" | "skill" | "items";
+type View = "all" | "stats" | "skill" | "items" | "info";
 const VIEW_LABEL: Record<View, string> = {
   all: "전체 보기",
   stats: "스탯",
   skill: "스킬",
   items: "아이템",
+  info: "정보",
 };
 
 const MAIN_STAT_LABEL: Record<"attackPower" | "skillAmp", string> = {
@@ -105,7 +106,7 @@ export function App() {
       <header className="topbar">
         <h1>이터널리턴 스탯 비교</h1>
         <div className="view-tabs">
-          {(["all", "stats", "skill", "items"] as View[]).map((v) => (
+          {(["all", "stats", "skill", "items", "info"] as View[]).map((v) => (
             <button
               key={v}
               className={view === v ? "active" : ""}
@@ -268,8 +269,6 @@ export function App() {
           </h4>
           <StatPills stats={currentStats} />
 
-          <StatBreakdown character={character} level={level} itemStats={equippedStats} />
-
           <h3>스탯 성장 · 효율</h3>
           <StatScaling
             character={character}
@@ -304,9 +303,11 @@ export function App() {
           />
         </section>
 
-        {/* 정보(설명) 패널 — 아이템 뷰 옆에 안내문 정리 */}
+        {/* 정보 뷰 전용 — 스탯 구성 비율 + 안내문 */}
         <section className="panel info-panel">
-          <h2>정보</h2>
+          <h2>정보 — {character.name}</h2>
+          <StatBreakdown character={character} level={level} itemStats={equippedStats} />
+          <h3>도움말</h3>
           <InfoPanel />
         </section>
       </div>

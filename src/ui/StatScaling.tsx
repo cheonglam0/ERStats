@@ -112,10 +112,13 @@ export function StatScaling({
           })}
         </tbody>
       </table>
-      <p className="hint sc-hint">
-        <b>균등 +{UNIFORM_P * 100}%</b>: 모든 스탯을 같은 비율로 올릴 때 이 스탯에 더해야 하는 양(=현재값×{UNIFORM_P * 100}%).
-        <b> 1당 효율</b>: 스탯을 1{`(%`}스탯은 1%p{`)`} 올릴 때 그 스탯이 오르는 비율 — 막대가 길수록 다른 스탯보다 투자 효율이 높습니다.
-      </p>
+      <details className="mini-help">
+        <summary>설명</summary>
+        <p className="hint sc-hint">
+          <b>균등 +{UNIFORM_P * 100}%</b>: 모든 스탯을 같은 비율로 올릴 때 이 스탯에 더해야 하는 양(=현재값×{UNIFORM_P * 100}%).
+          <b> 1당 효율</b>: 스탯을 1{`(%`}스탯은 1%p{`)`} 올릴 때 그 스탯이 오르는 비율 — 막대가 길수록 다른 스탯보다 투자 효율이 높습니다.
+        </p>
+      </details>
     </div>
   );
 }

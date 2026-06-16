@@ -45,17 +45,18 @@ body {
 }
 @media (max-width: 1100px) { .layout { grid-template-columns: 1fr !important; } }
 
-/* 정보 패널: 전체/아이템 뷰에서 아이템 옆에 노출 */
+/* 정보 패널: '정보' 뷰에서만 노출 (실험체 선택 패널과 함께) */
 .info-panel { display: none; }
-.layout.view-all { grid-template-columns: 270px 300px 1fr 280px; }
-.layout.view-all .info-panel { display: block; }
+.layout.view-info { grid-template-columns: 270px 1fr; }
+.layout.view-info .stats-panel,
+.layout.view-info .browser-panel { display: none; }
+.layout.view-info .info-panel { display: block; }
 
 /* 전용 보기: 스탯만 / 아이템만 (1번 실험체 선택 패널은 항상 표시) */
 .layout.view-stats { grid-template-columns: 270px 1fr; }
 .layout.view-stats .browser-panel { display: none; }
-.layout.view-items { grid-template-columns: 270px 1fr 280px; }
+.layout.view-items { grid-template-columns: 270px 1fr; }
 .layout.view-items .stats-panel { display: none; }
-.layout.view-items .info-panel { display: block; }
 
 /* 스킬 패널은 스킬 뷰에서만 노출 */
 .skill-panel { display: none; }
@@ -104,6 +105,13 @@ body {
 }
 .char small { color: var(--muted); }
 .empty { color: var(--muted); padding: 8px; }
+
+/* 기능 옆 미니 설명(기본 접힘) */
+.mini-help { margin-top: 6px; }
+.mini-help > summary {
+  font-size: 11px; color: var(--muted); cursor: pointer; user-select: none; padding: 2px 0;
+}
+.mini-help > summary:hover { color: var(--text); }
 
 /* --- 정보(설명) 패널 --- */
 .info details { border-bottom: 1px solid var(--line); padding: 6px 0; }

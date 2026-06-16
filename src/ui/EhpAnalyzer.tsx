@@ -137,9 +137,9 @@ export function EhpAnalyzer({ maxHp, defense }: { maxHp: number; defense: number
         </p>
       </div>
 
-      {/* 등가 환산 (실질체력 기준 + 아이템 환산비 비교) */}
-      <div className="ehp-block">
-        <div className="ehp-block-title">방어력 1의 가치 vs 아이템 환산비</div>
+      {/* 등가 환산 (실질체력 기준 + 아이템 환산비 비교) — 기본 접힘 */}
+      <details className="ehp-block mini-help">
+        <summary>방어력 1의 가치 vs 아이템 환산비</summary>
         <ul className="ehp-eq">
           <li>
             방어력 <b>+1</b>의 실질체력 가치 = 체력 <b className="hp">{fmt(defEqHp)}</b>점
@@ -157,7 +157,7 @@ export function EhpAnalyzer({ maxHp, defense }: { maxHp: number; defense: number
             )}
           </li>
         </ul>
-      </div>
+      </details>
 
       {/* 방어력 구간별 차트: 배수가 '한 칸 밀려' 고방어 효율이 떨어짐을 시각화 */}
       <details className="ehp-chart">
