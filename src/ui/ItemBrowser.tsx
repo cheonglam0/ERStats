@@ -4,7 +4,6 @@ import type { BuildProfile, StatBlock, StatKey } from "../types.js";
 import {
   gameItems,
   ITEM_SLOTS,
-  GRADE_ORDER,
   weaponLabel,
   itemStatsAtLevel,
   type GameItem,
@@ -35,8 +34,11 @@ const FILTERABLE_STATS: StatKey[] = (Object.keys(STAT_META) as StatKey[]).filter
   gameItems.some((it) => itemHasStat(it, k)),
 );
 
-/** 데이터에 실제 존재하는 등급만 (GRADE_ORDER 순서). */
-const GRADES_PRESENT: string[] = GRADE_ORDER.filter((g) => gameItems.some((it) => it.grade === g));
+/** 등급 필터 노출 순서: 영웅 → 전설 → 신화. (희귀 등 소수 등급은 제외) */
+const GRADE_FILTER_ORDER = ["Epic", "Legend", "Mythic"];
+const GRADES_PRESENT: string[] = GRADE_FILTER_ORDER.filter((g) =>
+  gameItems.some((it) => it.grade === g),
+);
 
 /** 코드 → 아이템 (장착 표시줄 조회용). */
 const ITEM_BY_CODE = new Map(gameItems.map((it) => [String(it.code), it]));

@@ -10,12 +10,21 @@ import { StatScaling } from "./StatScaling.js";
 import { EhpAnalyzer } from "./EhpAnalyzer.js";
 import { SkillPanel } from "./SkillPanel.js";
 import { ItemBrowser } from "./ItemBrowser.js";
+import { InfoPanel } from "./InfoPanel.js";
 
 const METRIC_LABEL: Record<Metric, string> = {
   total: "종합 DPS",
   skill: "스킬 DPS",
   basic: "평타 DPS",
   ehp: "유효 체력",
+};
+
+/** 렌즈 버튼 hover 설명 (텍스트 안내 대신 툴팁으로 제공). */
+const METRIC_DESC: Record<Metric, string> = {
+  total: "평타 + 스킬 합산 DPS. 평타 절대 공속은 임시값이라 다소 과대평가될 수 있음",
+  skill: "스킬 회전 DPS. 스킬 의존형 비교에 적합 (스킬 계수 입력된 캐릭만)",
+  basic: "평타 DPS. 평타 캐리 비교에 적합",
+  ehp: "유효 체력 = 체력 ÷ (1 − 피해감소). 생존력 비교",
 };
 
 const fmt = (x: number) =>
@@ -95,9 +104,6 @@ export function App() {
     <div className="app">
       <header className="topbar">
         <h1>이터널리턴 스탯 비교</h1>
-        <span className="sample-tag">
-          실데이터 · 스킬 계수는 나무위키 기준 직접 입력(보유 캐릭만 스킬 DPS 반영)
-        </span>
         <div className="view-tabs">
           {(["all", "stats", "skill", "items"] as View[]).map((v) => (
             <button
@@ -199,29 +205,28 @@ export function App() {
                 className={metric === m ? "active" : ""}
                 onClick={() => setMetric(m)}
                 disabled={m === "skill" && !hasSkills}
-                title={m === "skill" && !hasSkills ? "스킬 계수 미입력 캐릭" : ""}
+                title={
+                  m === "skill" && !hasSkills
+                    ? "스킬 계수 미입력 캐릭터 — 스킬 DPS 비교 불가"
+                    : METRIC_DESC[m]
+                }
               >
                 {METRIC_LABEL[m]}
               </button>
             ))}
           </div>
-          <p className="hint">
-            스킬 의존형은 <b>스킬 DPS</b>로, 평타 캐리는 <b>평타·종합</b>으로 비교하세요.
-            (평타 절대 공속은 임시값이라 종합 DPS는 평타가 다소 과대평가됨)
-          </p>
         </section>
 
         {/* 2) 현재 빌드 결과값 + 장착 아이템 */}
         <section className="panel stats-panel">
           <h2>2. 현재 빌드</h2>
           <div className="result-cards">
-            <div className="card dps">
+            <div className="card dps" title={hasSkills ? "" : "스킬 계수 미입력 캐릭터 — 평타 DPS만 표시"}>
               <div className="card-label">{hasSkills ? "유효 DPS" : "평타 DPS"}</div>
               <div className="card-value">{fmt(hasSkills ? dps.total : dps.basicAttackDps)}</div>
               <div className="card-sub">
-                {hasSkills
-                  ? `평타 ${fmt(dps.basicAttackDps)} · 스킬 ${fmt(dps.skillDps)}`
-                  : "※ 스킬 계수 미입력 캐릭(평타만)"}
+                평타 {fmt(dps.basicAttackDps)}
+                {hasSkills ? ` · 스킬 ${fmt(dps.skillDps)}` : ""}
               </div>
             </div>
             <div className="card ehp">
@@ -235,7 +240,7 @@ export function App() {
 
           <h3>장착 아이템 ({equipped.length})</h3>
           {equipped.length === 0 ? (
-            <p className="hint">오른쪽에서 아이템을 클릭하면 장착되고, 그 위에 누적 비교됩니다.</p>
+            <p className="hint">장착된 아이템 없음</p>
           ) : (
             <ul className="equipped">
               {equipped.map((code) => {
@@ -297,6 +302,12 @@ export function App() {
             metric={metric}
             showEquipped={view === "items"}
           />
+        </section>
+
+        {/* 정보(설명) 패널 — 아이템 뷰 옆에 안내문 정리 */}
+        <section className="panel info-panel">
+          <h2>정보</h2>
+          <InfoPanel />
         </section>
       </div>
     </div>
