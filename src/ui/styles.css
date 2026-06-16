@@ -279,3 +279,47 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
 .sc-note { color: var(--utility); font-size: 10px; }
 .sc-hint { margin-top: 8px; line-height: 1.5; }
 .sc-hint b { color: var(--text); }
+
+/* --- 실질 체력(EHP) 분석 --- */
+.ehp-analyzer { font-variant-numeric: tabular-nums; }
+.ehp-analyzer .def { color: var(--survival); }
+.ehp-analyzer .hp { color: var(--accent); }
+
+.ehp-cur {
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px;
+  font-size: 12px; padding: 8px 10px; background: var(--panel-2);
+  border-radius: 8px; margin-bottom: 10px;
+}
+.ehp-arrow { color: var(--muted); }
+.ehp-big { font-size: 16px; color: var(--survival); }
+.ehp-formula { color: var(--muted); font-size: 11px; margin-left: 4px; }
+
+.ehp-block { margin-bottom: 12px; }
+.ehp-block-title { font-size: 11px; color: var(--muted); margin-bottom: 5px; }
+.ehp-mrow { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; font-size: 11px; }
+.ehp-mlabel { width: 56px; flex: none; }
+.ehp-mbar { flex: 1; height: 8px; background: var(--bg); border-radius: 4px; overflow: hidden; }
+.ehp-mfill { display: block; height: 100%; }
+.ehp-mfill.def { background: var(--survival); }
+.ehp-mfill.hp { background: var(--accent); }
+.ehp-mval { width: 64px; flex: none; text-align: right; font-weight: 600; }
+.ehp-reco { font-size: 11px; color: var(--muted); margin: 6px 0 0; line-height: 1.5; }
+.ehp-reco b { color: var(--text); }
+
+.ehp-eq { list-style: none; margin: 0; padding: 0; font-size: 11px; }
+.ehp-eq li { padding: 2px 0; }
+.ehp-eq-ex { color: var(--muted); }
+.ehp-eq b { color: var(--text); }
+
+.ehp-chart { margin-top: 4px; }
+.ehp-chart summary { font-size: 11px; color: var(--muted); cursor: pointer; }
+.ehp-table { width: 100%; border-collapse: collapse; font-size: 11px; margin-top: 6px; }
+.ehp-table th {
+  text-align: right; color: var(--muted); font-weight: 600;
+  padding: 3px 6px; border-bottom: 1px solid var(--line); white-space: nowrap;
+}
+.ehp-table th:first-child { text-align: left; }
+.ehp-table td { padding: 3px 6px; border-bottom: 1px solid var(--panel-2); }
+.ehp-table td.num { text-align: right; }
+.ehp-table tr.ehp-here { background: rgba(77, 171, 247, 0.12); }
+.ehp-chart .hint { margin-top: 6px; line-height: 1.5; }

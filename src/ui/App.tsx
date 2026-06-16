@@ -5,6 +5,7 @@ import { gameCharacters, gameItems, weaponLabel, hasSkillData, itemStatsAtLevel,
 import { StatPills } from "./StatPills.js";
 import { StatBreakdown } from "./StatBreakdown.js";
 import { StatScaling } from "./StatScaling.js";
+import { EhpAnalyzer } from "./EhpAnalyzer.js";
 import { ItemBrowser } from "./ItemBrowser.js";
 
 const METRIC_LABEL: Record<Metric, string> = {
@@ -257,6 +258,12 @@ export function App() {
             level={level}
             totalStats={currentStats}
             mainStat={mainStat}
+          />
+
+          <h3>실질 체력(EHP) — 방어력 vs 체력 효율</h3>
+          <EhpAnalyzer
+            maxHp={currentStats.maxHp ?? 0}
+            defense={currentStats.defense ?? 0}
           />
         </section>
 

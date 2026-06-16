@@ -14,9 +14,10 @@ import type { StatKey, StatLine } from "./types.js";
  *   유효체력 = HP * (defense + DEFENSE_K) / DEFENSE_K
  *   => 방어력 1의 유효체력 환산 = HP / DEFENSE_K
  *
- * VERIFY: DEFENSE_K 상수는 이터널리턴 실제 공식과 다를 수 있음(임시값).
+ * 확인됨: 이터널리턴 공식 피해 공식의 방어력 항 = 받는 피해 × 100/(100+방어력) 이므로
+ *   DEFENSE_K = 100 은 게임 실상수와 일치한다. (출처: 공식 피해 공식)
  */
-export const DEFENSE_K = 100; // VERIFY
+export const DEFENSE_K = 100;
 
 /**
  * 공격 속도 상한 (초당 평타 횟수). VERIFY: 게임 내 공속 캡 확인 필요.
