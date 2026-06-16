@@ -99,6 +99,11 @@ body {
 .char small { color: var(--muted); }
 .empty { color: var(--muted); padding: 8px; }
 
+.mastery { font-size: 12px; }
+.mastery-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+.mastery-head b { color: var(--accent); }
+.mastery input[type="range"] { width: 100%; margin-bottom: 6px; }
+
 .weapon-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
 .tab {
   background: var(--panel-2); border: 1px solid var(--line); color: var(--text);

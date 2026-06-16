@@ -3,6 +3,7 @@ import { computeDps, computeEhp, mergeStats, resolveStats, type Metric } from ".
 import type { BuildProfile, StatBlock } from "../types.js";
 import { gameCharacters, gameItems, weaponLabel, hasSkillData, itemStatsAtLevel, mainStatById } from "../gameData.js";
 import { matchName } from "../hangul.js";
+import { hasMastery, masteryStatsAt, WEAPON_MASTERY } from "../weaponMastery.js";
 import { StatPills } from "./StatPills.js";
 import { StatBreakdown } from "./StatBreakdown.js";
 import { StatScaling } from "./StatScaling.js";
@@ -44,6 +45,7 @@ export function App() {
   const [equipped, setEquipped] = useState<string[]>([]);
   const [metric, setMetric] = useState<Metric>("total");
   const [view, setView] = useState<View>("all");
+  const [masteryLevel, setMasteryLevel] = useState(1);
 
   const character = gameCharacters.find((c) => c.id === characterId)!;
   const weapon =
@@ -79,7 +81,11 @@ export function App() {
     [equipped, level],
   );
 
-  const currentStats = resolveStats(profile, equippedStats);
+  const masteryStats = useMemo(
+    () => masteryStatsAt(weapon.weaponType, masteryLevel),
+    [weapon.weaponType, masteryLevel],
+  );
+  const currentStats = resolveStats(profile, equippedStats, masteryStats);
   const dps = computeDps(profile, currentStats);
   const ehp = computeEhp(currentStats);
   const hasSkills = hasSkillData(character.id);
@@ -152,6 +158,29 @@ export function App() {
               </button>
             ))}
           </div>
+
+          <h3>무기 숙련도</h3>
+          {hasMastery(weapon.weaponType) ? (
+            <div className="mastery">
+              <div className="mastery-head">
+                <span>{weaponLabel(weapon.weaponType)} 숙련도</span>
+                <b>Lv {masteryLevel}</b>
+              </div>
+              <input
+                type="range"
+                min={1}
+                max={WEAPON_MASTERY[weapon.weaponType]!.maxLevel}
+                value={masteryLevel}
+                onChange={(e) => setMasteryLevel(Number(e.target.value))}
+              />
+              <StatPills stats={masteryStats} />
+            </div>
+          ) : (
+            <p className="hint">
+              {weaponLabel(weapon.weaponType)} 숙련도 보너스 데이터 미입력. (무기군별 공속·스증·평타증폭
+              등 증가 — 추후 업데이트 예정)
+            </p>
+          )}
 
           <h3>레벨: {level}</h3>
           <input
