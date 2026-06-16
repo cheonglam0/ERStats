@@ -6,6 +6,7 @@ import { StatPills } from "./StatPills.js";
 import { StatBreakdown } from "./StatBreakdown.js";
 import { StatScaling } from "./StatScaling.js";
 import { EhpAnalyzer } from "./EhpAnalyzer.js";
+import { SkillPanel } from "./SkillPanel.js";
 import { ItemBrowser } from "./ItemBrowser.js";
 
 const METRIC_LABEL: Record<Metric, string> = {
@@ -21,11 +22,12 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`;
 
 const itemByCode = new Map(gameItems.map((it) => [String(it.code), it]));
 
-type View = "all" | "stats" | "items";
+type View = "all" | "stats" | "skill" | "items";
 const VIEW_LABEL: Record<View, string> = {
   all: "전체 보기",
   stats: "스탯",
-  items: "아이템만",
+  skill: "스킬",
+  items: "아이템",
 };
 
 const MAIN_STAT_LABEL: Record<"attackPower" | "skillAmp", string> = {
@@ -93,7 +95,7 @@ export function App() {
           실데이터 · 스킬 계수는 나무위키 기준 직접 입력(보유 캐릭만 스킬 DPS 반영)
         </span>
         <div className="view-tabs">
-          {(["all", "stats", "items"] as View[]).map((v) => (
+          {(["all", "stats", "skill", "items"] as View[]).map((v) => (
             <button
               key={v}
               className={view === v ? "active" : ""}
@@ -265,6 +267,12 @@ export function App() {
             maxHp={currentStats.maxHp ?? 0}
             defense={currentStats.defense ?? 0}
           />
+        </section>
+
+        {/* 스킬 정보 (스킬 뷰 전용) */}
+        <section className="panel skill-panel">
+          <h2>스킬 — {character.name} · {weaponLabel(weapon.weaponType)}</h2>
+          <SkillPanel profile={profile} stats={currentStats} hasSkills={hasSkills} />
         </section>
 
         {/* 3) ER2Route식 아이템 그리드 + 부위 필터 */}

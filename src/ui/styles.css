@@ -51,6 +51,13 @@ body {
 .layout.view-items { grid-template-columns: 240px 1fr; }
 .layout.view-items .stats-panel { display: none; }
 
+/* 스킬 패널은 스킬 뷰에서만 노출 */
+.skill-panel { display: none; }
+.layout.view-skill { grid-template-columns: 240px 1fr; }
+.layout.view-skill .stats-panel,
+.layout.view-skill .browser-panel { display: none; }
+.layout.view-skill .skill-panel { display: block; }
+
 .scroll { max-height: 260px; overflow-y: auto; }
 .browser-panel { min-height: 70vh; }
 
@@ -323,3 +330,43 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
 .ehp-table td.num { text-align: right; }
 .ehp-table tr.ehp-here { background: rgba(77, 171, 247, 0.12); }
 .ehp-chart .hint { margin-top: 6px; line-height: 1.5; }
+
+/* --- 스킬 정보 패널 --- */
+.skill-list > .hint { margin-top: 0; }
+.skill-card {
+  border: 1px solid var(--line); border-radius: 8px;
+  padding: 10px 12px; margin-bottom: 10px; background: var(--panel-2);
+}
+.skill-card.passive { opacity: 0.78; }
+.skill-card-head { display: flex; align-items: center; gap: 8px; }
+.skill-slot {
+  background: var(--bg); border-radius: 4px; padding: 1px 8px;
+  font-weight: 700; font-size: 12px; min-width: 20px; text-align: center;
+}
+.skill-card-name { font-weight: 600; flex: 1; }
+.dmg-tag { font-size: 10px; padding: 1px 6px; border-radius: 4px; border: 1px solid currentColor; }
+.dmg-tag.physical { color: var(--offense); }
+.dmg-tag.magic { color: var(--utility); }
+.dmg-tag.true { color: var(--accent); }
+.skill-flag {
+  font-size: 10px; color: var(--muted); border: 1px solid var(--line);
+  border-radius: 4px; padding: 1px 6px;
+}
+.skill-flag.passive { color: var(--muted); }
+.skill-formula {
+  font-size: 11px; color: var(--muted); margin: 6px 0 8px;
+  font-variant-numeric: tabular-nums;
+}
+.skill-lv-table {
+  width: 100%; border-collapse: collapse;
+  font-size: 11px; font-variant-numeric: tabular-nums;
+}
+.skill-lv-table th {
+  text-align: right; color: var(--muted); font-weight: 600;
+  padding: 3px 6px; border-bottom: 1px solid var(--line); white-space: nowrap;
+}
+.skill-lv-table th:first-child { text-align: left; }
+.skill-lv-table td { padding: 3px 6px; border-bottom: 1px solid var(--line); }
+.skill-lv-table td.num { text-align: right; }
+.skill-dps-cell { color: var(--accent); font-weight: 600; }
+.skill-note { font-size: 11px; color: var(--muted); margin: 8px 0 0; line-height: 1.5; }
