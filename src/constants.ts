@@ -77,6 +77,15 @@ export function effectiveCooldown(base: number, cdr: number): number {
   return (base * 100) / (100 + cd);
 }
 
+/**
+ * 쿨감 스탯 → 실제 쿨다운 감소율(0~1). 보이는 쿨감 수치가 아닌 체감 감소율.
+ *   감소율 = 쿨감 / (100 + 쿨감)  (effectiveCooldown 과 동일 출처, 캡 포함)
+ *   cdr 은 비율 표기(0.25 = 쿨감 25). 예) 0.25 → 0.20 (20%)
+ */
+export function cdrActualReduction(cdr: number): number {
+  return 1 - effectiveCooldown(1, cdr);
+}
+
 export function clamp01(x: number): number {
   return Math.min(1, Math.max(0, x));
 }

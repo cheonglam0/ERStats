@@ -1,5 +1,15 @@
 import type { StatBlock, StatKey } from "../types.js";
-import { STAT_LINE } from "../constants.js";
+import { STAT_LINE, cdrActualReduction } from "../constants.js";
+
+/**
+ * 쿨감 "결과값" 표기: 쿨감 수치(실제 감소율%). 예) 0.25 → "25(20%)".
+ * 아이템 옵션 자체 표시(StatPills)는 그대로 두고, 종합/결과 스탯 출력에만 사용한다.
+ */
+export function fmtCooldownResult(v: number): string {
+  const raw = Math.round(v * 100);
+  const pct = Math.round(cdrActualReduction(v) * 100);
+  return `${raw}(${pct}%)`;
+}
 
 /** 스탯 표시용 메타: 라벨 + 값 포맷(퍼센트형 여부). */
 export const STAT_META: Record<StatKey, { label: string; pct?: boolean }> = {

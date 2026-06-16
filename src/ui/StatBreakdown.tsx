@@ -1,5 +1,5 @@
 import type { Character, StatBlock, StatKey } from "../types.js";
-import { STAT_META } from "./StatPills.js";
+import { STAT_META, fmtCooldownResult } from "./StatPills.js";
 
 /**
  * 스탯 구성 비율 분해 — 각 스탯이 어디서 왔는지(기여도)를 보여준다.
@@ -65,7 +65,9 @@ export function StatBreakdown({
             <li key={r.key} className={r.total === 0 ? "bd-row bd-zero" : "bd-row"}>
               <div className="bd-head">
                 <span className="bd-label">{STAT_META[r.key].label}</span>
-                <span className="bd-total">{fmtVal(r.key, r.total)}</span>
+                <span className="bd-total">
+                  {r.key === "cooldownReduction" ? fmtCooldownResult(r.total) : fmtVal(r.key, r.total)}
+                </span>
               </div>
               <div className="bd-bar" title={`기본 ${bP.toFixed(0)}% · 성장 ${gP.toFixed(0)}% · 아이템 ${iP.toFixed(0)}%`}>
                 {bP > 0 && <span className="bd-seg bd-base" style={{ width: `${bP}%` }} />}

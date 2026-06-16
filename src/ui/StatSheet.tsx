@@ -1,6 +1,6 @@
 import type { StatBlock, StatKey } from "../types.js";
 import { STAT_LINE } from "../constants.js";
-import { STAT_META } from "./StatPills.js";
+import { STAT_META, fmtCooldownResult } from "./StatPills.js";
 
 /**
  * 현재 종합 스탯을 공격/생존/유틸 라인으로 묶어 라벨:값 형태로 보여준다.
@@ -16,7 +16,11 @@ const LINES = [
 const ORDER = Object.keys(STAT_META) as StatKey[];
 
 const fmtVal = (k: StatKey, v: number): string =>
-  STAT_META[k].pct ? `${(v * 100).toFixed(0)}%` : `${Math.round(v * 10) / 10}`;
+  k === "cooldownReduction"
+    ? fmtCooldownResult(v)
+    : STAT_META[k].pct
+      ? `${(v * 100).toFixed(0)}%`
+      : `${Math.round(v * 10) / 10}`;
 
 export function StatSheet({ stats }: { stats: StatBlock }) {
   const groups = LINES.map((line) => ({

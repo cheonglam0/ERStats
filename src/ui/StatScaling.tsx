@@ -1,5 +1,5 @@
 import type { Character, StatBlock, StatKey } from "../types.js";
-import { STAT_META } from "./StatPills.js";
+import { STAT_META, fmtCooldownResult } from "./StatPills.js";
 
 /**
  * 스탯 성장·효율 표 — "구성 비율"만으로는 안 보이는 두 가지를 수치로 보여준다.
@@ -86,7 +86,9 @@ export function StatScaling({
                   {m.label}
                   {r.isMain && <span className="sc-badge">주</span>}
                 </td>
-                <td className="sc-num">{fmtVal(r.key, r.total)}</td>
+                <td className="sc-num">
+                  {r.key === "cooldownReduction" ? fmtCooldownResult(r.total) : fmtVal(r.key, r.total)}
+                </td>
                 <td className="sc-num sc-growth">
                   {r.growth !== 0 ? `+${fmtVal(r.key, r.growth)}` : "—"}
                 </td>
