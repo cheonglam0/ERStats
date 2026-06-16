@@ -176,6 +176,31 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
 .weapon-filter input { accent-color: var(--accent); }
 .count { color: var(--muted); font-size: 12px; }
 
+/* --- 옵션(스탯) 필터 --- */
+.stat-filter {
+  margin-bottom: 10px; padding: 8px 10px;
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px;
+}
+.stat-filter-head { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; }
+.sf-label { font-size: 12px; color: var(--muted); font-weight: 600; }
+.mode-toggle { display: inline-flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.mode-toggle button {
+  background: var(--bg); color: var(--muted); border: none; cursor: pointer;
+  padding: 3px 12px; font-size: 11px; font-weight: 700;
+}
+.mode-toggle button.active { background: var(--accent); color: #1a1300; }
+.sf-clear {
+  background: none; border: none; color: var(--survival);
+  font-size: 11px; cursor: pointer; margin-left: auto; padding: 0;
+}
+.stat-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.stat-chip {
+  background: var(--bg); border: 1px solid var(--line); color: var(--text);
+  padding: 3px 10px; border-radius: 999px; cursor: pointer; font-size: 11px;
+}
+.stat-chip:hover { border-color: var(--accent); }
+.stat-chip.active { background: var(--accent); color: #1a1300; border-color: var(--accent); font-weight: 600; }
+
 .item-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));

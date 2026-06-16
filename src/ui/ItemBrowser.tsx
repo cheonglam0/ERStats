@@ -1,12 +1,23 @@
 import { useMemo, useState } from "react";
 import { itemEfficiency, metricDelta, type Metric } from "../engine.js";
-import type { BuildProfile, StatBlock } from "../types.js";
-import { gameItems, ITEM_SLOTS, weaponLabel, itemStatsAtLevel } from "../gameData.js";
-import { StatPills } from "./StatPills.js";
+import type { BuildProfile, StatBlock, StatKey } from "../types.js";
+import { gameItems, ITEM_SLOTS, weaponLabel, itemStatsAtLevel, type GameItem } from "../gameData.js";
+import { StatPills, STAT_META } from "./StatPills.js";
 
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`;
 const SLOT_TABS = ["전체", ...ITEM_SLOTS] as const;
 const isEhp = (m: Metric) => m === "ehp";
+
+type StatMode = "and" | "or";
+
+/** 아이템이 해당 스탯을 (기본 또는 레벨당으로) 가지는지. */
+const itemHasStat = (it: GameItem, k: StatKey): boolean =>
+  (it.stats[k] ?? 0) !== 0 || (it.statsByLv?.[k] ?? 0) !== 0;
+
+/** 아이템에 실제 등장하는 스탯만 필터 칩으로 노출 (STAT_META 순서 유지). */
+const FILTERABLE_STATS: StatKey[] = (Object.keys(STAT_META) as StatKey[]).filter((k) =>
+  gameItems.some((it) => itemHasStat(it, k)),
+);
 
 interface Props {
   profile: BuildProfile;
@@ -20,6 +31,11 @@ export function ItemBrowser({ profile, equippedStats, equipped, onToggle, metric
   const [slot, setSlot] = useState<(typeof SLOT_TABS)[number]>("전체");
   const [search, setSearch] = useState("");
   const [weaponOnlyThisType, setWeaponOnlyThisType] = useState(true);
+  const [statFilter, setStatFilter] = useState<StatKey[]>([]);
+  const [statMode, setStatMode] = useState<StatMode>("and");
+
+  const toggleStat = (k: StatKey) =>
+    setStatFilter((prev) => (prev.includes(k) ? prev.filter((x) => x !== k) : [...prev, k]));
 
   const filtered = useMemo(() => {
     const q = search.trim();
@@ -32,9 +48,16 @@ export function ItemBrowser({ profile, equippedStats, equipped, onToggle, metric
       )
         return false;
       if (q && !it.name.includes(q)) return false;
+      if (statFilter.length > 0) {
+        const ok =
+          statMode === "and"
+            ? statFilter.every((k) => itemHasStat(it, k))
+            : statFilter.some((k) => itemHasStat(it, k));
+        if (!ok) return false;
+      }
       return true;
     });
-  }, [slot, search, weaponOnlyThisType, profile.weapon.weaponType]);
+  }, [slot, search, weaponOnlyThisType, profile.weapon.weaponType, statFilter, statMode]);
 
   // 현재 빌드 기준 한계효율 계산 후 선택 렌즈로 정렬 (아이템 스탯은 레벨 환산)
   const ranked = useMemo(() => {
@@ -81,6 +104,44 @@ export function ItemBrowser({ profile, equippedStats, equipped, onToggle, metric
           이 빌드 무기군({weaponLabel(profile.weapon.weaponType)})만
         </label>
         <span className="count">{ranked.length}개</span>
+      </div>
+
+      <div className="stat-filter">
+        <div className="stat-filter-head">
+          <span className="sf-label">옵션 필터</span>
+          <div className="mode-toggle">
+            <button
+              className={statMode === "and" ? "active" : ""}
+              onClick={() => setStatMode("and")}
+              title="선택한 옵션을 모두 가진 아이템"
+            >
+              AND
+            </button>
+            <button
+              className={statMode === "or" ? "active" : ""}
+              onClick={() => setStatMode("or")}
+              title="선택한 옵션 중 하나라도 가진 아이템"
+            >
+              OR
+            </button>
+          </div>
+          {statFilter.length > 0 && (
+            <button className="sf-clear" onClick={() => setStatFilter([])}>
+              초기화
+            </button>
+          )}
+        </div>
+        <div className="stat-chips">
+          {FILTERABLE_STATS.map((k) => (
+            <button
+              key={k}
+              className={statFilter.includes(k) ? "stat-chip active" : "stat-chip"}
+              onClick={() => toggleStat(k)}
+            >
+              {STAT_META[k].label}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="item-grid">
