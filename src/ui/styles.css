@@ -326,6 +326,19 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
 .ehp-big { font-size: 16px; color: var(--survival); }
 .ehp-formula { color: var(--muted); font-size: 11px; margin-left: 4px; }
 
+.ehp-ratio {
+  display: flex; flex-direction: column; gap: 3px;
+  padding: 8px 10px; margin-bottom: 12px;
+  background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+}
+.ehp-ratio label { font-size: 12px; display: flex; align-items: center; gap: 5px; }
+.ehp-ratio input {
+  width: 54px; background: var(--panel-2); border: 1px solid var(--line);
+  color: var(--text); border-radius: 5px; padding: 3px 6px; font-size: 12px;
+  text-align: right;
+}
+.ehp-ratio .hint { font-size: 10px; margin: 0; }
+
 .ehp-block { margin-bottom: 12px; }
 .ehp-block-title { font-size: 11px; color: var(--muted); margin-bottom: 5px; }
 .ehp-mrow { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; font-size: 11px; }

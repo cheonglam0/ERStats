@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { DEFENSE_K } from "../constants.js";
 
 /**
@@ -7,14 +8,19 @@ import { DEFENSE_K } from "../constants.js";
  *   → 피해감소율 = 방어력 / (방어력 + K),  K = DEFENSE_K(=100, 게임 실상수)
  *   → 실질체력(EHP) = 체력 / (1 - 감소율) = 체력 × (방어력 + K) / K = 체력 × (1 + 방어력/K)
  *
- * 핵심 관계 (체력 = HP, 방어력 = DEF):
- *   - 방어력 +1당 EHP 증가 = HP / K            (절대값은 방어력과 무관하게 일정)
- *   - 체력  +1당 EHP 증가 = (DEF + K) / K       (방어력이 높을수록 체력이 더 값짐)
- *   두 한계효율이 같아지는 지점: DEF = HP - K  → 이보다 방어력이 낮으면 방어력 투자가 이득.
+ * 한계효율(1포인트당 EHP):
+ *   - 방어력 +1 → HP / K            (방어력과 무관하게 일정)
+ *   - 체력  +1 → (DEF + K) / K       (방어력이 높을수록 체력이 더 값짐)
  *
- * "방어력은 높을수록 효율 감소"는 배수(비율) 관점의 표현:
- *   EHP는 DEF=0에서도 HP만큼 존재(절편)하므로 EHP = (HP/K)·DEF + HP 의 1차식(정비례 아님).
- *   그래서 평균효율 EHP/DEF 는 DEF가 커질수록 감소한다.
+ * 단, 방어력 +1 vs 체력 +1 비교는 불공정하다. 실제 아이템·소비템이 주는 양 자체가
+ * 체력은 방어력의 약 10배(데이터상 평균 ~10.6배)다. 그래서 "같은 아이템 예산" 기준으로,
+ * 방어력 1 ≈ 체력 R(기본 10)로 환산해 비교한다:
+ *   - 방어력 +1   → EHP + HP/K
+ *   - 체력  +R    → EHP + R·(DEF+K)/K
+ *   두 효율이 같아지는 균형점: DEF = HP/R - K  (이보다 방어력이 낮으면 방어력이 이득).
+ *
+ * 동치: 방어력 1의 "실질체력 가치"는 체력 HP/(DEF+K)점. 이 값이 아이템 환산비 R보다 크면
+ *       방어력 투자가 이득이다 (DEF < HP/R - K 와 동일).
  */
 
 const fmt = (x: number): string =>
@@ -22,24 +28,30 @@ const fmt = (x: number): string =>
 
 const CHART_DEFS = [0, 50, 100, 150, 200, 250, 300];
 
+/** 기본 환산비: 아이템 데이터 분석상 체력은 방어력의 약 10배로 붙는다. */
+const DEFAULT_RATIO = 10;
+
 export function EhpAnalyzer({ maxHp, defense }: { maxHp: number; defense: number }) {
   const K = DEFENSE_K;
+  // R = 방어력 1과 같은 아이템 예산으로 얻는 체력 (조정 가능)
+  const [ratio, setRatio] = useState(DEFAULT_RATIO);
+  const r = ratio > 0 ? ratio : 1;
+
   const ehp = (hp: number, def: number) => (hp * (def + K)) / K;
   const curEhp = ehp(maxHp, defense);
 
-  // 한계효율: 지금 상태에서 1포인트 추가 시 EHP 증가량
   const perDef = maxHp / K; // 방어력 +1 → EHP
-  const perHp = (defense + K) / K; // 체력 +1 → EHP
-  const defMoreEfficient = perDef >= perHp;
+  const perHpUnit = (defense + K) / K; // 체력 +1 → EHP
+  const perHpBudget = r * perHpUnit; // 체력 +R → EHP (방어력 1과 동일 예산)
+  const defMoreEfficient = perDef >= perHpBudget;
 
-  // 등가 환산 (같은 EHP 증가를 내는 양)
-  const defEqHp = perDef / perHp; // 방어력 1 ≡ 체력 defEqHp 점
-  const hpEqDef = perHp / perDef; // 체력 1 ≡ 방어력 hpEqDef 점
+  // 방어력 1의 실질체력 가치(= 체력 몇 점과 같은가). 이 값이 R보다 크면 방어력 이득.
+  const defEqHp = perDef / perHpUnit; // = HP / (DEF + K)
 
-  // 한계효율이 같아지는(균형) 방어력
-  const balanceDef = Math.max(0, maxHp - K);
+  // 같은 아이템 예산 기준 균형 방어력
+  const balanceDef = Math.max(0, maxHp / r - K);
 
-  const maxBar = Math.max(perDef, perHp);
+  const maxBar = Math.max(perDef, perHpBudget);
 
   return (
     <div className="ehp-analyzer">
@@ -50,9 +62,26 @@ export function EhpAnalyzer({ maxHp, defense }: { maxHp: number; defense: number
         <span className="ehp-formula">= {fmt(maxHp)} × (100+{fmt(defense)})/100</span>
       </div>
 
-      {/* 한계효율: 1포인트당 EHP 증가 비교 */}
+      {/* 환산비 조정 */}
+      <div className="ehp-ratio">
+        <label>
+          아이템 환산비 — 방어력 <b className="def">1</b> ≈ 체력{" "}
+          <input
+            type="number"
+            min={1}
+            max={30}
+            step={1}
+            value={ratio}
+            onChange={(e) => setRatio(Number(e.target.value) || 0)}
+          />
+          <b className="hp">{fmt(r)}</b>
+        </label>
+        <span className="hint">실제 아이템·소비템이 주는 체력은 방어력의 약 10배(데이터 평균 ~10.6배)</span>
+      </div>
+
+      {/* 같은 아이템 예산 기준 효율 비교 */}
       <div className="ehp-block">
-        <div className="ehp-block-title">지금 1포인트 투자 시 실질체력 증가</div>
+        <div className="ehp-block-title">같은 아이템 예산 투자 시 실질체력 증가</div>
         <div className="ehp-mrow">
           <span className="ehp-mlabel">방어력 +1</span>
           <span className="ehp-mbar">
@@ -64,37 +93,43 @@ export function EhpAnalyzer({ maxHp, defense }: { maxHp: number; defense: number
           <span className="ehp-mval">+{fmt(perDef)}</span>
         </div>
         <div className="ehp-mrow">
-          <span className="ehp-mlabel">체력 +1</span>
+          <span className="ehp-mlabel">체력 +{fmt(r)}</span>
           <span className="ehp-mbar">
             <span
               className="ehp-mfill hp"
-              style={{ width: `${maxBar > 0 ? (perHp / maxBar) * 100 : 0}%` }}
+              style={{ width: `${maxBar > 0 ? (perHpBudget / maxBar) * 100 : 0}%` }}
             />
           </span>
-          <span className="ehp-mval">+{fmt(perHp)}</span>
+          <span className="ehp-mval">+{fmt(perHpBudget)}</span>
         </div>
         <p className="ehp-reco">
-          현재는 <b className={defMoreEfficient ? "def" : "hp"}>
+          현재 빌드(방어력 {fmt(defense)})에선{" "}
+          <b className={defMoreEfficient ? "def" : "hp"}>
             {defMoreEfficient ? "방어력" : "체력"}
           </b>{" "}
-          투자가 더 효율적입니다.
-          {" "}
-          (균형점: 방어력 <b>{fmt(balanceDef)}</b> — 이보다 낮으면 방어력, 높으면 체력 우위)
+          투자가 더 효율적입니다. (균형점: 방어력 <b>{fmt(balanceDef)}</b> — 이보다 낮으면 방어력,
+          높으면 체력 우위)
         </p>
       </div>
 
-      {/* 등가 환산 */}
+      {/* 등가 환산 (실질체력 기준 + 아이템 환산비 비교) */}
       <div className="ehp-block">
-        <div className="ehp-block-title">같은 실질체력을 내려면 (등가 환산)</div>
+        <div className="ehp-block-title">방어력 1의 가치 vs 아이템 환산비</div>
         <ul className="ehp-eq">
           <li>
-            방어력 <b>+1</b> ≡ 체력 <b className="hp">+{fmt(defEqHp)}</b>
-          </li>
-          <li>
-            체력 <b>+1</b> ≡ 방어력 <b className="def">+{fmt(hpEqDef)}</b>
+            방어력 <b>+1</b>의 실질체력 가치 = 체력 <b className="hp">{fmt(defEqHp)}</b>점
           </li>
           <li className="ehp-eq-ex">
-            예) 방어력 <b>+40</b> ≡ 체력 <b className="hp">+{fmt(defEqHp * 40)}</b> (둘 다 실질체력 +{fmt(perDef * 40)})
+            아이템은 방어력 1당 체력 <b>~{fmt(r)}</b>를 주므로,{" "}
+            {defEqHp >= r ? (
+              <>
+                <b className="def">방어력</b>이 더 이득 ({fmt(defEqHp)} ≥ {fmt(r)})
+              </>
+            ) : (
+              <>
+                <b className="hp">체력</b>이 더 이득 ({fmt(defEqHp)} &lt; {fmt(r)})
+              </>
+            )}
           </li>
         </ul>
       </div>
