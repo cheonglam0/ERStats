@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { DEFENSE_K } from "../constants.js";
 import { HP_DEF_RATIO } from "../gameData.js";
+import { EhpChart } from "./EhpChart.js";
 
 /**
  * 실질 체력(EHP) 효율 분석 — 방어력과 체력의 상관관계를 수치로 보여준다.
@@ -136,6 +137,9 @@ export function EhpAnalyzer({ maxHp, defense }: { maxHp: number; defense: number
           높으면 체력 우위)
         </p>
       </div>
+
+      {/* 방어력 vs 체력 효율 그래프 */}
+      <EhpChart maxHp={maxHp} defense={defense} ratio={r} />
 
       {/* 등가 환산 (실질체력 기준 + 아이템 환산비 비교) — 기본 접힘 */}
       <details className="ehp-block mini-help">

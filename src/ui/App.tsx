@@ -5,6 +5,7 @@ import { gameCharacters, gameItems, weaponLabel, hasSkillData, itemStatsAtLevel,
 import { matchName } from "../hangul.js";
 import { hasMastery, masteryStatsAt, WEAPON_MASTERY } from "../weaponMastery.js";
 import { StatPills } from "./StatPills.js";
+import { StatSheet } from "./StatSheet.js";
 import { StatBreakdown } from "./StatBreakdown.js";
 import { StatScaling } from "./StatScaling.js";
 import { EhpAnalyzer } from "./EhpAnalyzer.js";
@@ -267,7 +268,7 @@ export function App() {
               주 공격 스탯: {MAIN_STAT_LABEL[mainStat]}
             </span>
           </h4>
-          <StatPills stats={currentStats} />
+          <StatSheet stats={currentStats} />
 
           <h3>스탯 성장 · 효율</h3>
           <StatScaling

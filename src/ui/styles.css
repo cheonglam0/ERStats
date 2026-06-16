@@ -140,12 +140,38 @@ body {
 input[type="range"] { width: 100%; accent-color: var(--accent); }
 
 .result-cards { display: flex; gap: 10px; }
-.card { flex: 1; background: var(--panel-2); border-radius: 8px; padding: 12px; border: 1px solid var(--line); }
-.card-label { color: var(--muted); font-size: 12px; }
-.card-value { font-size: 26px; font-weight: 700; margin: 4px 0; }
+.card {
+  flex: 1; background: var(--panel-2); border-radius: 10px; padding: 12px 14px;
+  border: 1px solid var(--line); border-top: 3px solid var(--line);
+}
+.card.dps { border-top-color: var(--offense); }
+.card.ehp { border-top-color: var(--survival); }
+.card-label { color: var(--muted); font-size: 12px; font-weight: 600; }
+.card-value { font-size: 30px; font-weight: 800; margin: 2px 0; line-height: 1.1; font-variant-numeric: tabular-nums; }
 .card.dps .card-value { color: var(--offense); }
 .card.ehp .card-value { color: var(--survival); }
-.card-sub { color: var(--muted); font-size: 11px; }
+.card-sub { color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+
+/* --- 현재 종합 스탯 시트 (공격/생존/유틸 그룹) --- */
+.stat-sheet { display: flex; flex-direction: column; gap: 8px; }
+.ss-group {
+  border: 1px solid var(--line); border-left: 3px solid var(--line);
+  border-radius: 8px; padding: 7px 10px; background: var(--panel-2);
+}
+.ss-offense { border-left-color: var(--offense); }
+.ss-survival { border-left-color: var(--survival); }
+.ss-utility { border-left-color: var(--utility); }
+.ss-head { font-size: 11px; font-weight: 700; margin-bottom: 5px; }
+.ss-offense .ss-head { color: var(--offense); }
+.ss-survival .ss-head { color: var(--survival); }
+.ss-utility .ss-head { color: var(--utility); }
+.ss-group {
+  display: grid; grid-template-columns: max-content 1fr; gap: 2px 0; align-items: baseline;
+}
+.ss-head { grid-column: 1 / -1; }
+.ss-row { display: contents; }
+.ss-label { color: var(--muted); font-size: 12px; padding-right: 14px; }
+.ss-val { font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; }
 
 .skill-dps { list-style: none; margin: 0; padding: 0; }
 .skill-dps li { display: flex; align-items: center; gap: 8px; padding: 4px 0; border-bottom: 1px dashed var(--line); }
@@ -255,8 +281,8 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
 .item-card.equipped { outline: 2px solid var(--accent); }
 .item-head { display: flex; justify-content: flex-start; align-items: center; gap: 9px; }
 .item-icon {
-  width: 48px; height: 48px; border-radius: 8px; object-fit: cover; flex-shrink: 0;
-  background: var(--bg); border: 1px solid var(--line);
+  width: 56px; height: 56px; border-radius: 8px; object-fit: contain; flex-shrink: 0;
+  background: var(--bg); border: 1px solid var(--line); padding: 2px;
 }
 .item-headtext { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .item-name { font-weight: 600; font-size: 13px; }
@@ -293,7 +319,7 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
   border-radius: 999px; padding: 3px 8px 3px 4px; cursor: pointer; font-size: 11px;
 }
 .be-chip:hover { border-color: var(--offense); }
-.be-icon { width: 22px; height: 22px; border-radius: 5px; object-fit: cover; }
+.be-icon { width: 26px; height: 26px; border-radius: 5px; object-fit: contain; background: var(--bg); }
 .be-name { max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .be-x { color: var(--muted); }
 
@@ -394,6 +420,29 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
 }
 .ehp-ratio-head { display: flex; align-items: center; gap: 10px; }
 .ehp-ratio .hint { font-size: 10px; margin: 0; line-height: 1.5; }
+
+/* 방어력 vs 체력 효율 그래프 */
+.ehp-graph { margin-bottom: 12px; }
+.ehp-svg { width: 100%; height: auto; display: block; }
+.ehp-svg .axis { stroke: var(--line); stroke-width: 1; }
+.ehp-svg .tick { fill: var(--muted); font-size: 8px; }
+.ehp-svg .tick.cur { fill: var(--text); }
+.ehp-svg .axis-label { fill: var(--muted); font-size: 8px; }
+.ehp-svg .line-def { stroke: var(--survival); stroke-width: 2; }
+.ehp-svg .line-hp { stroke: var(--accent); stroke-width: 2; }
+.ehp-svg .line-cur { stroke: var(--text); stroke-width: 1; stroke-dasharray: 3 3; opacity: 0.6; }
+.ehp-svg .dot-balance { fill: var(--text); }
+.ehp-svg .zone-def { fill: var(--survival); opacity: 0.07; }
+.ehp-svg .zone-hp { fill: var(--accent); opacity: 0.07; }
+.ehp-legend { display: flex; gap: 12px; font-size: 10px; margin-top: 2px; }
+.ehp-legend .lg::before {
+  content: ""; display: inline-block; width: 10px; height: 3px;
+  border-radius: 2px; margin-right: 4px; vertical-align: middle;
+}
+.ehp-legend .lg.def { color: var(--survival); }
+.ehp-legend .lg.def::before { background: var(--survival); }
+.ehp-legend .lg.hp { color: var(--accent); }
+.ehp-legend .lg.hp::before { background: var(--accent); }
 
 .ehp-block { margin-bottom: 12px; }
 .ehp-block-title { font-size: 11px; color: var(--muted); margin-bottom: 5px; }
