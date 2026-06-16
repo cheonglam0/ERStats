@@ -96,6 +96,7 @@ export function ItemBrowser({
   }, [slot, search, weaponOnlyThisType, profile.weapon.weaponType, statFilter, statMode, gradeFilter]);
 
   // 현재 빌드 기준 한계효율로 선택 렌즈에 맞춰 정렬 (효율 막대는 제거, 정렬 기준으로만 사용)
+  // 장착(선택)된 아이템은 항상 목록 맨 앞으로, 그 안에서는 효율 순.
   const ranked = useMemo(() => {
     const rows = filtered.map((it) => ({
       item: it,
@@ -105,9 +106,14 @@ export function ItemBrowser({
         metric,
       ).delta,
     }));
-    rows.sort((a, b) => b.effDelta - a.effDelta);
+    rows.sort((a, b) => {
+      const aEq = equipped.includes(String(a.item.code));
+      const bEq = equipped.includes(String(b.item.code));
+      if (aEq !== bEq) return aEq ? -1 : 1;
+      return b.effDelta - a.effDelta;
+    });
     return rows;
-  }, [filtered, profile, equippedStats, metric]);
+  }, [filtered, profile, equippedStats, metric, equipped]);
 
   return (
     <div className="browser">

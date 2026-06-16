@@ -61,10 +61,20 @@ export function attacksPerSecond(base: number, bonusRatio: number): number {
   return Math.min(ATTACK_SPEED_CAP, base * (1 + Math.max(0, bonusRatio)));
 }
 
-/** 유효 쿨다운(초) = base * (1 - min(cdr, cap)). */
+/**
+ * 유효 쿨다운(초). 이터널리턴 실제 공식 적용:
+ *   최종 쿨타임 = 기본 쿨타임 × 100 / (100 + 쿨감)
+ *   (쿨감 X일 때 실제 감소율 = X / (100 + X))
+ *
+ * cdr 은 비율 표기(0.20 = 쿨감 20). 즉 쿨감 수치 X = cdr × 100.
+ * 예) cdr 0.20 → 100/120 ≈ 0.833배(실제 감소 16.7%), 보이는 대로의 -20%가 아님.
+ *
+ * CDR_CAP 은 쿨감 스탯(비율) 상한으로 적용한다. // VERIFY: 인게임 쿨감 캡 존재/수치
+ */
 export function effectiveCooldown(base: number, cdr: number): number {
   const r = Math.min(CDR_CAP, Math.max(0, cdr));
-  return base * (1 - r);
+  const cd = r * 100; // 쿨감 수치 X (예: 0.20 → 20)
+  return (base * 100) / (100 + cd);
 }
 
 export function clamp01(x: number): number {
