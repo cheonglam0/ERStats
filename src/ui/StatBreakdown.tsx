@@ -27,7 +27,7 @@ function buildRows(character: Character, level: number, itemStats: StatBlock): R
     const growth = (character.growthPerLevel[key] ?? 0) * steps;
     const item = itemStats[key] ?? 0;
     const total = base + growth + item;
-    if (total === 0) continue;
+    // 0인 스탯도 전부 노출(공격속도·치명 등 캐릭터가 가진 스탯 전체를 보여준다).
     rows.push({ key, base, growth, item, total });
   }
   return rows;
@@ -47,10 +47,10 @@ export function StatBreakdown({
   itemStats: StatBlock;
 }) {
   const rows = buildRows(character, level, itemStats);
-  if (rows.length === 0) return <p className="hint">표시할 스탯이 없습니다.</p>;
 
   return (
-    <div className="stat-breakdown">
+    <details className="stat-breakdown">
+      <summary>스탯 구성 비율 (기본 · 성장 · 아이템)</summary>
       <div className="bd-legend">
         <span className="bd-key bd-base">기본</span>
         <span className="bd-key bd-growth">성장(레벨)</span>
@@ -62,7 +62,7 @@ export function StatBreakdown({
           const gP = share(r.growth, r.total);
           const iP = share(r.item, r.total);
           return (
-            <li key={r.key} className="bd-row">
+            <li key={r.key} className={r.total === 0 ? "bd-row bd-zero" : "bd-row"}>
               <div className="bd-head">
                 <span className="bd-label">{STAT_META[r.key].label}</span>
                 <span className="bd-total">{fmtVal(r.key, r.total)}</span>
@@ -81,6 +81,6 @@ export function StatBreakdown({
           );
         })}
       </ul>
-    </div>
+    </details>
   );
 }

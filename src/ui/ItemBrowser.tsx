@@ -3,6 +3,7 @@ import { itemEfficiency, metricDelta, type Metric } from "../engine.js";
 import type { BuildProfile, StatBlock, StatKey } from "../types.js";
 import { gameItems, ITEM_SLOTS, weaponLabel, itemStatsAtLevel, type GameItem } from "../gameData.js";
 import { StatPills, STAT_META } from "./StatPills.js";
+import { matchName } from "../hangul.js";
 
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`;
 const SLOT_TABS = ["전체", ...ITEM_SLOTS] as const;
@@ -38,7 +39,6 @@ export function ItemBrowser({ profile, equippedStats, equipped, onToggle, metric
     setStatFilter((prev) => (prev.includes(k) ? prev.filter((x) => x !== k) : [...prev, k]));
 
   const filtered = useMemo(() => {
-    const q = search.trim();
     return gameItems.filter((it) => {
       if (slot !== "전체" && it.slot !== slot) return false;
       if (
@@ -47,7 +47,7 @@ export function ItemBrowser({ profile, equippedStats, equipped, onToggle, metric
         it.weaponType !== profile.weapon.weaponType
       )
         return false;
-      if (q && !it.name.includes(q)) return false;
+      if (!matchName(it.name, search)) return false;
       if (statFilter.length > 0) {
         const ok =
           statMode === "and"

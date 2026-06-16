@@ -39,26 +39,26 @@ body {
 
 .layout {
   display: grid;
-  grid-template-columns: 240px 300px 1fr;
+  grid-template-columns: 270px 300px 1fr;
   gap: 16px;
   align-items: start;
 }
 @media (max-width: 1100px) { .layout { grid-template-columns: 1fr !important; } }
 
 /* 전용 보기: 스탯만 / 아이템만 (1번 실험체 선택 패널은 항상 표시) */
-.layout.view-stats { grid-template-columns: 240px 1fr; }
+.layout.view-stats { grid-template-columns: 270px 1fr; }
 .layout.view-stats .browser-panel { display: none; }
-.layout.view-items { grid-template-columns: 240px 1fr; }
+.layout.view-items { grid-template-columns: 270px 1fr; }
 .layout.view-items .stats-panel { display: none; }
 
 /* 스킬 패널은 스킬 뷰에서만 노출 */
 .skill-panel { display: none; }
-.layout.view-skill { grid-template-columns: 240px 1fr; }
+.layout.view-skill { grid-template-columns: 270px 1fr; }
 .layout.view-skill .stats-panel,
 .layout.view-skill .browser-panel { display: none; }
 .layout.view-skill .skill-panel { display: block; }
 
-.scroll { max-height: 260px; overflow-y: auto; }
+.scroll { max-height: 360px; overflow-y: auto; padding-right: 4px; }
 .browser-panel { min-height: 70vh; }
 
 .panel {
@@ -77,19 +77,25 @@ body {
   color: var(--text); border-radius: 6px; padding: 8px 10px; margin-bottom: 8px;
 }
 
-.char-list { list-style: none; margin: 0; padding: 0; }
+.char-list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(82px, 1fr)); gap: 7px;
+}
 .char {
-  width: 100%; display: flex; justify-content: flex-start; align-items: center; gap: 9px;
+  width: 100%; display: flex; flex-direction: column; align-items: center; gap: 5px;
   background: var(--panel-2); border: 1px solid transparent; color: var(--text);
-  padding: 6px 10px; border-radius: 6px; margin-bottom: 4px; cursor: pointer;
+  padding: 8px 4px 6px; border-radius: 8px; cursor: pointer;
 }
 .char:hover { border-color: var(--line); }
-.char.active { border-color: var(--accent); }
+.char.active { border-color: var(--accent); background: var(--panel); }
 .char-icon {
-  width: 30px; height: 30px; border-radius: 6px; object-fit: cover; flex-shrink: 0;
+  width: 56px; height: 56px; border-radius: 8px; object-fit: cover;
   background: var(--bg); border: 1px solid var(--line);
 }
-.char-name { flex: 1; text-align: left; }
+.char-name {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2px;
+  text-align: center; font-size: 12px; line-height: 1.2;
+}
 .char small { color: var(--muted); }
 .empty { color: var(--muted); padding: 8px; }
 
@@ -244,7 +250,15 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
 .eff-pos { color: var(--accent); font-size: 11px; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .eff-zero { color: var(--muted); font-size: 11px; white-space: nowrap; }
 
-/* --- 스탯 구성 비율 분해 --- */
+/* --- 스탯 구성 비율 분해 (접이식) --- */
+.stat-breakdown { margin: 16px 0 6px; }
+.stat-breakdown > summary {
+  font-size: 13px; color: var(--muted); cursor: pointer; padding: 4px 0;
+  list-style: revert; user-select: none;
+}
+.stat-breakdown > summary:hover { color: var(--text); }
+.stat-breakdown .bd-legend { margin-top: 8px; }
+.bd-row.bd-zero { opacity: 0.4; }
 .bd-base { color: var(--survival); }
 .bd-growth { color: var(--accent); }
 .bd-item { color: var(--offense); }

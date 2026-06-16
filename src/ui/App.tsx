@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { computeDps, computeEhp, mergeStats, resolveStats, type Metric } from "../engine.js";
 import type { BuildProfile, StatBlock } from "../types.js";
 import { gameCharacters, gameItems, weaponLabel, hasSkillData, itemStatsAtLevel, mainStatById } from "../gameData.js";
+import { matchName } from "../hangul.js";
 import { StatPills } from "./StatPills.js";
 import { StatBreakdown } from "./StatBreakdown.js";
 import { StatScaling } from "./StatScaling.js";
@@ -49,9 +50,7 @@ export function App() {
     character.weapons.find((w) => w.weaponType === weaponType) ?? character.weapons[0]!;
   const profile: BuildProfile = { character, weapon, level };
 
-  const filteredChars = gameCharacters.filter((c) =>
-    c.name.includes(search.trim()),
-  );
+  const filteredChars = gameCharacters.filter((c) => matchName(c.name, search));
 
   function selectCharacter(id: string) {
     const c = gameCharacters.find((x) => x.id === id)!;
@@ -83,7 +82,6 @@ export function App() {
   const currentStats = resolveStats(profile, equippedStats);
   const dps = computeDps(profile, currentStats);
   const ehp = computeEhp(currentStats);
-  const skillRows = character.skills.filter((s) => !s.excludeFromDps);
   const hasSkills = hasSkillData(character.id);
   const mainStat = mainStatById.get(character.id) ?? "attackPower";
 
@@ -206,21 +204,6 @@ export function App() {
             </div>
           </div>
 
-          {skillRows.length > 0 && (
-            <>
-              <h3>스킬별 DPS</h3>
-              <ul className="skill-dps">
-                {skillRows.map((s) => (
-                  <li key={s.slot}>
-                    <span className="slot">{s.slot}</span>
-                    <span className="skill-name">{s.name}</span>
-                    <span className="skill-val">{fmt(dps.perSkill[s.slot] ?? 0)}</span>
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-
           <h3>장착 아이템 ({equipped.length})</h3>
           {equipped.length === 0 ? (
             <p className="hint">오른쪽에서 아이템을 클릭하면 장착되고, 그 위에 누적 비교됩니다.</p>
@@ -251,7 +234,6 @@ export function App() {
           </h4>
           <StatPills stats={currentStats} />
 
-          <h3>스탯 구성 비율 (기본 · 성장 · 아이템)</h3>
           <StatBreakdown character={character} level={level} itemStats={equippedStats} />
 
           <h3>스탯 성장 · 효율</h3>
