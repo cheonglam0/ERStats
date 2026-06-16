@@ -229,14 +229,15 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
 }
 .item-card:hover { border-color: var(--accent); }
 .item-card.equipped { outline: 2px solid var(--accent); }
-.item-head { display: flex; justify-content: flex-start; align-items: center; gap: 6px; }
+.item-head { display: flex; justify-content: flex-start; align-items: center; gap: 9px; }
 .item-icon {
-  width: 26px; height: 26px; border-radius: 5px; object-fit: cover; flex-shrink: 0;
+  width: 48px; height: 48px; border-radius: 8px; object-fit: cover; flex-shrink: 0;
   background: var(--bg); border: 1px solid var(--line);
 }
-.item-name { font-weight: 600; font-size: 13px; flex: 1; }
+.item-headtext { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.item-name { font-weight: 600; font-size: 13px; }
 .item-slot { color: var(--muted); font-size: 11px; }
-.item-grade { font-size: 10px; }
+.item-grade { font-size: 11px; font-weight: 700; }
 
 .g-Legend { color: #ffd43b; }
 .g-Mythic { color: #ff8787; }
@@ -250,10 +251,27 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
 .item-card.grade-Rare { border-left-color: #74c0fc; }
 .item-card.grade-Uncommon { border-left-color: #8ce99a; }
 
-.item-eff { display: flex; align-items: center; gap: 8px; margin-top: 2px; }
-.item-eff .bar { flex: 1; margin: 0; }
-.eff-pos { color: var(--accent); font-size: 11px; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.eff-zero { color: var(--muted); font-size: 11px; white-space: nowrap; }
+/* 등급 필터 칩: 비활성 시 등급 색 테두리, 활성 시 강조 */
+.grade-chip { border-color: currentColor; }
+.grade-chip.active { background: var(--accent); color: #1a1300 !important; border-color: var(--accent); }
+
+/* 아이템 단독 뷰 상단 장착 표시줄 */
+.browser-equipped {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+  padding: 8px 10px; margin-bottom: 10px;
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px;
+}
+.be-label { font-size: 12px; color: var(--muted); font-weight: 600; margin-right: 2px; }
+.browser-equipped .hint { margin: 0; }
+.be-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--bg); border: 1px solid var(--line); color: var(--text);
+  border-radius: 999px; padding: 3px 8px 3px 4px; cursor: pointer; font-size: 11px;
+}
+.be-chip:hover { border-color: var(--offense); }
+.be-icon { width: 22px; height: 22px; border-radius: 5px; object-fit: cover; }
+.be-name { max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.be-x { color: var(--muted); }
 
 /* --- 스탯 구성 비율 분해 (접이식) --- */
 .stat-breakdown { margin: 16px 0 6px; }

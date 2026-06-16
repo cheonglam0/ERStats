@@ -295,6 +295,7 @@ export function App() {
             equipped={equipped}
             onToggle={toggleItem}
             metric={metric}
+            showEquipped={view === "items"}
           />
         </section>
       </div>
