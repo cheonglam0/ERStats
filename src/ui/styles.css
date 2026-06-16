@@ -331,13 +331,8 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
   padding: 8px 10px; margin-bottom: 12px;
   background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
 }
-.ehp-ratio label { font-size: 12px; display: flex; align-items: center; gap: 5px; }
-.ehp-ratio input {
-  width: 54px; background: var(--panel-2); border: 1px solid var(--line);
-  color: var(--text); border-radius: 5px; padding: 3px 6px; font-size: 12px;
-  text-align: right;
-}
-.ehp-ratio .hint { font-size: 10px; margin: 0; }
+.ehp-ratio-head { display: flex; align-items: center; gap: 10px; }
+.ehp-ratio .hint { font-size: 10px; margin: 0; line-height: 1.5; }
 
 .ehp-block { margin-bottom: 12px; }
 .ehp-block-title { font-size: 11px; color: var(--muted); margin-bottom: 5px; }

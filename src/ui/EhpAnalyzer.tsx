@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { DEFENSE_K } from "../constants.js";
+import { HP_DEF_RATIO } from "../gameData.js";
 
 /**
  * 실질 체력(EHP) 효율 분석 — 방어력과 체력의 상관관계를 수치로 보여준다.
@@ -28,13 +29,26 @@ const fmt = (x: number): string =>
 
 const CHART_DEFS = [0, 50, 100, 150, 200, 250, 300];
 
-/** 기본 환산비: 아이템 데이터 분석상 체력은 방어력의 약 10배로 붙는다. */
-const DEFAULT_RATIO = 10;
+/** 등급 영문 → 한글 라벨. */
+const GRADE_KO: Record<string, string> = {
+  Common: "일반",
+  Uncommon: "고급",
+  Rare: "희귀",
+  Epic: "영웅",
+  Legend: "전설",
+  Mythic: "신화",
+};
+/** 환산비 기준으로 쓸 등급(데이터 있는 것만, 높은 등급 우선). */
+const RATIO_GRADES = ["Legend", "Epic", "Rare", "Uncommon", "Common", "Mythic"].filter(
+  (g) => HP_DEF_RATIO.byGrade[g] != null,
+);
 
 export function EhpAnalyzer({ maxHp, defense }: { maxHp: number; defense: number }) {
   const K = DEFENSE_K;
-  // R = 방어력 1과 같은 아이템 예산으로 얻는 체력 (조정 가능)
-  const [ratio, setRatio] = useState(DEFAULT_RATIO);
+  // 환산비 기준 등급("all" = 전체). 데이터에서 산출된 값을 R로 사용.
+  const [ratioGrade, setRatioGrade] = useState<string>("all");
+  const ratio =
+    ratioGrade === "all" ? HP_DEF_RATIO.all : HP_DEF_RATIO.byGrade[ratioGrade] ?? HP_DEF_RATIO.all;
   const r = ratio > 0 ? ratio : 1;
 
   const ehp = (hp: number, def: number) => (hp * (def + K)) / K;
@@ -62,21 +76,32 @@ export function EhpAnalyzer({ maxHp, defense }: { maxHp: number; defense: number
         <span className="ehp-formula">= {fmt(maxHp)} × (100+{fmt(defense)})/100</span>
       </div>
 
-      {/* 환산비 조정 */}
+      {/* 환산비 기준 (아이템 데이터에서 산출) */}
       <div className="ehp-ratio">
-        <label>
-          아이템 환산비 — 방어력 <b className="def">1</b> ≈ 체력{" "}
-          <input
-            type="number"
-            min={1}
-            max={30}
-            step={1}
-            value={ratio}
-            onChange={(e) => setRatio(Number(e.target.value) || 0)}
-          />
-          <b className="hp">{fmt(r)}</b>
-        </label>
-        <span className="hint">실제 아이템·소비템이 주는 체력은 방어력의 약 10배(데이터 평균 ~10.6배)</span>
+        <div className="ehp-ratio-head">
+          <span className="sf-label">환산비 기준</span>
+          <div className="mode-toggle">
+            <button
+              className={ratioGrade === "all" ? "active" : ""}
+              onClick={() => setRatioGrade("all")}
+            >
+              전체
+            </button>
+            {RATIO_GRADES.map((g) => (
+              <button
+                key={g}
+                className={ratioGrade === g ? "active" : ""}
+                onClick={() => setRatioGrade(g)}
+              >
+                {GRADE_KO[g] ?? g}
+              </button>
+            ))}
+          </div>
+        </div>
+        <span className="hint">
+          방어력 <b className="def">1</b> ≈ 체력 <b className="hp">{fmt(r)}</b> — 같은 부위·등급
+          방어구의 체력÷방어력 평균(데이터 산출). 부위마다 8~20으로 달라 등급으로 보정합니다.
+        </span>
       </div>
 
       {/* 같은 아이템 예산 기준 효율 비교 */}

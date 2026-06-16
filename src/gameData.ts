@@ -174,3 +174,69 @@ export const ITEM_SLOTS = ["무기", "머리", "가슴", "팔", "다리"] as con
 
 /** 등급 표시 순서/색상용. */
 export const GRADE_ORDER = ["Legend", "Mythic", "Epic", "Rare", "Uncommon", "Common"];
+
+// ---------------------------------------------------------------------------
+// 체력 ↔ 방어력 아이템 환산비 (실질체력 효율 비교용)
+// ---------------------------------------------------------------------------
+
+/** 방어력/체력이 붙는 방어구 부위. (무기는 체력·방어 옵션 비교 대상에서 제외) */
+const ARMOR_SLOTS = ["머리", "가슴", "팔", "다리"] as const;
+
+/** 레벨 환산 스탯값(level 기준, base + byLv*(level-1)). */
+function statAt(item: GameItem, key: StatKey, level: number): number {
+  return (item.stats[key] ?? 0) + (item.statsByLv?.[key] ?? 0) * Math.max(0, level - 1);
+}
+const mean = (xs: number[]) => (xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : 0);
+const median = (xs: number[]) => {
+  if (xs.length === 0) return 0;
+  const s = [...xs].sort((a, b) => a - b);
+  const m = Math.floor(s.length / 2);
+  return s.length % 2 ? s[m]! : (s[m - 1]! + s[m]!) / 2;
+};
+
+export interface HpDefRatio {
+  /** 전체(모든 등급) 환산비. */
+  all: number;
+  /** 등급별 환산비 (데이터가 충분한 등급만). */
+  byGrade: Record<string, number>;
+}
+
+/**
+ * "방어력 1 대신 얻는 체력(R)"을 아이템 데이터에서 산출.
+ *
+ * 같은 (부위, 등급) 버킷에서 방어력 위주 아이템과 체력 위주 아이템은 동일한 아이템 예산을
+ * 쓴다고 보고, 각 버킷의 (체력 평균 / 방어력 평균)을 그 등급/부위의 교환비로 본다.
+ * 부위별 스탯 크기 차이가 평균을 왜곡하지 않도록 버킷 비율들의 중앙값으로 집계한다.
+ * (장비 비교 기준이라 레벨은 만렙 부근인 18로 환산.)
+ */
+function computeHpDefRatio(level = 18): HpDefRatio {
+  const byBucket = new Map<string, { def: number[]; hp: number[] }>();
+  for (const it of gameItems) {
+    if (!(ARMOR_SLOTS as readonly string[]).includes(it.slot)) continue;
+    const key = `${it.slot}|${it.grade}`;
+    const b = byBucket.get(key) ?? { def: [], hp: [] };
+    const dv = statAt(it, "defense", level);
+    const hv = statAt(it, "maxHp", level);
+    if (dv > 0) b.def.push(dv);
+    if (hv > 0) b.hp.push(hv);
+    byBucket.set(key, b);
+  }
+  const allRatios: number[] = [];
+  const gradeRatios = new Map<string, number[]>();
+  for (const [key, b] of byBucket) {
+    if (b.def.length === 0 || b.hp.length === 0) continue;
+    const ratio = mean(b.hp) / mean(b.def);
+    allRatios.push(ratio);
+    const grade = key.split("|")[1]!;
+    const arr = gradeRatios.get(grade) ?? [];
+    arr.push(ratio);
+    gradeRatios.set(grade, arr);
+  }
+  const round1 = (x: number) => Math.round(x * 10) / 10;
+  const byGrade: Record<string, number> = {};
+  for (const [grade, arr] of gradeRatios) byGrade[grade] = round1(median(arr));
+  return { all: round1(median(allRatios)) || 10, byGrade };
+}
+
+/** 체력↔방어력 아이템 환산비 (실질체력 분석 기본값). */
+export const HP_DEF_RATIO: HpDefRatio = computeHpDefRatio();
