@@ -1,0 +1,164 @@
+[
+  {
+    "code": 1,
+    "name": "항구",
+    "areaType": "Lumia",
+    "startingArea": true
+  },
+  {
+    "code": 2,
+    "name": "연못",
+    "areaType": "Lumia",
+    "startingArea": true
+  },
+  {
+    "code": 3,
+    "name": "모래사장",
+    "areaType": "Lumia",
+    "startingArea": true
+  },
+  {
+    "code": 4,
+    "name": "고급 주택가",
+    "areaType": "Lumia",
+    "startingArea": true
+  },
+  {
+    "code": 5,
+    "name": "골목길",
+    "areaType": "Lumia",
+    "startingArea": true
+  },
+  {
+    "code": 6,
+    "name": "호텔",
+    "areaType": "Lumia",
+    "startingArea": true
+  },
+  {
+    "code": 7,
+    "name": "번화가",
+    "areaType": "Lumia",
+    "startingArea": true
+  },
+  {
+    "code": 8,
+    "name": "병원",
+    "areaType": "Lumia",
+    "startingArea": true
+  },
+  {
+    "code": 9,
+    "name": "절",
+    "areaType": "Lumia",
+    "startingArea": true
+  },
+  {
+    "code": 10,
+    "name": "양궁장",
+    "areaType": "Lumia",
+    "startingArea": true
+  },
+  {
+    "code": 11,
+    "name": "묘지",
+    "areaType": "Lumia",
+    "startingArea": true
+  },
+  {
+    "code": 12,
+    "name": "숲",
+    "areaType": "Lumia",
+    "startingArea": true
+  },
+  {
+    "code": 13,
+    "name": "공장",
+    "areaType": "Lumia",
+    "startingArea": true
+  },
+  {
+    "code": 14,
+    "name": "성당",
+    "areaType": "Lumia",
+    "startingArea": true
+  },
+  {
+    "code": 15,
+    "name": "학교",
+    "areaType": "Lumia",
+    "startingArea": true
+  },
+  {
+    "code": 16,
+    "name": "연구소",
+    "areaType": "Lumia",
+    "startingArea": false
+  },
+  {
+    "code": 17,
+    "name": "???",
+    "areaType": "Escape_Wait",
+    "startingArea": false
+  },
+  {
+    "code": 18,
+    "name": "???",
+    "areaType": "Escape_Boarding",
+    "startingArea": false
+  },
+  {
+    "code": 19,
+    "name": "???",
+    "areaType": "Escape_Boarding",
+    "startingArea": false
+  },
+  {
+    "code": 20,
+    "name": "BriefingRoom",
+    "areaType": "Lumia",
+    "startingArea": false
+  },
+  {
+    "code": 101,
+    "name": "Cobalt1",
+    "areaType": "Cobalt",
+    "startingArea": false
+  },
+  {
+    "code": 102,
+    "name": "Cobalt2",
+    "areaType": "Cobalt",
+    "startingArea": false
+  },
+  {
+    "code": 103,
+    "name": "Cobalt3",
+    "areaType": "Cobalt",
+    "startingArea": false
+  },
+  {
+    "code": 104,
+    "name": "Cobalt4",
+    "areaType": "Cobalt",
+    "startingArea": false
+  },
+  {
+    "code": 105,
+    "name": "Cobalt5",
+    "areaType": "Cobalt",
+    "startingArea": false
+  },
+  {
+    "code": 106,
+    "name": "Cobalt6",
+    "areaType": "Cobalt",
+    "startingArea": false
+  },
+  {
+    "code": 107,
+    "name": "Cobalt7",
+    "areaType": "Cobalt",
+    "startingArea": true
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "code": 30,
+    "name": "블링크",
+    "desc": "사용 시 지정한 위치로 일정거리 순간이동합니다. 강화 시: 사용 후 일시적으로 이동 속도가 증가하며, 충돌을 무시합니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4000000.png"
+  },
+  {
+    "code": 40,
+    "name": "퀘이크",
+    "desc": "사용 시 주변의 적들에게 스킬 피해를 입히고, 이동 속도를 감소시켜 방해합니다. 강화 시: 일정 시간 동안 주변의 적들에게 피해를 줍니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4001000.png"
+  },
+  {
+    "code": 50,
+    "name": "프로토콜 위반",
+    "desc": "개조된 E.M.O.T.E 가 폭발하여 아군에게는 체력 증가 효과, 적에게는 고정 피해를 입힙니다. 강화 시: 더 강한 효과를 부여합니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4101000.png"
+  },
+  {
+    "code": 60,
+    "name": "붉은 폭풍",
+    "desc": "사용 시 짧은 거리를 이동하고 일정시간 동안 기본 공격 사거리가 증가합니다. 강화 시: 사거리 증가 효과가 증가합니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4102000.png"
+  },
+  {
+    "code": 70,
+    "name": "초월",
+    "desc": "높은 보호막을 제공하여 폭발적인 피해량을 흡수할 수 있도록 합니다. 강화 시: 일정 시간 동안 방해 효과 저항이 증가합니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4103000.png"
+  },
+  {
+    "code": 80,
+    "name": "아티팩트",
+    "desc": "잠시동안 경직 상태가 되어 어떠한 간섭도 받지 않습니다. 강화 시: 경직 상태일 때 자신의 스킬 쿨다운이 빠르게 감소합니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4104000.png"
+  },
+  {
+    "code": 90,
+    "name": "무효화",
+    "desc": "자신과 주변 아군의 해로운 상태 이상을 즉시 해제하며, 이동 속도가 증가합니다. 강화 시: 사용 시 자신과 주변 아군의 방해 효과 저항이 증가합니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4105000.png"
+  },
+  {
+    "code": 110,
+    "name": "강한 결속",
+    "desc": "주변 범위 내의 실험체간의 전투로 인해 잃어버린 체력에 비례하여 에너지를 획득합니다. 사용 시 모든 에너지를 소모하여 주변 아군에게 이동 속도와 모든 피해 흡혈 효과를 부여합니다. 강화 시: 더 많은 에너지를 획득할 수 있습니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4107000.png"
+  },
+  {
+    "code": 120,
+    "name": "스트라이더 - A13",
+    "desc": "사용 시 적 실험체를 향해 이동하는 이동 속도가 증가하며, 지속 시간 동안 적 실험체에게 피해를 입힐 경우 추가 스킬 피해를 입히고 잠시 동안 이동 속도가 증가합니다. 강화 시: 스트라이더 - A13 스킬로 피해를 입힌 대상의 이동 속도를 감소시킵니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4110000.png"
+  },
+  {
+    "code": 130,
+    "name": "진실의 칼날",
+    "desc": "사용 시 주변 적에게 피해를 입히고 입힌 대상의 수에 비례하여 이동 속도가 증가합니다. 강화 시: 진실의 칼날이 하나 더 소환되어 추가 피해를 입힙니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4112000.png"
+  },
+  {
+    "code": 140,
+    "name": "거짓 서약",
+    "desc": "사용자의 체력을 비용으로, 모든 피해가 증가합니다. 사용된 체력은 서서히 회복합니다. 강화 시: 적 실험체를 처치에 관여할 경우, 효과가 갱신됩니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4113000.png"
+  },
+  {
+    "code": 150,
+    "name": "치유의 바람",
+    "desc": "범위 내의 아군 실험체의 체력을 회복합니다. 강화 시: 바람에 휩싸인 아군이 일정 시간 동안 체력을 추가로 회복합니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4108000.png"
+  },
+  {
+    "code": 160,
+    "name": "리펄서 미사일",
+    "desc": "사용 시 짧은 거리를 이동하며 착지 지점 주변 가장 가까운 적 실험체를 향해 미사일을 발사해 적중한 적에게 고정 피해를 입힙니다. 강화 시: 미사일이 추가로 발사됩니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4115000.png"
+  },
+  {
+    "code": 170,
+    "name": "플라즈마 대시",
+    "desc": "사용 시 짧은 거리를 이동하며 전방을 향해 플라즈마 에너지 발사해 적중한 적에게 스킬 피해를 입히며 이동 속도를 감소시킵니다. 다수의 투사체에 적중해도 피해는 한 번만 적용됩니다. 강화 시: 투사체에 적중된 적의 방어력을 감소시킵니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4116000.png"
+  },
+  {
+    "code": 190,
+    "name": "라이트 윙",
+    "desc": "사용 시 자신에게 걸린 이동 속도 감소 효과를 제거하며 일정 시간 동안 이동 속도와 공격 속도가 증가합니다. 적 실험체에게 기본 공격 적중 시 이동 속도가 감소합니다. 강화 시: 적 실험체에게 기본 공격 적중 시 지속 시간이 증가합니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4118000.png"
+  },
+  {
+    "code": 500020,
+    "name": "중력장",
+    "desc": "잠시 후 주위의 적들을 당겨오고, 기절시킵니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4502000.png"
+  },
+  {
+    "code": 500030,
+    "name": "롤링썬더",
+    "desc": "일정 시간 동안 자신의 이동 속도를 대폭 증가시킵니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4503000.png"
+  },
+  {
+    "code": 500040,
+    "name": "폭진",
+    "desc": "에너지를 터트려 짧은 순간 후 주위의 적 실험체를 타격하고, 타격에 성공 시 보너스를 받습니다. 타격 실패 시 페널티를 받습니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4504000.png"
+  },
+  {
+    "code": 500050,
+    "name": "임펄스",
+    "desc": "짧은 시간 정지 상태가 되고, 지정한 방향으로 돌진합니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4512000.png"
+  },
+  {
+    "code": 500060,
+    "name": "기원",
+    "desc": "일정 범위 내 모든 아군에게 보호막을 부여합니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4506000.png"
+  },
+  {
+    "code": 500070,
+    "name": "대지분쇄",
+    "desc": "지정한 방향의 지면에 분쇄 영역을 생성하여 피해를 입힌 후 적에게 기절과 이동 속도 감소 효과를 입힙니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4507000.png"
+  },
+  {
+    "code": 500080,
+    "name": "힘껏 펀치",
+    "desc": "지정한 방향으로 지니의 펀치를 힘껏 날립니다. 적중한 실험체는 해당 방향으로 날아갑니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4508000.png"
+  },
+  {
+    "code": 500090,
+    "name": "메테오",
+    "desc": "잠시 후 지정한 위치에 운석을 떨어뜨려 큰 피해를 입힙니다. 운석에 맞은 적은 짧은 시간 기절합니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4509000.png"
+  },
+  {
+    "code": 500100,
+    "name": "라이트닝 쉴드",
+    "desc": "지정한 아군에게 썬더의 보호막을 입히고, 해로운 효과를 제거합니다. 썬더의 보호막은 파열 시 주위에 피해를 입힙니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4510000.png"
+  },
+  {
+    "code": 500110,
+    "name": "블레싱: 명상",
+    "desc": "즉시 최대 체력의 일부를 회복하고, 이후 잠시동안 추가로 회복합니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4511000.png"
+  },
+  {
+    "code": 500240,
+    "name": "부착",
+    "desc": "지정한 방향으로 투사체를 던져 처음 적중한 대상에게 피해를 입히고 스킬 재사용 시 대상에게 돌진합니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4524000.png"
+  },
+  {
+    "code": 500270,
+    "name": "쇠약",
+    "desc": "지정한 적 실험체에게 이동 속도와 대상이 입히는 피해를 감소시키는 쇠약 효과를 부여합니다. 강화 시: 더 강한 효과를 부여합니다.",
+    "iconUrl": "https://cdn.dak.gg/assets/er/game-assets/11.4.0/VSkillIcon_4117000.png"
+  }
+]

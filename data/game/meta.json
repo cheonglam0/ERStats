@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-06-15T15:27:18.684Z",
+  "fetchedAt": "2026-06-18T16:08:18.780Z",
   "dataHash": {
     "ActionCost": 960655380,
     "Area": 2497425820,
@@ -48,6 +48,12 @@
   },
   "counts": {
     "characters": 88,
-    "items": 351
+    "items": 307,
+    "traits": 119,
+    "monsters": 35,
+    "areas": 27,
+    "recipes": 759,
+    "tactical": 27,
+    "metaRows": 88
   }
 }

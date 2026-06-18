@@ -50,9 +50,9 @@ const REQUEST_DELAY = 1200;
 async function apiGet(key: string, path: string): Promise<any> {
   for (let attempt = 0; attempt < 6; attempt++) {
     const res = await fetch(`${BASE}${path}`, { headers: { "x-api-key": key } });
-    if (res.status === 429) {
+    if (res.status === 429 || res.status >= 500) {
       const wait = 2000 * (attempt + 1);
-      console.log(`    (429 rate limit — ${wait}ms 대기 후 재시도)`);
+      console.log(`    (HTTP ${res.status} — ${wait}ms 대기 후 재시도)`);
       await sleep(wait);
       continue;
     }
@@ -60,7 +60,7 @@ async function apiGet(key: string, path: string): Promise<any> {
     await sleep(REQUEST_DELAY);
     return res.json();
   }
-  throw new Error(`API ${path} → 429 반복, 재시도 한계 초과`);
+  throw new Error(`API ${path} → 재시도 한계 초과(429/5xx)`);
 }
 
 function writeJson(path: string, data: unknown): void {
@@ -82,6 +82,12 @@ const META_TYPES = [
   "ItemArmor",
   "ItemSpecial",
   "ItemConsumable",
+  "ItemMisc", // 제작 재료(잡템) 이름/등급
+  "Trait", // 특성
+  "TacticalSkillSet", // 전술 스킬
+  "Monster", // 야생동물
+  "MonsterDropGroup", // 야생동물 드랍
+  "Area", // 지역
 ] as const;
 
 /** --refresh 가 없고 캐시가 있으면 API 대신 디스크 원본을 쓴다. */
@@ -90,6 +96,16 @@ const USE_CACHE = !process.argv.includes("--refresh");
 function readCache<T>(path: string): T | null {
   return USE_CACHE && existsSync(path) ? (JSON.parse(readFileSync(path, "utf8")) as T) : null;
 }
+
+/** 빌드 비교의 필수 테이블이 아니어서, 수집 실패해도 중단하지 않고 건너뛰는 부가 테이블. */
+const OPTIONAL_TYPES = new Set<string>([
+  "ItemMisc",
+  "Trait",
+  "TacticalSkillSet",
+  "Monster",
+  "MonsterDropGroup",
+  "Area",
+]);
 
 async function fetchMeta(key: string): Promise<Record<string, any[]>> {
   const out: Record<string, any[]> = {};
@@ -101,10 +117,16 @@ async function fetchMeta(key: string): Promise<Record<string, any[]>> {
       rows = cached;
       console.log(`  [meta] ${t}: ${rows.length} rows (캐시)`);
     } else {
-      const json = await apiGet(key, `/v1/data/${t}`);
-      rows = json.data ?? [];
-      writeJson(cachePath, rows);
-      console.log(`  [meta] ${t}: ${rows.length} rows`);
+      try {
+        const json = await apiGet(key, `/v1/data/${t}`);
+        rows = json.data ?? [];
+        writeJson(cachePath, rows);
+        console.log(`  [meta] ${t}: ${rows.length} rows`);
+      } catch (e) {
+        if (!OPTIONAL_TYPES.has(t)) throw e; // 필수 테이블은 그대로 실패
+        rows = [];
+        console.warn(`  [meta] ${t}: 수집 실패 — 건너뜀 (${(e as Error).message})`);
+      }
     }
     out[t] = rows;
   }
@@ -443,6 +465,280 @@ async function enrichItemIcons(items: NormItem[]): Promise<void> {
 }
 
 // ---------------------------------------------------------------------------
+// 정규화: 특성 / 야생동물 / 지역 / 제작 트리 (부가 데이터 — 게임 시스템 뷰용)
+// ---------------------------------------------------------------------------
+
+/** 게임 텍스트의 서식 태그/플레이스홀더 제거 → 읽기용 한 줄. */
+function cleanText(s: string | undefined): string {
+  if (!s) return "";
+  return s
+    .replace(/<[^>]+>/g, "") // <color=...> 등 태그 제거
+    .replace(/\\n/g, " ")
+    .replace(/\{\d+\}/g, "?") // 수치 플레이스홀더
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+interface NormTrait {
+  code: number;
+  name: string;
+  group: string; // traitGroup (Havoc 등)
+  type: string; // Core / Sub 등
+  desc: string;
+}
+
+function normalizeTraits(meta: Record<string, any[]>, l10n: Record<string, string>): NormTrait[] {
+  return (meta.Trait ?? [])
+    .filter((t) => t.active !== false)
+    .map((t) => ({
+      code: t.code,
+      name: l10n[`Trait/Name/${t.code}`] ?? String(t.code),
+      group: t.traitGroup ?? "",
+      type: t.traitType ?? "",
+      desc: cleanText(l10n[`Trait/Tooltip/${t.code}`]),
+    }))
+    .filter((t) => t.name && t.name !== String(t.code));
+}
+
+interface NormMonster {
+  code: number;
+  name: string;
+  grade: string;
+  maxHp: number;
+  attackPower: number;
+  defense: number;
+  attackSpeed: number;
+  moveSpeed: number;
+  gainExp: number;
+  regenTime: number;
+  isMutant: boolean;
+}
+
+function normalizeMonsters(
+  meta: Record<string, any[]>,
+  l10n: Record<string, string>,
+): NormMonster[] {
+  return (meta.Monster ?? [])
+    .map((m) => ({
+      code: m.code,
+      name: l10n[`Monster/Name/${m.code}`] ?? m.monster,
+      grade: m.grade ?? "Common",
+      maxHp: num(m.maxHp),
+      attackPower: num(m.attackPower),
+      defense: num(m.defense),
+      attackSpeed: num(m.attackSpeed),
+      moveSpeed: num(m.moveSpeed),
+      gainExp: num(m.gainExp),
+      regenTime: num(m.regenTime),
+      isMutant: Boolean(m.isMutant),
+    }))
+    .filter((m) => m.name);
+}
+
+interface NormArea {
+  code: number;
+  name: string;
+  areaType: string;
+  startingArea: boolean;
+}
+
+function normalizeAreas(meta: Record<string, any[]>, l10n: Record<string, string>): NormArea[] {
+  return (meta.Area ?? [])
+    .map((a) => ({
+      code: a.code,
+      name: l10n[`Area/Name/${a.code}`] ?? a.name,
+      areaType: a.areaType ?? "",
+      startingArea: Boolean(a.startingArea),
+    }))
+    .filter((a) => a.name);
+}
+
+interface NormRecipe {
+  code: number;
+  name: string;
+  grade: string;
+  kind: string; // Weapon/Armor/Special/Consumable/Misc
+  slot?: string; // 방어구/무기 부위 (있으면)
+  weaponType?: string;
+  m1: number; // 재료1 코드 (0=기본 재료)
+  m2: number;
+  iconUrl?: string;
+}
+
+/** 모든 아이템 테이블에서 제작 레시피(makeMaterial) 사전 구성. 재료 추적은 코드로. */
+function normalizeRecipes(meta: Record<string, any[]>): NormRecipe[] {
+  const out: NormRecipe[] = [];
+  const push = (r: any, kind: string, extra: Partial<NormRecipe> = {}) => {
+    out.push({
+      code: r.code,
+      name: r.name,
+      grade: r.itemGrade ?? "Common",
+      kind,
+      m1: num(r.makeMaterial1),
+      m2: num(r.makeMaterial2),
+      ...extra,
+    });
+  };
+  for (const r of meta.ItemWeapon ?? []) push(r, "Weapon", { weaponType: r.weaponType, slot: "무기" });
+  for (const r of meta.ItemArmor ?? [])
+    push(r, "Armor", { slot: ARMOR_SLOT_KO[r.armorType] ?? r.armorType });
+  for (const r of meta.ItemSpecial ?? []) push(r, "Special");
+  for (const r of meta.ItemConsumable ?? []) push(r, "Consumable");
+  for (const r of meta.ItemMisc ?? []) push(r, "Misc");
+  return out;
+}
+
+/** dak.gg 아이콘으로 레시피 아이템 아이콘 보강 (재료 포함 전체). */
+async function enrichRecipeIcons(recipes: NormRecipe[]): Promise<void> {
+  const cachePath = resolve(RAW_DIR, "dakgg-items.json");
+  if (!existsSync(cachePath)) return;
+  const cached = JSON.parse(readFileSync(cachePath, "utf8")) as { items?: any[] };
+  const byId = new Map<number, any>((cached.items ?? []).map((x) => [x.id, x]));
+  for (const r of recipes) {
+    const url = byId.get(r.code)?.imageUrl;
+    if (typeof url === "string" && url) r.iconUrl = url;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// 부가 수집: 전술 스킬 + 티어/메타 (dak.gg, 공식 API 미제공분)
+// ---------------------------------------------------------------------------
+
+interface NormTactical {
+  code: number;
+  name: string;
+  desc: string;
+  iconUrl?: string;
+}
+
+/** dak.gg 전술 스킬(공식 /v1/data/TacticalSkillSet 은 502). 이름 중복 제거. */
+async function fetchTacticalSkills(): Promise<NormTactical[]> {
+  const cachePath = resolve(RAW_DIR, "dakgg-tactical-skills.json");
+  let raw: any;
+  const cached = readCache<any>(cachePath);
+  if (cached) {
+    raw = cached;
+  } else {
+    try {
+      const res = await fetch("https://er.dakgg.io/api/v1/data/tactical-skills?hl=ko");
+      raw = await res.json();
+      writeJson(cachePath, raw);
+    } catch (e) {
+      console.warn(`  [dak.gg] 전술 스킬 수집 실패 — 건너뜀 (${(e as Error).message})`);
+      return [];
+    }
+  }
+  const list: any[] = raw.tacticalSkills ?? [];
+  const seen = new Set<string>();
+  const out: NormTactical[] = [];
+  for (const t of list) {
+    if (!t.name || seen.has(t.name)) continue;
+    seen.add(t.name);
+    out.push({ code: t.id, name: t.name, desc: cleanText(t.tooltip), iconUrl: t.imageUrl });
+  }
+  return out;
+}
+
+interface MetaBuild {
+  weapon: string; // 무기군 한글
+  tier: string; // S/A/B/C/D
+  tierScore: number;
+  games: number;
+  pickRate: number;
+  winRate: number;
+  top3Rate: number;
+}
+interface MetaRow {
+  name: string;
+  games: number;
+  pickRate: number;
+  winRate: number;
+  top3Rate: number;
+  tier: string; // 대표(최다 픽 빌드) 티어
+  builds: MetaBuild[];
+}
+interface NormMetaTier {
+  patch: number;
+  tier: string;
+  updatedAt: number;
+  totalGames: number;
+  rows: MetaRow[];
+}
+
+/** dak.gg 캐릭터 통계 → (캐릭터별) 티어/픽률/승률/Top3. 무기군별 빌드 분해 포함. */
+async function fetchMetaTier(): Promise<NormMetaTier | null> {
+  const cachePath = resolve(RAW_DIR, "dakgg-character-stats.json");
+  let raw: any;
+  const cached = readCache<any>(cachePath);
+  if (cached) {
+    raw = cached;
+  } else {
+    try {
+      const res = await fetch("https://er.dakgg.io/api/v1/character-stats?hl=ko");
+      raw = await res.json();
+      writeJson(cachePath, raw);
+    } catch (e) {
+      console.warn(`  [dak.gg] 티어/메타 수집 실패 — 건너뜀 (${(e as Error).message})`);
+      return null;
+    }
+  }
+  const snap = raw.characterStatSnapshot;
+  if (!snap?.characterStats) return null;
+
+  // 매핑: dak.gg 캐릭터 id→이름, 무기 id→무기군 key
+  const dakCharsPath = resolve(RAW_DIR, "dakgg-characters.json");
+  if (!existsSync(dakCharsPath)) return null;
+  const dakChars = JSON.parse(readFileSync(dakCharsPath, "utf8")) as any[];
+  const nameByKey = new Map<number, string>(dakChars.map((c) => [c.id, c.name]));
+  const weaponKeyToType = new Map<number, string>();
+  for (const c of dakChars)
+    for (const w of c.weaponTypes ?? []) weaponKeyToType.set(w.id, w.key);
+
+  const totalGames = num(snap.tierGameCount) || 1;
+  const rows: MetaRow[] = [];
+  for (const cs of snap.characterStats) {
+    const name = nameByKey.get(cs.key);
+    if (!name) continue;
+    const builds: MetaBuild[] = (cs.weaponStats ?? [])
+      .map((ws: any) => {
+        const games = num(ws.count);
+        const type = weaponKeyToType.get(ws.key) ?? String(ws.key);
+        return {
+          weapon: WEAPON_TYPE_KO[type] ?? type,
+          tier: ws.tier ?? "-",
+          tierScore: Math.round(num(ws.tierScore) * 10) / 10,
+          games,
+          pickRate: games / totalGames,
+          winRate: games ? num(ws.win) / games : 0,
+          top3Rate: games ? num(ws.top3) / games : 0,
+        };
+      })
+      .sort((a: MetaBuild, b: MetaBuild) => b.games - a.games);
+    if (builds.length === 0) continue;
+    const games = builds.reduce((s, b) => s + b.games, 0);
+    const win = (cs.weaponStats ?? []).reduce((s: number, w: any) => s + num(w.win), 0);
+    const top3 = (cs.weaponStats ?? []).reduce((s: number, w: any) => s + num(w.top3), 0);
+    rows.push({
+      name,
+      games,
+      pickRate: games / totalGames,
+      winRate: games ? win / games : 0,
+      top3Rate: games ? top3 / games : 0,
+      tier: builds[0]!.tier, // 최다 픽 빌드의 티어를 대표값으로
+      builds,
+    });
+  }
+  rows.sort((a, b) => (b.builds[0]?.tierScore ?? 0) - (a.builds[0]?.tierScore ?? 0));
+  return {
+    patch: num(raw.meta?.patch),
+    tier: raw.meta?.tier ?? "",
+    updatedAt: num(raw.meta?.updatedAt),
+    totalGames,
+    rows,
+  };
+}
+
+// ---------------------------------------------------------------------------
 // 자동화 안전장치
 // ---------------------------------------------------------------------------
 
@@ -501,16 +797,43 @@ async function main(): Promise<void> {
 
   assertDataSane(characters.length, items.length); // 비정상 수집이면 여기서 중단(쓰기 전)
 
+  // 부가 데이터(게임 시스템 뷰): 특성/야생동물/지역/제작 트리. 실패해도 핵심 데이터는 유지.
+  const traits = normalizeTraits(meta, l10n);
+  const monsters = normalizeMonsters(meta, l10n);
+  const areas = normalizeAreas(meta, l10n);
+  const recipes = normalizeRecipes(meta);
+  await enrichRecipeIcons(recipes);
+  const tactical = await fetchTacticalSkills();
+  const metaTier = await fetchMetaTier();
+
   writeJson(resolve(GAME_DIR, "characters.json"), characters);
   writeJson(resolve(GAME_DIR, "items.json"), items);
+  writeJson(resolve(GAME_DIR, "traits.json"), traits);
+  writeJson(resolve(GAME_DIR, "monsters.json"), monsters);
+  writeJson(resolve(GAME_DIR, "areas.json"), areas);
+  writeJson(resolve(GAME_DIR, "crafting.json"), recipes);
+  writeJson(resolve(GAME_DIR, "tactical.json"), tactical);
+  if (metaTier) writeJson(resolve(GAME_DIR, "metaTier.json"), metaTier);
   writeJson(resolve(GAME_DIR, "meta.json"), {
     fetchedAt: new Date().toISOString(),
     dataHash: hash.data ?? null,
-    counts: { characters: characters.length, items: items.length },
+    counts: {
+      characters: characters.length,
+      items: items.length,
+      traits: traits.length,
+      monsters: monsters.length,
+      areas: areas.length,
+      recipes: recipes.length,
+      tactical: tactical.length,
+      metaRows: metaTier?.rows.length ?? 0,
+    },
   });
 
   console.log(
     `\n완료: 캐릭터 ${characters.length}명, 완성 아이템 ${items.length}개 → data/game/`,
+  );
+  console.log(
+    `  부가: 특성 ${traits.length} · 야생동물 ${monsters.length} · 지역 ${areas.length} · 제작 ${recipes.length} · 전술 ${tactical.length} · 메타 ${metaTier?.rows.length ?? 0}`,
   );
   console.log(
     "※ 스킬 데미지 계수는 공식 API에 없음 → data/skills/ 큐레이션 오버레이로 별도 관리 필요.",

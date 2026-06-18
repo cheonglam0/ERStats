@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
-import { itemEfficiency, metricDelta, type Metric } from "../engine.js";
-import type { BuildProfile, StatBlock, StatKey } from "../types.js";
+import { itemEfficiency, metricDelta, mergeStats, type Metric } from "../engine.js";
+import type { BuildProfile, StatBlock, StatKey, TargetProfile } from "../types.js";
 import {
   gameItems,
   ITEM_SLOTS,
@@ -45,20 +45,22 @@ const ITEM_BY_CODE = new Map(gameItems.map((it) => [String(it.code), it]));
 
 interface Props {
   profile: BuildProfile;
-  equippedStats: StatBlock;
-  equipped: string[];
+  /** 슬롯형 로드아웃(슬롯 → 아이템 코드). */
+  loadout: Record<string, string>;
   onToggle: (code: string) => void;
   metric: Metric;
+  /** DPS 효율을 계산할 대상(방어력). 방관 스탯 가치 반영. */
+  target: TargetProfile;
   /** 아이템 단독 뷰처럼 장착 목록이 따로 안 보일 때 상단에 장착 표시줄 노출. */
   showEquipped?: boolean;
 }
 
 export function ItemBrowser({
   profile,
-  equippedStats,
-  equipped,
+  loadout,
   onToggle,
   metric,
+  target,
   showEquipped = false,
 }: Props) {
   const [slot, setSlot] = useState<(typeof SLOT_TABS)[number]>("전체");
@@ -72,6 +74,18 @@ export function ItemBrowser({
     setStatFilter((prev) => (prev.includes(k) ? prev.filter((x) => x !== k) : [...prev, k]));
   const toggleGrade = (g: string) =>
     setGradeFilter((prev) => (prev.includes(g) ? prev.filter((x) => x !== g) : [...prev, g]));
+
+  /** 현재 장착된 코드 집합 + 슬롯별 환산 스탯(교체 효율 계산용). */
+  const equippedCodes = useMemo(() => new Set(Object.values(loadout)), [loadout]);
+  const equippedList = ITEM_SLOTS.map((s) => loadout[s]).filter((x): x is string => Boolean(x));
+  const slotStats = useMemo(() => {
+    const m: Record<string, StatBlock> = {};
+    for (const [slot, code] of Object.entries(loadout)) {
+      const it = ITEM_BY_CODE.get(code);
+      if (it) m[slot] = itemStatsAtLevel(it, profile.level);
+    }
+    return m;
+  }, [loadout, profile.level]);
 
   const filtered = useMemo(() => {
     return gameItems.filter((it) => {
@@ -96,34 +110,45 @@ export function ItemBrowser({
   }, [slot, search, weaponOnlyThisType, profile.weapon.weaponType, statFilter, statMode, gradeFilter]);
 
   // 현재 빌드 기준 한계효율로 선택 렌즈에 맞춰 정렬 (효율 막대는 제거, 정렬 기준으로만 사용)
+  // 효율은 "같은 슬롯의 현재 아이템을 이걸로 교체"한 델타 — 즉 그 슬롯 점유분을 빼고 계산한다.
   // 장착(선택)된 아이템은 항상 목록 맨 앞으로, 그 안에서는 효율 순.
   const ranked = useMemo(() => {
+    /** 후보 슬롯을 제외한 나머지 장착분(교체 기준선). */
+    const baseExtraForSlot = (slot: string): StatBlock =>
+      mergeStats(
+        ...Object.entries(slotStats)
+          .filter(([s]) => s !== slot)
+          .map(([, v]) => v),
+      );
     const rows = filtered.map((it) => ({
       item: it,
       leveledStats: itemStatsAtLevel(it, profile.level),
       effDelta: metricDelta(
-        itemEfficiency(profile, itemStatsAtLevel(it, profile.level), { baseExtra: equippedStats }),
+        itemEfficiency(profile, itemStatsAtLevel(it, profile.level), {
+          baseExtra: baseExtraForSlot(it.slot),
+          target,
+        }),
         metric,
       ).delta,
     }));
     rows.sort((a, b) => {
-      const aEq = equipped.includes(String(a.item.code));
-      const bEq = equipped.includes(String(b.item.code));
+      const aEq = equippedCodes.has(String(a.item.code));
+      const bEq = equippedCodes.has(String(b.item.code));
       if (aEq !== bEq) return aEq ? -1 : 1;
       return b.effDelta - a.effDelta;
     });
     return rows;
-  }, [filtered, profile, equippedStats, metric, equipped]);
+  }, [filtered, profile, slotStats, metric, target, equippedCodes]);
 
   return (
     <div className="browser">
       {showEquipped && (
         <div className="browser-equipped">
-          <span className="be-label">장착 {equipped.length}</span>
-          {equipped.length === 0 ? (
+          <span className="be-label">장착 {equippedList.length}</span>
+          {equippedList.length === 0 ? (
             <span className="hint">아래에서 아이템을 클릭하면 장착됩니다.</span>
           ) : (
-            equipped.map((code) => {
+            equippedList.map((code) => {
               const it = ITEM_BY_CODE.get(code);
               if (!it) return null;
               return (
@@ -234,7 +259,7 @@ export function ItemBrowser({
 
       <div className="item-grid">
         {ranked.map(({ item, leveledStats }) => {
-          const isEquipped = equipped.includes(String(item.code));
+          const isEquipped = equippedCodes.has(String(item.code));
           return (
             <button
               key={item.code}

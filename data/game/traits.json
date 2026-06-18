@@ -1,0 +1,835 @@
+[
+  {
+    "code": 7000201,
+    "name": "취약",
+    "group": "Havoc",
+    "type": "Core",
+    "desc": "동일 실험체에게 기본 공격 또는 개별 스킬을 3회 적중 시 고정 피해를 추가로 입히며, 대상의 방어력을 감소시킵니다."
+  },
+  {
+    "code": 7000401,
+    "name": "흡혈마",
+    "group": "Havoc",
+    "type": "Core",
+    "desc": "기본 공격 또는 개별 스킬로 실험체에게 피해를 입힐 때마다 모든 피해 흡혈과, 공격력 또는 스킬 증폭이 상승합니다. 최대 중첩 시 공격력 또는 스킬 증폭이 추가적으로 증가합니다."
+  },
+  {
+    "code": 7000501,
+    "name": "벽력",
+    "group": "Havoc",
+    "type": "Core",
+    "desc": "적 실험체에게 스킬로 피해를 입혔을 때 스킬 피해를 입힙니다. 먼 거리에 있는 적에게 더 강한 피해를 입힙니다. 스킬이 적중한 적 실험체의 범위 내 가장 가까운 적 실험체가 있을 경우 전류의 줄기가 한 번 전이되어 스킬 피해를 입힙니다."
+  },
+  {
+    "code": 7000601,
+    "name": "아드레날린",
+    "group": "Havoc",
+    "type": "Core",
+    "desc": "적 실험체에게 기본 공격으로 피해를 입힐 때마다 공격 속도가 증가합니다. 최대 중첩 시 추가적으로 공격 속도와 이동 속도가 증가합니다."
+  },
+  {
+    "code": 7010101,
+    "name": "철갑탄",
+    "group": "Havoc",
+    "type": "Sub",
+    "desc": "방어 관통이 증가합니다."
+  },
+  {
+    "code": 7010201,
+    "name": "복수자",
+    "group": "Havoc",
+    "type": "Sub",
+    "desc": "안전지대 활성화 단계 이후로 자신이 안전지대 안에 있을 때 적에게 입히는 피해가 증가합니다."
+  },
+  {
+    "code": 7010301,
+    "name": "수확",
+    "group": "Havoc",
+    "type": "Sub",
+    "desc": "자신 또는 자신의 소환물이 입히는 모든 피해만큼 스태미나가 회복됩니다."
+  },
+  {
+    "code": 7010401,
+    "name": "갈증",
+    "group": "Havoc",
+    "type": "Sub",
+    "desc": "자신 또는 자신의 소환물이 실험체가 아닌 대상에게 입히는 피해가 증가하며, 입힌 피해 일부의 체력이 회복됩니다"
+  },
+  {
+    "code": 7010501,
+    "name": "열세극복",
+    "group": "Havoc",
+    "type": "Sub",
+    "desc": "대상 실험체의 최대 체력이 자신의 최대 체력보다 많은 경우 입히는 피해가 증가합니다."
+  },
+  {
+    "code": 7010601,
+    "name": "영혼 흡수 장치",
+    "group": "Havoc",
+    "type": "Sub",
+    "desc": "적 실험체 처치 관여, 곰 및 보스 몬스터 처치 관여 시 중첩을 획득합니다. 중첩 당 공격력 또는 스킬 증폭이 증가합니다."
+  },
+  {
+    "code": 7100101,
+    "name": "금강",
+    "group": "Fortification",
+    "type": "Core",
+    "desc": "상대 실험체를 이동 불가 상태로 만들면 방어력이 증가합니다. 방어력 증가 효과가 종료되는 즉시 주변에 스킬 피해를 입힙니다. 피해를 입은 대상은 이동 속도가 감소합니다."
+  },
+  {
+    "code": 7100201,
+    "name": "불괴",
+    "group": "Fortification",
+    "type": "Core",
+    "desc": "무기 스킬 사용 시 일정 시간 동안 불괴 상태가 되며 받는 피해가 감소하고 방해 효과 저항력이 증가합니다."
+  },
+  {
+    "code": 7100301,
+    "name": "망각",
+    "group": "Fortification",
+    "type": "Core",
+    "desc": "현재 체력이 낮을수록 기본 공격 피해를 덜 입습니다. 기본 공격 피해를 덜 입을 때마다 그 피해의 일부를 고유 피해로 반사합니다."
+  },
+  {
+    "code": 7100401,
+    "name": "빛의 수호",
+    "group": "Fortification",
+    "type": "Core",
+    "desc": "최대 체력의 일정부분에 해당하는 보호막을 획득합니다. 보호막이 파괴되면 해로운 효과가 즉시 해제되며 이동 속도가 잠깐 증가합니다."
+  },
+  {
+    "code": 7100501,
+    "name": "응징",
+    "group": "Fortification",
+    "type": "Core",
+    "desc": "적 실험체에 의해 잃은 체력에 비례하여 중첩을 획득합니다. 보유한 중첩에 비례해서 받는 피해가 감소합니다. 적에게 기본 공격을 가하면 보유한 중첩을 소모하여 스킬 피해를 주고 이동 속도를 감소시킵니다. 중첩을 소모하지 않고 일정 시간이 지나면 보유한 중첩에 비례하여 체력을 회복합니다."
+  },
+  {
+    "code": 7110101,
+    "name": "대담",
+    "group": "Fortification",
+    "type": "Sub",
+    "desc": "스킬 또는 특성 의해 보호막이나 체력 회복 효과를 받으면 방어력이 증가합니다."
+  },
+  {
+    "code": 7110201,
+    "name": "특공대",
+    "group": "Fortification",
+    "type": "Sub",
+    "desc": "주변에 아군이 없을 경우, 받는 피해가 감소합니다."
+  },
+  {
+    "code": 7110301,
+    "name": "둔감",
+    "group": "Fortification",
+    "type": "Sub",
+    "desc": "치명타 피해를 받으면 받는 치명타 피해가 감소합니다."
+  },
+  {
+    "code": 7110401,
+    "name": "견고",
+    "group": "Fortification",
+    "type": "Sub",
+    "desc": "방해 효과 저항이 증가합니다."
+  },
+  {
+    "code": 7110501,
+    "name": "중장갑",
+    "group": "Fortification",
+    "type": "Sub",
+    "desc": "아이템으로 증가하는 피해 감소 옵션이 적용됩니다."
+  },
+  {
+    "code": 7110601,
+    "name": "먹보",
+    "group": "Fortification",
+    "type": "Sub",
+    "desc": "음식 섭취에 걸리는 시간이 단축됩니다. 회복량이 낮은 음식 회복량이 증가합니다."
+  },
+  {
+    "code": 7200101,
+    "name": "초재생",
+    "group": "Support",
+    "type": "Core",
+    "desc": "자신의 스킬 또는 특성에 의해 발생하는 모든 보호막 및 체력 회복량이 증가합니다. 자신에 의해 보호막 또는 체력 회복 효과를 받은 대상은 공격력 또는 스킬 증폭이 증가합니다."
+  },
+  {
+    "code": 7200201,
+    "name": "증폭 드론",
+    "group": "Support",
+    "type": "Core",
+    "desc": "궁극기 사용 시 자신을 따라다니는 증폭 드론이 나타납니다. 증폭 드론은 주변 내 자신을 포함한 아군의 이동 속도와 스킬 피해량을 증가시킵니다."
+  },
+  {
+    "code": 7200301,
+    "name": "치유 드론",
+    "group": "Support",
+    "type": "Core",
+    "desc": "자신을 포함한 아군 실험체의 체력이 일정 이하일 때 피해를 입은 경우, 자신을 따라다니는 치유 드론이 나타납니다. 치유 드론은 주변 내 자신을 포함한 아군의 체력을 매 초 잃은 체력의 일부를 회복시킵니다."
+  },
+  {
+    "code": 7200401,
+    "name": "추진력",
+    "group": "Support",
+    "type": "Core",
+    "desc": "적이나 야생동물을 처치하면 적 실험체를 향해 이동할 때 이동 속도가 증가하고 처치한 유형에 따라 체력을 회복하거나 받는 피해가 감소됩니다."
+  },
+  {
+    "code": 7200501,
+    "name": "헌신",
+    "group": "Support",
+    "type": "Core",
+    "desc": "적 실험체에게 개별 스킬로 피해를 입히면 자신과 주변 아군에게 보호막을 부여합니다."
+  },
+  {
+    "code": 7210101,
+    "name": "가시 덤불",
+    "group": "Support",
+    "type": "Sub",
+    "desc": "상대를 이동 불가 상태로 만들면 대상의 치유 효과가 감소하며, 받는 모든 피해가 증가합니다."
+  },
+  {
+    "code": 7210201,
+    "name": "집결",
+    "group": "Support",
+    "type": "Sub",
+    "desc": "궁극기 사용 시 자신의 주변에 내 자신을 포함한 아군은 보호막을 얻습니다."
+  },
+  {
+    "code": 7210301,
+    "name": "테이아",
+    "group": "Support",
+    "type": "Sub",
+    "desc": "밤 시야가 1.25m 증가합니다."
+  },
+  {
+    "code": 7210401,
+    "name": "후방 보급",
+    "group": "Support",
+    "type": "Sub",
+    "desc": "매일 밤마다 망원 카메라를 얻습니다. 아이템 칸이 부족할 경우 바닥에 떨어집니다."
+  },
+  {
+    "code": 7210501,
+    "name": "시가전",
+    "group": "Support",
+    "type": "Sub",
+    "desc": "매일 밤마다 크레모어를 얻습니다. 아이템 칸이 부족할 경우 바닥에 떨어집니다."
+  },
+  {
+    "code": 7210601,
+    "name": "스프린터",
+    "group": "Support",
+    "type": "Sub",
+    "desc": "시작 시 나막신을 장착한 상태로 시작합니다. 영웅 등급 이상 다리 방어구 장착 시 비전투 이동 속도가 증가합니다."
+  },
+  {
+    "code": 7210801,
+    "name": "할인 쿠폰",
+    "group": "Support",
+    "type": "Sub",
+    "desc": "키오스크에서 아이템을 할인된 가격에 구매할 수 있습니다."
+  },
+  {
+    "code": 7900101,
+    "name": "공격력 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900102,
+    "name": "공격력 II",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900103,
+    "name": "공격력 III",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900201,
+    "name": "방어력 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900202,
+    "name": "방어력 II",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900203,
+    "name": "방어력 III",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900301,
+    "name": "공격 속도 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900302,
+    "name": "공격 속도 II",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900303,
+    "name": "공격 속도 IIl",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900401,
+    "name": "이동 속도 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900402,
+    "name": "이동 속도 II",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900403,
+    "name": "이동 속도 Ill",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900501,
+    "name": "쿨다운 감소 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900502,
+    "name": "쿨다운 감소 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900503,
+    "name": "쿨다운 감소 Ill",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900601,
+    "name": "모든 피해 흡혈 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900602,
+    "name": "모든 피해 흡혈 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900603,
+    "name": "모든 피해 흡혈 IlI",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900701,
+    "name": "방해 효과 저항 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900702,
+    "name": "방해 효과 저항 ",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900703,
+    "name": "방해 효과 저항",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900801,
+    "name": "치명타 확률 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900802,
+    "name": "치명타 확률 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7900803,
+    "name": "치명타 확률 Ill",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920101,
+    "name": "철벽 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920102,
+    "name": "철벽 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920103,
+    "name": "철벽",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "자신의 현재 체력이 일정량 이하일 때 이동 속도와 체력 재생이 증가합니다."
+  },
+  {
+    "code": 7920201,
+    "name": "하이퍼 크리티컬 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920202,
+    "name": "하이퍼 크리티컬 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920203,
+    "name": "광견병",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920301,
+    "name": "생명력 강탈 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920302,
+    "name": "생명력 강탈 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920303,
+    "name": "생명력 강탈",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "개별 스킬로 피해를 입혔을 때 적 실험체에게 고정 피해를 입히고 자신의 체력을 회복합니다."
+  },
+  {
+    "code": 7920401,
+    "name": "고귀한 희생 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920402,
+    "name": "고귀한 희생 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920403,
+    "name": "고귀한 희생",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "자신이 사망 시 잠시 후 범위 내 모든 적을 잠시 띄우며, 대상의 잃은 체력에 비례한 고정 피해를 입힙니다."
+  },
+  {
+    "code": 7920501,
+    "name": "잠꾸러기 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920502,
+    "name": "잠꾸러기 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920503,
+    "name": "잠꾸러기",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "일정 시간 적에게 피해를 입지 않을 때 매 초마다 체력을 회복합니다."
+  },
+  {
+    "code": 7920603,
+    "name": "소생",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "사망 시 일정 시간 후 체력을 회복하여 부활합니다."
+  },
+  {
+    "code": 7920701,
+    "name": "전능자 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920702,
+    "name": "전능자 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920703,
+    "name": "전능자",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920801,
+    "name": "오염된 늪 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920802,
+    "name": "오염된 늪 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "자신이 사망 시 이동 속도와 방어력을 감소시키는 늪을 생성합니다."
+  },
+  {
+    "code": 7920803,
+    "name": "오염된 늪",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7920903,
+    "name": "함구령",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "무기 스킬 사용 시 잠시 후 범위 내 모든 적 실험체를 잠시 동안 침묵 상태로 만듭니다."
+  },
+  {
+    "code": 7921003,
+    "name": "플라즈마 노바",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "무기 스킬 사용 시 잠시 후 범위 내 모든 적에게 고정 피해를 입힙니다."
+  },
+  {
+    "code": 7921101,
+    "name": "시너지 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7921102,
+    "name": "시너지 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7921103,
+    "name": "시너지",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "궁극기 사용 시 기본 스킬의 쿨다운이 감소합니다. 기본 스킬을 사용할 때 마다 쿨다운이 감소합니다."
+  },
+  {
+    "code": 7921203,
+    "name": "압도적인 힘",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "궁극기 사용 시 잠시 동안 모든 방해 면역 상태가 되는 동시에 이동 속도가 증가합니다."
+  },
+  {
+    "code": 7921301,
+    "name": "대용량 충전지 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7921302,
+    "name": "대용량 충전지 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "방어관통과 최대 체력이 증가합니다."
+  },
+  {
+    "code": 7921303,
+    "name": "대용량 충전지",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7921401,
+    "name": "수집가 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7921402,
+    "name": "수집가 II",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "소지한 크레딧 개수에 비례하여 적 실험체와 적 실험체가 소환한 소환물에게 입히는 피해가 증가합니다."
+  },
+  {
+    "code": 7921403,
+    "name": "수집가 III",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7921501,
+    "name": "디스코 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7921502,
+    "name": "디스코 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7921503,
+    "name": "디스코",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7921602,
+    "name": "라이프 백",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "자신의 힐 팩으로 얻는 회복 효과가 증가하고 회복될 때 보호막을 획득합니다. 라이프 백으로 얻은 보호막이 유지되는 동안 이동 속도가 증가합니다."
+  },
+  {
+    "code": 7921701,
+    "name": "기동 타격대 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7921702,
+    "name": "기동 타격대 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7921703,
+    "name": "기동 타격대",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "가속 경계 통과 시 일정 시간 동안 다음 기본 공격이 강화됩니다."
+  },
+  {
+    "code": 7921802,
+    "name": "수상한 실험",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7921903,
+    "name": "발키리 드라이브",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "자신이 체력이 일정량 이하인 상태에서 적 실험체에게 피해를 입었을 때 [발키리 드라이브: 보호] 효과가 발동됩니다. [발키리 드라이브: 보호] 5초 동안 보호막을 얻고, 이동 속도가 증가합니다. 일정 거리를 즉시 이동합니다."
+  },
+  {
+    "code": 7922003,
+    "name": "A.M.D.S",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "A.M.D.S 배리어는 적이 자신에게 입히는 스킬의 효과 및 피해를 잠시 무시합니다. 배리어를 파괴한 적 실험체에게 ‘절대로 피할 수 없는 미사일’ 을 발사합니다."
+  },
+  {
+    "code": 7922102,
+    "name": "지진파",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "기본 공격 시 충격파를 발산하여 범위 내 적들에게 스킬 피해를 입힙니다."
+  },
+  {
+    "code": 7922201,
+    "name": "상처 찢기 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7922202,
+    "name": "상처 찢기 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7922203,
+    "name": "상처 찢기",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "적 실험체에게 기본 공격 시 상처를 새기고 중첩 당 추가 고정 피해를 입힙니다."
+  },
+  {
+    "code": 7922302,
+    "name": "철갑탄",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "방어 관통이 증가합니다."
+  },
+  {
+    "code": 7922402,
+    "name": "수확 Mk2",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "자신 또는 자신의 소환물이 입히는 모든 피해량의 일부 만큼 체력이 회복됩니다."
+  },
+  {
+    "code": 7922502,
+    "name": "둔감",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "받는 치명타 피해가 감소합니다."
+  },
+  {
+    "code": 7922602,
+    "name": "견고",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "방해 효과 저항이 증가합니다."
+  },
+  {
+    "code": 7922702,
+    "name": "가시 덤불",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "이동 불가 상태가 되어 일정 시간 동안 치유 효과가 감소하며 받는 모든 피해가 증가합니다."
+  },
+  {
+    "code": 7922803,
+    "name": "대리인",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "기본 공격 또는 스킬로 적에게 피해를 입혔을 때 고정 피해를 입힙니다."
+  },
+  {
+    "code": 7922903,
+    "name": "유독성 발자국",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "이동 시 매 초 고정 피해를 입히는 독 장판을 생성합니다."
+  },
+  {
+    "code": 7923002,
+    "name": "강림",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7923101,
+    "name": "산울림 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7923102,
+    "name": "산울림 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7923103,
+    "name": "산울림",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": "기본 공격 피해가 2회 적용됩니다."
+  },
+  {
+    "code": 7923201,
+    "name": "하이퍼 크리티컬 I",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7923202,
+    "name": "하이퍼 크리티컬 Il",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  },
+  {
+    "code": 7923203,
+    "name": "하이퍼 크리티컬",
+    "group": "Cobalt",
+    "type": "Cobalt",
+    "desc": ""
+  }
+]
