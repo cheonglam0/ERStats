@@ -12,6 +12,7 @@ import { EhpAnalyzer } from "./EhpAnalyzer.js";
 import { SkillPanel } from "./SkillPanel.js";
 import { ItemBrowser } from "./ItemBrowser.js";
 import { InfoPanel } from "./InfoPanel.js";
+import { PatchNotes } from "./PatchNotes.js";
 
 const METRIC_LABEL: Record<Metric, string> = {
   total: "종합 DPS",
@@ -34,13 +35,14 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`;
 
 const itemByCode = new Map(gameItems.map((it) => [String(it.code), it]));
 
-type View = "all" | "stats" | "skill" | "items" | "info";
+type View = "all" | "stats" | "skill" | "items" | "info" | "patch";
 const VIEW_LABEL: Record<View, string> = {
   all: "전체 보기",
   stats: "스탯",
   skill: "스킬",
   items: "아이템",
   info: "정보",
+  patch: "패치",
 };
 
 const MAIN_STAT_LABEL: Record<"attackPower" | "skillAmp", string> = {
@@ -107,7 +109,7 @@ export function App() {
       <header className="topbar">
         <h1>이터널리턴 스탯 비교</h1>
         <div className="view-tabs">
-          {(["all", "stats", "skill", "items", "info"] as View[]).map((v) => (
+          {(["all", "stats", "skill", "items", "info", "patch"] as View[]).map((v) => (
             <button
               key={v}
               className={view === v ? "active" : ""}
@@ -310,6 +312,16 @@ export function App() {
           <StatBreakdown character={character} level={level} itemStats={equippedStats} />
           <h3>도움말</h3>
           <InfoPanel />
+        </section>
+
+        {/* 패치 뷰 전용 — 패치/핫픽스 변경점 설명 (data/patchNotes.ts 에서 편집) */}
+        <section className="panel patch-panel">
+          <h2>패치 변경점</h2>
+          <p className="hint">
+            게임 데이터 수치는 본문에서 자동 갱신됩니다. 이 칸은 <b>무엇이 어떻게 바뀌었는지</b> 설명을 적는 곳입니다.
+            (내용 편집: <code>data/patchNotes.ts</code>)
+          </p>
+          <PatchNotes />
         </section>
       </div>
     </div>

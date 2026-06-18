@@ -58,6 +58,13 @@ body {
 .layout.view-items { grid-template-columns: 270px 1fr; }
 .layout.view-items .stats-panel { display: none; }
 
+/* 패치 패널: '패치' 뷰에서만 노출 */
+.patch-panel { display: none; }
+.layout.view-patch { grid-template-columns: 270px 1fr; }
+.layout.view-patch .stats-panel,
+.layout.view-patch .browser-panel { display: none; }
+.layout.view-patch .patch-panel { display: block; }
+
 /* 스킬 패널은 스킬 뷰에서만 노출 */
 .skill-panel { display: none; }
 .layout.view-skill { grid-template-columns: 270px 1fr; }
@@ -513,3 +520,18 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
 .skill-lv-table td.num { text-align: right; }
 .skill-dps-cell { color: var(--accent); font-weight: 600; }
 .skill-note { font-size: 11px; color: var(--muted); margin: 8px 0 0; line-height: 1.5; }
+
+/* 패치 변경점 */
+.patch-notes { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+.patch-entry {
+  border: 1px solid var(--line); border-radius: 8px;
+  padding: 10px 12px; background: var(--panel);
+}
+.patch-head {
+  display: flex; align-items: baseline; gap: 10px;
+  margin-bottom: 6px; padding-bottom: 6px; border-bottom: 1px solid var(--line);
+}
+.patch-version { font-size: 14px; font-weight: 700; color: var(--accent); }
+.patch-date { font-size: 11px; color: var(--muted); margin-left: auto; }
+.patch-changes { margin: 0; padding-left: 18px; }
+.patch-changes li { font-size: 12px; line-height: 1.6; }
