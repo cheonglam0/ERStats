@@ -41,15 +41,20 @@ jobs:
           ER_API_KEY: ${{ secrets.ER_API_KEY }}
         run: npm run fetch:data -- --refresh
 
-      # characters/items 가 실제로 바뀐 경우에만 커밋(meta.json 의 타임스탬프만 바뀐 건 무시).
+      # 패치노트 수집(키 불필요): Steam 공지로 날짜·버전·목록을 잡고, 같은 버전의
+      # ER 공식 글에서 한글 본문을 채운다. 커밋된 JSON이 캐시라 평소엔 증분 스캔만 한다.
+      - name: 패치노트 수집(Steam 목록 + ER 한글 본문)
+        run: npm run fetch:patch
+
+      # characters/items/패치노트가 실제로 바뀐 경우에만 커밋(meta.json 의 타임스탬프만 바뀐 건 무시).
       - name: 변경 감지 후 커밋·푸시
         id: commit
         run: |
-          if [ -n "$(git status --porcelain data/game/characters.json data/game/items.json)" ]; then
+          if [ -n "$(git status --porcelain data/game/characters.json data/game/items.json data/game/patchNotesSteam.json)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data/game
-            git commit -m "chore(data): 게임 데이터 자동 갱신 ($(date -u +%Y-%m-%d))"
+            git commit -m "chore(data): 게임 데이터/패치노트 자동 갱신 ($(date -u +%Y-%m-%d))"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
             echo "데이터 변경 감지 — 커밋·푸시 완료"

@@ -314,12 +314,12 @@ export function App() {
           <InfoPanel />
         </section>
 
-        {/* 패치 뷰 전용 — 패치/핫픽스 변경점 설명 (data/patchNotes.ts 에서 편집) */}
+        {/* 패치 뷰 — 수동 한글 노트(data/patchNotes.ts) + Steam 자동 수집분 병합 */}
         <section className="panel patch-panel">
           <h2>패치 변경점</h2>
           <p className="hint">
-            게임 데이터 수치는 본문에서 자동 갱신됩니다. 이 칸은 <b>무엇이 어떻게 바뀌었는지</b> 설명을 적는 곳입니다.
-            (내용 편집: <code>data/patchNotes.ts</code>)
+            <b>Steam</b> 배지가 붙은 항목은 공식 Steam 공지에서 자동 수집됩니다(패치 즉시 반영).
+            한글 설명은 <code>data/patchNotes.ts</code> 에 직접 추가하면 날짜순으로 함께 표시됩니다.
           </p>
           <PatchNotes />
         </section>

@@ -13,6 +13,7 @@
     "typecheck": "tsc --noEmit",
     "demo": "tsx src/demo.ts",
     "fetch:data": "tsx scripts/fetchGameData.ts",
+    "fetch:patch": "tsx scripts/fetchPatchNotes.ts",
     "gen:skills": "tsx scripts/genSkillSkeletons.ts"
   },
   "dependencies": {

@@ -532,6 +532,20 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
   margin-bottom: 6px; padding-bottom: 6px; border-bottom: 1px solid var(--line);
 }
 .patch-version { font-size: 14px; font-weight: 700; color: var(--accent); }
+.patch-badge {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.3px;
+  padding: 1px 6px; border-radius: 10px;
+  color: #fff; background: #1b2838; border: 1px solid #66c0f4;
+}
 .patch-date { font-size: 11px; color: var(--muted); margin-left: auto; }
 .patch-changes { margin: 0; padding-left: 18px; }
 .patch-changes li { font-size: 12px; line-height: 1.6; }
+.patch-changes li.patch-section {
+  list-style: none; margin: 6px 0 2px -18px;
+  font-weight: 700; color: var(--accent);
+}
+.patch-link {
+  display: inline-block; margin-top: 8px;
+  font-size: 11px; color: #66c0f4; text-decoration: none;
+}
+.patch-link:hover { text-decoration: underline; }
