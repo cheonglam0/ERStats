@@ -43,6 +43,25 @@ npm run demo     # 빌드별 아이템 효율 순위 출력
 npm run typecheck
 ```
 
+## 데이터 자동 갱신 (게임 패치/핫픽스 반영)
+
+게임이 업데이트되면 **공식 API + dak.gg**에서 최신 캐릭터/아이템 데이터를 받아
+`data/game/*.json`을 갱신하고, 변경이 있으면 자동으로 재배포한다.
+
+- **자동**: GitHub Actions `update-data.yml`가 매일 04:00(KST) 점검 → 변경 시에만 커밋·재배포.
+- **수동 버튼**: GitHub → **Actions → "Update game data" → "Run workflow"** 클릭.
+- **로컬**: `npm run fetch:data -- --refresh` (결과를 커밋·푸시하면 배포됨).
+
+설정 (최초 1회):
+1. repo **Settings → Secrets and variables → Actions → New repository secret**
+   - 이름 `ER_API_KEY`, 값 = 발급받은 공식 API 키. **키 교체 시 이 Secret 값만 바꾸면 됨**(코드 수정 불필요).
+2. 끝. (워크플로 권한·트리거는 `.github/workflows/update-data.yml`에 포함)
+
+안전장치: 수집 결과가 비정상으로 적으면(API 장애·키 만료 등) 기존 데이터를 덮어쓰지 않고 중단한다
+(`scripts/fetchGameData.ts`의 `assertDataSane`). 깨진 데이터가 배포되는 사고를 막는다.
+
+> ⚠️ **스킬 계수**(`data/skills/*`)는 어떤 공개 API에도 없어 자동화 대상이 아니다 → 수동 큐레이션 유지.
+
 ## ⚠️ 데이터/공식 검증 필요 항목
 
 엔진의 **구조**는 완성됐지만, 정확한 게임 수치는 아직 샘플/임시값이다.

@@ -26,8 +26,14 @@ const BASE = "https://open-api.bser.io";
 // ---------------------------------------------------------------------------
 
 function loadApiKey(): string {
+  // 1) 환경변수 우선 — GitHub Actions Secrets(ER_API_KEY)가 env로 주입된다.
+  //    키 교체 시 Secrets(또는 .env) 값만 바꾸면 되고 코드 수정은 불필요.
+  const fromEnv = process.env.ER_API_KEY?.trim();
+  if (fromEnv) return fromEnv;
+  // 2) 로컬 개발용 .env 파일 폴백.
   const envPath = resolve(ROOT, ".env");
-  if (!existsSync(envPath)) throw new Error(".env 파일이 없습니다.");
+  if (!existsSync(envPath))
+    throw new Error("ER_API_KEY 가 없습니다. 환경변수(Secrets) 또는 .env 에 설정하세요.");
   const line = readFileSync(envPath, "utf8")
     .split(/\r?\n/)
     .find((l) => l.trim().startsWith("ER_API_KEY="));
@@ -437,6 +443,40 @@ async function enrichItemIcons(items: NormItem[]): Promise<void> {
 }
 
 // ---------------------------------------------------------------------------
+// 자동화 안전장치
+// ---------------------------------------------------------------------------
+
+/** 직전 수집 시 저장된 카운트 (meta.json). 급감 감지 기준값. */
+function readPrevCounts(): { characters: number; items: number } | null {
+  const p = resolve(GAME_DIR, "meta.json");
+  if (!existsSync(p)) return null;
+  try {
+    return JSON.parse(readFileSync(p, "utf8")).counts ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * 무인 자동 갱신(GitHub Actions) 보호:
+ *   API 장애·키 만료·rate limit 등으로 수집이 부분 실패하면 결과가 텅 비거나 급감하는데,
+ *   그대로 쓰면 깨진 데이터가 커밋·배포된다. 비정상이면 기존 data/game/* 를 건드리지 않고 중단.
+ */
+function assertDataSane(charCount: number, itemCount: number): void {
+  const HARD_MIN_CHARS = 50;
+  const HARD_MIN_ITEMS = 150;
+  if (charCount < HARD_MIN_CHARS || itemCount < HARD_MIN_ITEMS)
+    throw new Error(
+      `수집 결과 비정상(캐릭터 ${charCount}, 아이템 ${itemCount}). 기존 데이터 보호를 위해 중단 — API 응답/키를 확인하세요.`,
+    );
+  const prev = readPrevCounts();
+  if (prev && (charCount < prev.characters * 0.7 || itemCount < prev.items * 0.7))
+    throw new Error(
+      `수집 결과가 직전 대비 급감(캐릭터 ${prev.characters}→${charCount}, 아이템 ${prev.items}→${itemCount}). 중단.`,
+    );
+}
+
+// ---------------------------------------------------------------------------
 // main
 // ---------------------------------------------------------------------------
 
@@ -458,6 +498,8 @@ async function main(): Promise<void> {
   enrichIcons(characters); // 공식 API 캐릭터에 dak.gg 일러스트 URL 보강
   const items = normalizeItems(meta);
   await enrichItemIcons(items); // dak.gg 아이템 아이콘 URL 보강
+
+  assertDataSane(characters.length, items.length); // 비정상 수집이면 여기서 중단(쓰기 전)
 
   writeJson(resolve(GAME_DIR, "characters.json"), characters);
   writeJson(resolve(GAME_DIR, "items.json"), items);
