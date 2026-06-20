@@ -102,6 +102,9 @@ function guessPositions(weapons: RawWeapon[]): Position[] {
 export const WEAPON_KO: Record<string, string> = {};
 for (const rc of rawCharacters)
   for (const w of rc.weapons) WEAPON_KO[w.weaponType] = w.weaponTypeKo;
+// 자히르 전용 — 곡사/직사가 데이터상 둘 다 "투척"이라 탭이 중복돼 보임. 라벨을 구분.
+WEAPON_KO["HighAngleFire"] = "투척(곡사)";
+WEAPON_KO["DirectFire"] = "투척(직사)";
 
 export const weaponLabel = (type: string): string => WEAPON_KO[type] ?? type;
 

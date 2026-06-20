@@ -8,6 +8,8 @@ import {
   itemStatsAtLevel,
   type GameItem,
 } from "../gameData.js";
+import { X } from "lucide-react";
+import { Icon } from "./kit/index.js";
 import { StatPills, STAT_META } from "./StatPills.js";
 import { matchName } from "../hangul.js";
 
@@ -160,7 +162,7 @@ export function ItemBrowser({
                 >
                   {it.iconUrl && <img className="be-icon" src={it.iconUrl} alt="" loading="lazy" />}
                   <span className="be-name">{it.name}</span>
-                  <span className="be-x">✕</span>
+                  <span className="be-x"><Icon icon={X} size={14} /></span>
                 </button>
               );
             })

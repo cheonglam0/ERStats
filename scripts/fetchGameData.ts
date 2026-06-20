@@ -181,12 +181,14 @@ const WEAPON_TYPE_KO: Record<string, string> = {
   Tonfa: "톤파",
   Bat: "방망이",
   Whip: "채찍",
-  HighAngleFire: "투척",
-  DirectFire: "투척",
+  // 자히르 전용 — 곡사/직사는 dak.gg에서 별개 무기군(별개 빌드)으로 취급된다. 라벨을 구분해야 중복으로 합쳐지지 않음.
+  HighAngleFire: "투척(곡사)",
+  DirectFire: "투척(직사)",
   Throw: "암기",
   Shuriken: "암기",
   Bow: "활",
   Crossbow: "석궁",
+  CrossBow: "석궁", // dak.gg는 대문자 B 표기 사용
   Pistol: "권총",
   AssaultRifle: "돌격소총",
   SniperRifle: "저격총",
@@ -203,6 +205,7 @@ const WEAPON_TYPE_KO: Record<string, string> = {
   Camera: "카메라",
   Arcana: "아르카나",
   VFArcana: "아르카나",
+  VFArm: "VF의수",
 };
 
 /** dak.gg 프로토콜 상대경로(//cdn…) → 절대 https URL. */
@@ -694,26 +697,47 @@ async function fetchMetaTier(): Promise<NormMetaTier | null> {
   for (const c of dakChars)
     for (const w of c.weaponTypes ?? []) weaponKeyToType.set(w.id, w.key);
 
-  const totalGames = num(snap.tierGameCount) || 1;
+  const totalGames = num(snap.tierGameCount) || 1; // 표본 게임 수 (표시용)
+  // 픽률 분모 = 전체 픽 수(tierCount). 게임 수로 나누면 BR 특성상 등장률(>100% 합산)이 되어 dak.gg 표기와 다름.
+  const totalPicks = num(snap.tierCount) || totalGames;
   const rows: MetaRow[] = [];
   for (const cs of snap.characterStats) {
     const name = nameByKey.get(cs.key);
     if (!name) continue;
-    const builds: MetaBuild[] = (cs.weaponStats ?? [])
-      .map((ws: any) => {
-        const games = num(ws.count);
-        const type = weaponKeyToType.get(ws.key) ?? String(ws.key);
-        return {
-          weapon: WEAPON_TYPE_KO[type] ?? type,
-          tier: ws.tier ?? "-",
-          tierScore: Math.round(num(ws.tierScore) * 10) / 10,
-          games,
-          pickRate: games / totalGames,
-          winRate: games ? num(ws.win) / games : 0,
-          top3Rate: games ? num(ws.top3) / games : 0,
-        };
-      })
-      .sort((a: MetaBuild, b: MetaBuild) => b.games - a.games);
+    // 같은 무기군 라벨로 병합 — 서로 다른 dak key가 한 무기군으로 모이는 경우
+    // (예: HighAngleFire + DirectFire → '투척') 빌드가 중복 표기되는 것을 막는다.
+    type Acc = { weapon: string; tier: string; tierScore: number; games: number; win: number; top3: number };
+    const byWeapon = new Map<string, Acc>();
+    for (const ws of cs.weaponStats ?? []) {
+      const games = num(ws.count);
+      const type = weaponKeyToType.get(ws.key) ?? String(ws.key);
+      const weapon = WEAPON_TYPE_KO[type] ?? type;
+      const tierScore = Math.round(num(ws.tierScore) * 10) / 10;
+      const cur = byWeapon.get(weapon);
+      if (cur) {
+        if (games > cur.games) {
+          // 최다 픽 빌드의 티어/점수를 대표값으로
+          cur.tier = ws.tier ?? cur.tier;
+          cur.tierScore = tierScore;
+        }
+        cur.games += games;
+        cur.win += num(ws.win);
+        cur.top3 += num(ws.top3);
+      } else {
+        byWeapon.set(weapon, { weapon, tier: ws.tier ?? "-", tierScore, games, win: num(ws.win), top3: num(ws.top3) });
+      }
+    }
+    const builds: MetaBuild[] = [...byWeapon.values()]
+      .map((b) => ({
+        weapon: b.weapon,
+        tier: b.tier,
+        tierScore: b.tierScore,
+        games: b.games,
+        pickRate: b.games / totalPicks,
+        winRate: b.games ? b.win / b.games : 0,
+        top3Rate: b.games ? b.top3 / b.games : 0,
+      }))
+      .sort((a, b) => b.games - a.games);
     if (builds.length === 0) continue;
     const games = builds.reduce((s, b) => s + b.games, 0);
     const win = (cs.weaponStats ?? []).reduce((s: number, w: any) => s + num(w.win), 0);
@@ -721,7 +745,7 @@ async function fetchMetaTier(): Promise<NormMetaTier | null> {
     rows.push({
       name,
       games,
-      pickRate: games / totalGames,
+      pickRate: games / totalPicks,
       winRate: games ? win / games : 0,
       top3Rate: games ? top3 / games : 0,
       tier: builds[0]!.tier, // 최다 픽 빌드의 티어를 대표값으로

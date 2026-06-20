@@ -5,7 +5,11 @@
 
 import { useMemo, useState } from "react";
 import { metaTier, TIER_ORDER, type MetaRow } from "../gameExtra.js";
+import { gameCharacters } from "../gameData.js";
 import { matchName } from "../hangul.js";
+
+/** 실험체 이름 → 아이콘 URL (티어표 행에 아이콘 표시용). */
+const iconByName = new Map(gameCharacters.map((c) => [c.name, c.iconUrl]));
 
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`;
 
@@ -15,25 +19,45 @@ const patchLabel = (p: number) =>
 
 const TIERS = ["S", "A", "B", "C", "D"];
 
+type SortKey = "tier" | "name" | "winRate" | "top3Rate" | "pickRate";
+
 export function MetaTier({ onPick }: { onPick: (name: string) => void }) {
   const [q, setQ] = useState("");
   const [tierFilter, setTierFilter] = useState<string | null>(null);
-  const [sort, setSort] = useState<"tier" | "winRate" | "pickRate">("tier");
+  const [sortKey, setSortKey] = useState<SortKey>("tier");
+  const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
+
+  /** 헤더 클릭 — 같은 열이면 방향 토글, 다른 열이면 기본 방향으로. */
+  function clickSort(k: SortKey) {
+    if (k === sortKey) setSortDir((d) => (d === "asc" ? "desc" : "asc"));
+    else {
+      setSortKey(k);
+      setSortDir(k === "name" ? "asc" : "desc"); // 이름만 가나다 오름차순 기본
+    }
+  }
 
   const rows = useMemo(() => {
     let list = metaTier.rows.filter((r) => matchName(r.name, q));
     if (tierFilter) list = list.filter((r) => r.tier === tierFilter);
-    const sorted = [...list];
-    if (sort === "winRate") sorted.sort((a, b) => b.winRate - a.winRate);
-    else if (sort === "pickRate") sorted.sort((a, b) => b.pickRate - a.pickRate);
-    else
-      sorted.sort(
-        (a, b) =>
-          TIER_ORDER.indexOf(a.tier) - TIER_ORDER.indexOf(b.tier) ||
-          b.winRate - a.winRate,
-      );
-    return sorted;
-  }, [q, tierFilter, sort]);
+    // 티어는 높을수록 큰 값(-index)으로 환산해 숫자처럼 정렬
+    const val = (r: MetaRow): number | string =>
+      sortKey === "tier"
+        ? -TIER_ORDER.indexOf(r.tier)
+        : sortKey === "name"
+          ? r.name
+          : (r[sortKey] as number);
+    const dir = sortDir === "asc" ? 1 : -1;
+    return [...list].sort((a, b) => {
+      const va = val(a);
+      const vb = val(b);
+      let c =
+        typeof va === "string" ? va.localeCompare(vb as string, "ko") : va - (vb as number);
+      if (c === 0) c = b.winRate - a.winRate; // 동률은 승률로
+      return c * dir;
+    });
+  }, [q, tierFilter, sortKey, sortDir]);
+
+  const arrow = (k: SortKey) => (sortKey === k ? (sortDir === "asc" ? " ▲" : " ▼") : "");
 
   const updated = metaTier.updatedAt
     ? new Date(metaTier.updatedAt).toLocaleDateString("ko-KR")
@@ -70,23 +94,26 @@ export function MetaTier({ onPick }: { onPick: (name: string) => void }) {
             </button>
           ))}
         </div>
-        <div className="meta-sort">
-          {(["tier", "winRate", "pickRate"] as const).map((s) => (
-            <button key={s} className={sort === s ? "tab active" : "tab"} onClick={() => setSort(s)}>
-              {s === "tier" ? "티어순" : s === "winRate" ? "승률순" : "픽률순"}
-            </button>
-          ))}
-        </div>
       </div>
 
       <table className="meta-table">
         <thead>
           <tr>
-            <th>티어</th>
-            <th>실험체</th>
-            <th>승률</th>
-            <th>Top3</th>
-            <th>픽률</th>
+            <th className={`sortable${sortKey === "tier" ? " sorted" : ""}`} onClick={() => clickSort("tier")}>
+              티어{arrow("tier")}
+            </th>
+            <th className={`sortable${sortKey === "name" ? " sorted" : ""}`} onClick={() => clickSort("name")}>
+              실험체{arrow("name")}
+            </th>
+            <th className={`sortable${sortKey === "winRate" ? " sorted" : ""}`} onClick={() => clickSort("winRate")}>
+              승률{arrow("winRate")}
+            </th>
+            <th className={`sortable${sortKey === "top3Rate" ? " sorted" : ""}`} onClick={() => clickSort("top3Rate")}>
+              Top3{arrow("top3Rate")}
+            </th>
+            <th className={`sortable${sortKey === "pickRate" ? " sorted" : ""}`} onClick={() => clickSort("pickRate")}>
+              픽률{arrow("pickRate")}
+            </th>
             <th>주요 빌드</th>
           </tr>
         </thead>
@@ -118,7 +145,10 @@ function MetaRowView({ row, onPick }: { row: MetaRow; onPick: (name: string) => 
             }}
             title="이 실험체로 스탯 비교 열기"
           >
-            {row.name}
+            {iconByName.get(row.name) && (
+              <img className="meta-icon" src={iconByName.get(row.name)} alt="" loading="lazy" />
+            )}
+            <span>{row.name}</span>
           </button>
         </td>
         <td>{pct(row.winRate)}</td>

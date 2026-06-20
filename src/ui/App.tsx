@@ -20,6 +20,28 @@ import {
   removeSavedBuild,
   type SavedBuild,
 } from "./buildStore.js";
+import {
+  Plus,
+  Share2,
+  X,
+  Star,
+  Trophy,
+  Calculator,
+  GitCompareArrows,
+  BookOpen,
+  Newspaper,
+  ArrowRight,
+  Swords,
+  Users,
+  Gauge,
+  Package,
+  Info,
+  Wand2,
+  TrendingUp,
+  HeartPulse,
+  type LucideIcon,
+} from "lucide-react";
+import { Button, Icon, Modal, useToast } from "./kit/index.js";
 import { StatPills } from "./StatPills.js";
 import { StatSheet } from "./StatSheet.js";
 import { StatBreakdown } from "./StatBreakdown.js";
@@ -27,6 +49,7 @@ import { StatScaling } from "./StatScaling.js";
 import { EhpAnalyzer } from "./EhpAnalyzer.js";
 import { SkillPanel } from "./SkillPanel.js";
 import { ItemBrowser } from "./ItemBrowser.js";
+import { BuildOptimizer } from "./BuildOptimizer.js";
 import { InfoPanel } from "./InfoPanel.js";
 import { PatchNotes } from "./PatchNotes.js";
 
@@ -112,6 +135,23 @@ const VIEW_ORDER: View[] = [
   "patch",
 ];
 
+/**
+ * 상단 네비 — 9개 평면 뷰를 5개 상위 그룹으로 묶는다.
+ * '빌드 계산기' 그룹은 하위 세그먼트(전체/스탯/스킬/아이템/정보)로 펼쳐진다.
+ * (View 상태머신과 레이아웃 CSS는 그대로 두고 표현만 그룹화)
+ */
+type NavGroupId = "meta" | "build" | "compare" | "codex" | "patch";
+const NAV_GROUPS: { id: NavGroupId; label: string; icon: LucideIcon; views: View[] }[] = [
+  { id: "meta", label: "티어", icon: Trophy, views: ["meta"] },
+  { id: "build", label: "빌드 계산기", icon: Calculator, views: ["all", "stats", "skill", "items", "info"] },
+  { id: "compare", label: "비교", icon: GitCompareArrows, views: ["compare"] },
+  { id: "codex", label: "도감", icon: BookOpen, views: ["codex"] },
+  { id: "patch", label: "패치", icon: Newspaper, views: ["patch"] },
+];
+const BUILD_SUBVIEWS: View[] = ["all", "stats", "skill", "items", "info"];
+const groupOfView = (v: View): NavGroupId =>
+  NAV_GROUPS.find((g) => g.views.includes(v))?.id ?? "meta";
+
 const MAIN_STAT_LABEL: Record<"attackPower" | "skillAmp", string> = {
   attackPower: "공격력",
   skillAmp: "스킬증폭",
@@ -164,7 +204,12 @@ export function App() {
   const [masteryLevel, setMasteryLevel] = useState(init.masteryLevel);
   const [targetDefense, setTargetDefense] = useState(init.targetDefense);
   const [saved, setSaved] = useState<SavedBuild[]>(() => loadSavedBuilds());
-  const [copied, setCopied] = useState(false);
+  const [saveOpen, setSaveOpen] = useState(false);
+  const [saveName, setSaveName] = useState("");
+  const [lastBuildView, setLastBuildView] = useState<View>(
+    BUILD_SUBVIEWS.includes(init.view) ? init.view : "all",
+  );
+  const toast = useToast();
 
   const character = gameCharacters.find((c) => c.id === characterId)!;
   const weapon =
@@ -198,12 +243,24 @@ export function App() {
     setLoadout((prev) => dropInvalidWeapon(prev, wt));
   }
 
+  /** 빌드 하위 뷰 전환 (마지막 위치 기억). */
+  function pickBuildView(v: View) {
+    setLastBuildView(v);
+    setView(v);
+  }
+
+  /** 상위 네비 그룹 전환. '빌드 계산기'는 마지막 보던 하위 뷰로 복귀. */
+  function goGroup(id: NavGroupId) {
+    if (id === "build") setView(lastBuildView);
+    else setView(NAV_GROUPS.find((g) => g.id === id)!.views[0]!);
+  }
+
   /** 티어표에서 실험체 선택 → 스탯 비교로 이동. */
   function pickFromMeta(name: string) {
     const c = gameCharacters.find((x) => x.name === name);
     if (!c) return;
     selectCharacter(c.id);
-    setView("stats");
+    pickBuildView("stats");
   }
 
   function toggleItem(code: string) {
@@ -218,15 +275,23 @@ export function App() {
     });
   }
 
-  function saveCurrent() {
-    const name = window.prompt(
-      "빌드 이름을 입력하세요",
-      `${character.name} · ${weaponLabel(weaponType)}`,
-    );
-    if (!name || !name.trim()) return;
+  /** 자동 최적화 — 추천 코드 묶음을 전체 로드아웃으로 적용. */
+  function applyLoadout(codes: string[]) {
+    setLoadout(dropInvalidWeapon(codesToLoadout(codes), weaponType));
+    toast("최적 빌드를 적용했어요");
+  }
+
+  function openSave() {
+    setSaveName(`${character.name} · ${weaponLabel(weaponType)}`);
+    setSaveOpen(true);
+  }
+
+  function confirmSave() {
+    const name = saveName.trim();
+    if (!name) return;
     setSaved(
       addSavedBuild({
-        name: name.trim(),
+        name,
         c: characterId,
         w: weaponType,
         l: level,
@@ -234,6 +299,8 @@ export function App() {
         eq: equipped,
       }),
     );
+    setSaveOpen(false);
+    toast("빌드를 저장했어요");
   }
 
   function loadBuild(b: SavedBuild) {
@@ -251,11 +318,8 @@ export function App() {
   function copyShareLink() {
     const url = window.location.href;
     navigator.clipboard?.writeText(url).then(
-      () => {
-        setCopied(true);
-        window.setTimeout(() => setCopied(false), 1500);
-      },
-      () => {},
+      () => toast("공유 링크를 복사했어요"),
+      () => toast("복사에 실패했어요"),
     );
   }
 
@@ -287,27 +351,47 @@ export function App() {
   const hasSkills = hasSkillData(character.id);
   const mainStat = mainStatById.get(character.id) ?? "attackPower";
 
+  const currentGroup = groupOfView(view);
+
   return (
     <div className="app">
       <header className="topbar">
-        <h1>이터널리턴 스탯 비교</h1>
-        <div className="view-tabs">
-          {VIEW_ORDER.map((v) => (
+        <button className="brand" onClick={() => setView("meta")} title="Aglumia 홈">
+          <span className="brand-mark">◈</span>
+          <span className="brand-name">Aglumia</span>
+        </button>
+        <nav className="nav-groups">
+          {NAV_GROUPS.map((g) => (
+            <button
+              key={g.id}
+              className={currentGroup === g.id ? "nav-group active" : "nav-group"}
+              onClick={() => goGroup(g.id)}
+            >
+              <Icon icon={g.icon} size={16} />
+              <span>{g.label}</span>
+            </button>
+          ))}
+        </nav>
+      </header>
+
+      {currentGroup === "build" && (
+        <div className="subnav">
+          {BUILD_SUBVIEWS.map((v) => (
             <button
               key={v}
-              className={view === v ? "active" : ""}
-              onClick={() => setView(v)}
+              className={view === v ? "seg active" : "seg"}
+              onClick={() => pickBuildView(v)}
             >
               {VIEW_LABEL[v]}
             </button>
           ))}
         </div>
-      </header>
+      )}
 
       <div className={`layout view-${view}`}>
         {/* 1) 실험체 + 무기군 + 레벨 */}
         <section className="panel">
-          <h2>1. 실험체 ({gameCharacters.length})</h2>
+          <h2><Icon icon={Users} size={17} />1. 실험체 ({gameCharacters.length})</h2>
           <input
             className="search"
             placeholder="실험체 검색…"
@@ -329,7 +413,11 @@ export function App() {
                     {mainStatById.get(c.id) === "skillAmp" && (
                       <em className="main-badge amp" title="스킬증폭 메인 캐릭터">스증</em>
                     )}
-                    {hasSkillData(c.id) && <em className="skill-badge" title="스킬 계수 입력됨">★</em>}
+                    {hasSkillData(c.id) && (
+                      <em className="skill-badge" title="스킬 계수 입력됨">
+                        <Icon icon={Star} size={11} />
+                      </em>
+                    )}
                   </span>
                 </button>
               </li>
@@ -429,7 +517,7 @@ export function App() {
 
         {/* 2) 현재 빌드 결과값 + 장착 슬롯 */}
         <section className="panel stats-panel">
-          <h2>2. 현재 빌드</h2>
+          <h2><Icon icon={Gauge} size={17} />2. 현재 빌드</h2>
           <div className="result-cards">
             <div className="card dps" title={hasSkills ? "" : "스킬 계수 미입력 캐릭터 — 평타 DPS만 표시"}>
               <div className="card-label">{hasSkills ? "유효 DPS" : "평타 DPS"}</div>
@@ -449,10 +537,12 @@ export function App() {
           </div>
 
           <div className="build-actions">
-            <button className="ba-save" onClick={saveCurrent}>＋ 빌드 저장</button>
-            <button className="ba-share" onClick={copyShareLink}>
-              {copied ? "복사됨 ✓" : "🔗 공유 링크 복사"}
-            </button>
+            <Button variant="primary" onClick={openSave}>
+              <Icon icon={Plus} /> 빌드 저장
+            </Button>
+            <Button onClick={copyShareLink}>
+              <Icon icon={Share2} /> 공유 링크 복사
+            </Button>
           </div>
 
           {saved.length > 0 && (
@@ -472,8 +562,9 @@ export function App() {
                       className="remove"
                       onClick={() => setSaved(removeSavedBuild(b.id))}
                       title="삭제"
+                      aria-label="삭제"
                     >
-                      ✕
+                      <Icon icon={X} size={15} />
                     </button>
                   </li>
                 ))}
@@ -495,8 +586,13 @@ export function App() {
                         <img className="item-icon" src={it.iconUrl} alt="" loading="lazy" />
                       )}
                       <span className="slot-item">{it.name}</span>
-                      <button className="remove" onClick={() => toggleItem(code!)} title="해제">
-                        ✕
+                      <button
+                        className="remove"
+                        onClick={() => toggleItem(code!)}
+                        title="해제"
+                        aria-label="해제"
+                      >
+                        <Icon icon={X} size={15} />
                       </button>
                     </>
                   ) : (
@@ -507,6 +603,16 @@ export function App() {
             })}
           </div>
 
+          <h3>자동 추천 — 빌드 최적화</h3>
+          <BuildOptimizer
+            profile={profile}
+            loadout={loadout}
+            metric={metric}
+            target={target}
+            onEquip={toggleItem}
+            onApply={applyLoadout}
+          />
+
           <h4>
             현재 종합 스탯
             <span className={`main-stat-tag ${mainStat === "skillAmp" ? "amp" : "ad"}`}>
@@ -515,30 +621,35 @@ export function App() {
           </h4>
           <StatSheet stats={currentStats} />
 
-          <h3>스탯 성장 · 효율</h3>
-          <StatScaling
-            character={character}
-            level={level}
-            totalStats={currentStats}
-            mainStat={mainStat}
-          />
+          <details className="adv">
+            <summary><Icon icon={TrendingUp} size={15} />스탯 성장 · 효율</summary>
+            <div className="adv-body">
+              <StatScaling
+                character={character}
+                level={level}
+                totalStats={currentStats}
+                mainStat={mainStat}
+              />
+            </div>
+          </details>
 
-          <h3>실질 체력(EHP) — 방어력 vs 체력 효율</h3>
-          <EhpAnalyzer
-            maxHp={currentStats.maxHp ?? 0}
-            defense={currentStats.defense ?? 0}
-          />
+          <details className="adv">
+            <summary><Icon icon={HeartPulse} size={15} />실질 체력(EHP) — 방어력 vs 체력 효율</summary>
+            <div className="adv-body">
+              <EhpAnalyzer maxHp={currentStats.maxHp ?? 0} defense={currentStats.defense ?? 0} />
+            </div>
+          </details>
         </section>
 
         {/* 스킬 정보 (스킬 뷰 전용) */}
         <section className="panel skill-panel">
-          <h2>스킬 — {character.name} · {weaponLabel(weapon.weaponType)}</h2>
+          <h2><Icon icon={Wand2} size={17} />스킬 — {character.name} · {weaponLabel(weapon.weaponType)}</h2>
           <SkillPanel profile={profile} stats={currentStats} hasSkills={hasSkills} />
         </section>
 
         {/* 3) ER2Route식 아이템 그리드 + 부위 필터 */}
         <section className="panel browser-panel">
-          <h2>3. 아이템 ({METRIC_LABEL[metric]} 효율순)</h2>
+          <h2><Icon icon={Package} size={17} />3. 아이템 ({METRIC_LABEL[metric]} 효율순)</h2>
           <ItemBrowser
             profile={profile}
             loadout={loadout}
@@ -551,7 +662,7 @@ export function App() {
 
         {/* 정보 뷰 전용 — 스탯 구성 비율 + 안내문 */}
         <section className="panel info-panel">
-          <h2>정보 — {character.name}</h2>
+          <h2><Icon icon={Info} size={17} />정보 — {character.name}</h2>
           <StatBreakdown character={character} level={level} itemStats={equippedStats} />
           <h3>도움말</h3>
           <InfoPanel />
@@ -559,7 +670,7 @@ export function App() {
 
         {/* 패치 뷰 — 수동 한글 노트(data/patchNotes.ts) + Steam 자동 수집분 병합 */}
         <section className="panel patch-panel">
-          <h2>패치 변경점</h2>
+          <h2><Icon icon={Newspaper} size={17} />패치 변경점</h2>
           <p className="hint">
             <b>Steam</b> 배지가 붙은 항목은 공식 Steam 공지에서 자동 수집됩니다(패치 즉시 반영).
             한글 설명은 <code>data/patchNotes.ts</code> 에 직접 추가하면 날짜순으로 함께 표시됩니다.
@@ -569,17 +680,41 @@ export function App() {
 
         {/* 티어/메타 랜딩 — dak.gg 통계 기반 */}
         <section className="panel meta-panel">
-          <h2>티어 / 메타</h2>
           {view === "meta" && (
-            <Suspense fallback={<p className="hint">티어 불러오는 중…</p>}>
-              <MetaTier onPick={pickFromMeta} />
-            </Suspense>
+            <>
+              <div className="hero">
+                <div className="hero-inner">
+                  <span className="hero-eyebrow">
+                    <span className="brand-mark">◈</span> 이터널리턴 빌드 계측 · Aglumia
+                  </span>
+                  <h2 className="hero-title">
+                    내 빌드에서 <em>어떤 아이템</em>이 진짜 더 셀까?
+                  </h2>
+                  <p className="hero-sub">
+                    실험체 × 무기군 빌드의 <b>DPS</b> · <b>유효 체력(EHP)</b>을 수치로 비교합니다.
+                    같은 아이템도 빌드에 따라 효율 순위가 달라집니다.
+                  </p>
+                  <div className="hero-cta">
+                    <Button variant="primary" onClick={() => goGroup("build")}>
+                      <Icon icon={Calculator} /> 빌드 계산기 시작 <Icon icon={ArrowRight} size={15} />
+                    </Button>
+                    <Button onClick={() => setView("compare")}>
+                      <Icon icon={Swords} /> 실험체 비교
+                    </Button>
+                  </div>
+                </div>
+              </div>
+              <h3 className="meta-section-title">티어 / 메타</h3>
+              <Suspense fallback={<p className="hint">티어 불러오는 중…</p>}>
+                <MetaTier onPick={pickFromMeta} />
+              </Suspense>
+            </>
           )}
         </section>
 
         {/* 두 빌드 좌우 비교 */}
         <section className="panel compare-panel">
-          <h2>실험체 비교</h2>
+          <h2><Icon icon={GitCompareArrows} size={17} />실험체 비교</h2>
           {view === "compare" && (
             <Suspense fallback={<p className="hint">비교 불러오는 중…</p>}>
               <Compare initialA={{ characterId, weaponType }} />
@@ -589,7 +724,7 @@ export function App() {
 
         {/* 도감 뷰 — 특성 / 전술 / 제작 트리 / 야생동물 / 지역 */}
         <section className="panel codex-panel">
-          <h2>도감 — 게임 시스템</h2>
+          <h2><Icon icon={BookOpen} size={17} />도감 — 게임 시스템</h2>
           {view === "codex" && (
             <Suspense fallback={<p className="hint">도감 불러오는 중…</p>}>
               <Codex />
@@ -597,6 +732,31 @@ export function App() {
           )}
         </section>
       </div>
+
+      <Modal open={saveOpen} onClose={() => setSaveOpen(false)} title="빌드 저장">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            confirmSave();
+          }}
+        >
+          <input
+            className="search"
+            autoFocus
+            placeholder="빌드 이름"
+            value={saveName}
+            onChange={(e) => setSaveName(e.target.value)}
+          />
+          <div className="modal-actions">
+            <Button type="button" onClick={() => setSaveOpen(false)}>
+              취소
+            </Button>
+            <Button type="submit" variant="primary" disabled={!saveName.trim()}>
+              저장
+            </Button>
+          </div>
+        </form>
+      </Modal>
     </div>
   );
 }
